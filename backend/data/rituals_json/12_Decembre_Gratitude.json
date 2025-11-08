@@ -1,0 +1,234 @@
+[
+  {
+    "day": 2,
+    "message": "Ce que tu laisses mourir fait place au vrai toi.",
+    "ritual": "Respire la **cyprès**, ta **jaspe rouge** sur le cœur.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Cyprès",
+    "symbol": "⚖︎"
+  },
+  {
+    "day": 3,
+    "message": "Le changement ne détruit pas, il révèle.",
+    "ritual": "Diffuse de l’**encens**, garde ton **œil de tigre** et regarde-toi avec bienveillance.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Encens",
+    "symbol": "✦"
+  },
+  {
+    "day": 4,
+    "message": "Tu ne perds rien en te transformant, tu t’allèges.",
+    "ritual": "Respire une goutte de **romarin**, ta **malachite** dans la main.",
+    "stone": "Malachite",
+    "essential_oil": "Romarin",
+    "symbol": "☽"
+  },
+  {
+    "day": 5,
+    "message": "Ce que tu résistes persiste, ce que tu accueilles se transforme.",
+    "ritual": "Diffuse du **bois de cèdre**, tiens ton **grenat** et dis : “Je laisse faire.”",
+    "stone": "Grenat",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "🜂"
+  },
+  {
+    "day": 6,
+    "message": "La transformation demande du courage, pas de violence.",
+    "ritual": "Respire la **patchouli**, ta **obsidienne** sur ton plexus.",
+    "stone": "Obsidienne",
+    "essential_oil": "Patchouli",
+    "symbol": "⚖︎"
+  },
+  {
+    "day": 7,
+    "message": "Lâche le contrôle, garde la foi.",
+    "ritual": "Diffuse du **cyprès**, garde ton **œil de tigre** et ferme les yeux lentement.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Cyprès",
+    "symbol": "✦"
+  },
+  {
+    "day": 8,
+    "message": "Le feu purifie sans détruire.",
+    "ritual": "Respire la **gingembre**, tiens ta **jaspe rouge** et ressens la chaleur du moment.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Gingembre",
+    "symbol": "☽"
+  },
+  {
+    "day": 9,
+    "message": "Le changement commence par une simple intention.",
+    "ritual": "Diffuse du **romarin**, ta **malachite** dans la main.",
+    "stone": "Malachite",
+    "essential_oil": "Romarin",
+    "symbol": "🜂"
+  },
+  {
+    "day": 10,
+    "message": "Ce que tu traverses te façonne, pas te brise.",
+    "ritual": "Respire la **bois de cèdre**, garde ton **grenat** sur le cœur.",
+    "stone": "Grenat",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "⚖︎"
+  },
+  {
+    "day": 11,
+    "message": "Chaque fin porte déjà le germe d’un début.",
+    "ritual": "Diffuse du **encens**, tiens ton **obsidienne** et répète : “Je fais confiance au cycle.”",
+    "stone": "Obsidienne",
+    "essential_oil": "Encens",
+    "symbol": "✦"
+  },
+  {
+    "day": 12,
+    "message": "Le changement n’est pas chaos, c’est mouvement.",
+    "ritual": "Respire la **cyprès**, garde ton **œil de tigre** et marche lentement.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Cyprès",
+    "symbol": "☽"
+  },
+  {
+    "day": 13,
+    "message": "Accepte de ne plus être la personne que tu étais.",
+    "ritual": "Diffuse du **romarin**, ta **jaspe rouge** dans la main.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Romarin",
+    "symbol": "🜂"
+  },
+  {
+    "day": 14,
+    "message": "Les racines profondes supportent tous les vents.",
+    "ritual": "Respire la **bois de cèdre**, tiens ta **malachite** et ancre-toi consciemment.",
+    "stone": "Malachite",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "⚖︎"
+  },
+  {
+    "day": 15,
+    "message": "Transformer, c’est honorer son passé sans s’y attacher.",
+    "ritual": "Diffuse du **patchouli**, garde ton **grenat** et souris à ton évolution.",
+    "stone": "Grenat",
+    "essential_oil": "Patchouli",
+    "symbol": "✦"
+  },
+  {
+    "day": 16,
+    "message": "La mue n’est pas perte, c’est libération.",
+    "ritual": "Respire la **cyprès**, ta **obsidienne** sur le cœur.",
+    "stone": "Obsidienne",
+    "essential_oil": "Cyprès",
+    "symbol": "☽"
+  },
+  {
+    "day": 17,
+    "message": "Laisse tomber les masques, ils t’épuisent.",
+    "ritual": "Diffuse de la **gingembre**, tiens ton **œil de tigre** et respire profondément.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Gingembre",
+    "symbol": "🜂"
+  },
+  {
+    "day": 18,
+    "message": "La transformation ne vient pas du faire, mais du laisser-être.",
+    "ritual": "Respire le **encens**, garde ta **jaspe rouge** et ferme les yeux.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Encens",
+    "symbol": "⚖︎"
+  },
+  {
+    "day": 19,
+    "message": "Le feu intérieur éclaire le chemin du renouveau.",
+    "ritual": "Diffuse du **romarin**, ta **malachite** dans la main.",
+    "stone": "Malachite",
+    "essential_oil": "Romarin",
+    "symbol": "✦"
+  },
+  {
+    "day": 20,
+    "message": "Accepte les cycles, rien ne dure ni ne meurt vraiment.",
+    "ritual": "Respire la **bois de cèdre**, tiens ton **grenat** et observe ton souffle.",
+    "stone": "Grenat",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "☽"
+  },
+  {
+    "day": 21,
+    "message": "Le vrai pouvoir, c’est la transformation consciente.",
+    "ritual": "Diffuse du **patchouli**, garde ton **obsidienne** et dis : “Je choisis d’évoluer.”",
+    "stone": "Obsidienne",
+    "essential_oil": "Patchouli",
+    "symbol": "🜂"
+  },
+  {
+    "day": 22,
+    "message": "Le changement n’efface pas, il réécrit.",
+    "ritual": "Respire la **cyprès**, ta **œil de tigre** sur ton plexus.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Cyprès",
+    "symbol": "⚖︎"
+  },
+  {
+    "day": 23,
+    "message": "Tu n’as rien à perdre en devenant toi-même.",
+    "ritual": "Diffuse du **encens**, tiens ta **jaspe rouge** et reste immobile une minute.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Encens",
+    "symbol": "✦"
+  },
+  {
+    "day": 24,
+    "message": "Le lâcher-prise est une alchimie.",
+    "ritual": "Respire la **gingembre**, garde ta **malachite** et souris au moment présent.",
+    "stone": "Malachite",
+    "essential_oil": "Gingembre",
+    "symbol": "☽"
+  },
+  {
+    "day": 25,
+    "message": "La transformation est un art de patience.",
+    "ritual": "Diffuse du **bois de cèdre**, tiens ton **grenat** et respire trois fois lentement.",
+    "stone": "Grenat",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "🜂"
+  },
+  {
+    "day": 26,
+    "message": "Ce qui brûle maintenant éclaire demain.",
+    "ritual": "Respire la **patchouli**, ta **obsidienne** dans la main.",
+    "stone": "Obsidienne",
+    "essential_oil": "Patchouli",
+    "symbol": "⚖︎"
+  },
+  {
+    "day": 27,
+    "message": "Le changement intérieur précède toujours le visible.",
+    "ritual": "Diffuse du **romarin**, garde ton **œil de tigre** et écris une intention.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Romarin",
+    "symbol": "✦"
+  },
+  {
+    "day": 28,
+    "message": "Le feu du cœur ne détruit pas, il purifie.",
+    "ritual": "Respire la **cyprès**, tiens ta **jaspe rouge** et sens la chaleur en toi.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Cyprès",
+    "symbol": "☽"
+  },
+  {
+    "day": 29,
+    "message": "Tout ce qui se transforme revient plus vrai.",
+    "ritual": "Ferme les yeux, pense à une personne qui t’a apporté de la lumière cette année, et envoie-lui une pensée silencieuse de remerciement.",
+    "stone": "Malachite",
+    "essential_oil": "Gingembre",
+    "symbol": "🜂"
+  },
+  {
+    "day": 30,
+    "message": "Le cycle se ferme, mais la lumière reste.",
+    "ritual": "Respire l’**encens**, garde ton **grenat** et dis : “Je remercie ce que j’ai été.”",
+    "stone": "Grenat",
+    "essential_oil": "Encens",
+    "symbol": "⚖︎"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "day": 2,
+    "message": "Réveille ton feu intérieur.",
+    "ritual": "Respire l’odeur chaude du **gingembre** diffusé, garde ta **cornaline** sur ton cœur.",
+    "stone": "Cornaline",
+    "essential_oil": "Gingembre",
+    "symbol": "✺"
+  },
+  {
+    "day": 3,
+    "message": "La vitalité vient du mouvement, pas de la vitesse.",
+    "ritual": "Étire doucement ton corps, ta **aventurine verte** dans la main, respire la **menthe poivrée**.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "🜂"
+  },
+  {
+    "day": 4,
+    "message": "Rayonne sans réserve.",
+    "ritual": "Diffuse du **citron**, tiens ton **œil de tigre**, et ressens la chaleur t’envahir.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 5,
+    "message": "Ton corps est ton premier soleil.",
+    "ritual": "Masse ta nuque avec une goutte d’**orange douce** diluée. Garde ton **grenat** sur toi toute la journée.",
+    "stone": "Grenat",
+    "essential_oil": "Orange douce",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 6,
+    "message": "Danse avant d’y croire.",
+    "ritual": "Mets un fond de musique, diffuse du **pamplemousse**, tiens ta **cornaline** et bouge librement.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "✺"
+  },
+  {
+    "day": 7,
+    "message": "La joie se sème dans le corps avant de fleurir dans l’âme.",
+    "ritual": "Respire une goutte de **ylang-ylang**, garde ta **citrine** dans la main et souris sans raison.",
+    "stone": "Citrine",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "🜂"
+  },
+  {
+    "day": 8,
+    "message": "L’énergie circule quand tu respires pleinement.",
+    "ritual": "Diffuse du **romarin**, place ton **aventurine verte** sur ton plexus et inspire profondément.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Romarin",
+    "symbol": "✦"
+  },
+  {
+    "day": 9,
+    "message": "La vitalité n’est pas agitation, c’est présence.",
+    "ritual": "Respire le parfum frais du **citron**, tiens ton **œil de tigre** et ressens ton ancrage.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Citron",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 10,
+    "message": "Ton rire est une prière.",
+    "ritual": "Diffuse du **pamplemousse**, garde ton **grenat** dans la main et ris franchement, même seul(e).",
+    "stone": "Grenat",
+    "essential_oil": "Pamplemousse",
+    "symbol": "✺"
+  },
+  {
+    "day": 11,
+    "message": "L’énergie se renouvelle dans la simplicité.",
+    "ritual": "Respire une goutte de **orange douce**, tiens ta **cornaline** et dis : “Je choisis la légèreté.”",
+    "stone": "Cornaline",
+    "essential_oil": "Orange douce",
+    "symbol": "🜂"
+  },
+  {
+    "day": 12,
+    "message": "Ose briller sans t’excuser.",
+    "ritual": "Diffuse du **citron**, garde ta **citrine** sur ton cœur et imagine une lumière sortir de toi.",
+    "stone": "Citrine",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 13,
+    "message": "La joie nourrit la force.",
+    "ritual": "Respire le parfum du **gingembre**, garde ton **jaspe rouge** et marche quelques pas dans la nature.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Gingembre",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 14,
+    "message": "Ton souffle est ton carburant.",
+    "ritual": "Respire profondément la **menthe poivrée** diffusée, ta **aventurine verte** dans la main.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "✺"
+  },
+  {
+    "day": 15,
+    "message": "Accueille la chaleur du jour comme une bénédiction.",
+    "ritual": "Diffuse du **ylang-ylang**, tiens ta **citrine** et sens la douceur du moment.",
+    "stone": "Citrine",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "🜂"
+  },
+  {
+    "day": 16,
+    "message": "L’énergie suit la joie, toujours.",
+    "ritual": "Respire la **orange douce**, garde ta **œil de tigre** sur le plexus et souris.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Orange douce",
+    "symbol": "✦"
+  },
+  {
+    "day": 17,
+    "message": "Sois vivant(e) sans te justifier.",
+    "ritual": "Diffuse du **pamplemousse**, tiens ta **cornaline** et respire profondément.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 18,
+    "message": "Ta force, c’est ta lumière en mouvement.",
+    "ritual": "Respire la **menthe poivrée**, garde ta **grenat** dans la main et sens ton énergie circuler.",
+    "stone": "Grenat",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "✺"
+  },
+  {
+    "day": 19,
+    "message": "Ton feu intérieur éclaire sans brûler.",
+    "ritual": "Diffuse du **gingembre**, tiens ta **jaspe rouge** sur ton ventre et inspire lentement.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Gingembre",
+    "symbol": "🜂"
+  },
+  {
+    "day": 20,
+    "message": "La vitalité aime le jeu.",
+    "ritual": "Respire la **citron**, garde ta **aventurine verte** et fais un geste spontané.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 21,
+    "message": "Ton énergie inspire celle des autres.",
+    "ritual": "Diffuse du **romarin**, tiens ton **œil de tigre** et dis : “Je rayonne librement.”",
+    "stone": "Œil de tigre",
+    "essential_oil": "Romarin",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 22,
+    "message": "Nourris ta flamme chaque matin.",
+    "ritual": "Respire la **orange douce**, garde ta **citrine** sur ton cœur et ouvre la fenêtre.",
+    "stone": "Citrine",
+    "essential_oil": "Orange douce",
+    "symbol": "✺"
+  },
+  {
+    "day": 23,
+    "message": "Le corps heureux est un corps libre.",
+    "ritual": "Diffuse du **pamplemousse**, tiens ta **cornaline** et fais trois respirations profondes.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "🜂"
+  },
+  {
+    "day": 24,
+    "message": "Rayonner, c’est partager sans s’épuiser.",
+    "ritual": "Respire le parfum frais du **citron**, garde ta **aventurine verte** et remercie ton corps.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 25,
+    "message": "Ta vitalité est un langage silencieux.",
+    "ritual": "Diffuse du **romarin**, tiens ton **jaspe rouge** et écoute les sons de la nature.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Romarin",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 26,
+    "message": "La joie simple est la plus durable.",
+    "ritual": "Respire une goutte de **orange douce** sur un mouchoir, ta **grenat** dans la main.",
+    "stone": "Grenat",
+    "essential_oil": "Orange douce",
+    "symbol": "✺"
+  },
+  {
+    "day": 27,
+    "message": "Réveille ton énergie avec gratitude.",
+    "ritual": "Diffuse du **menthe poivrée**, tiens ta **œil de tigre** et inspire le renouveau.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "🜂"
+  },
+  {
+    "day": 28,
+    "message": "L’énergie positive se crée, elle ne s’attend pas.",
+    "ritual": "Respire la **citron**, garde ta **citrine** et bouge ton corps librement.",
+    "stone": "Citrine",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 29,
+    "message": "Ta lumière nourrit ton entourage.",
+    "ritual": "Diffuse du **ylang-ylang**, tiens ta **aventurine verte** et pense à une personne à qui envoyer de la joie.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 30,
+    "message": "La vitalité, c’est l’art de dire oui à la vie.",
+    "ritual": "Respire une goutte de **pamplemousse**, ta **cornaline** dans la main, et dis : “Oui à la vie.”",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "✺"
+  },
+  {
+    "day": 31,
+    "message": "La joie partagée devient énergie infinie.",
+    "ritual": "Diffuse du **romarin**, tiens ton **citrine** et remercie ton chemin.",
+    "stone": "Citrine",
+    "essential_oil": "Romarin",
+    "symbol": "🜂"
+  }
+]

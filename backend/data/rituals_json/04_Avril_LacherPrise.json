@@ -1,0 +1,242 @@
+[
+  {
+    "day": 2,
+    "message": "Ce que tu remercies se multiplie.",
+    "ritual": "Respire la **cannelle**, ta **pierre de soleil** sur le cœur.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Cannelle",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 3,
+    "message": "La paix vient de la reconnaissance du chemin.",
+    "ritual": "Diffuse de l’**encens**, garde ton **quartz rose** et dis : “Merci pour ce jour.”",
+    "stone": "Quartz rose",
+    "essential_oil": "Encens",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 4,
+    "message": "Remercier, c’est honorer la vie telle qu’elle est.",
+    "ritual": "Respire une goutte de **vanille**, ta **aventurine verte** dans la main.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Vanille",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 5,
+    "message": "La gratitude transforme le manque en plénitude.",
+    "ritual": "Diffuse du **bois de cèdre**, tiens ton **améthyste** et respire lentement.",
+    "stone": "Améthyste",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "✧"
+  },
+  {
+    "day": 6,
+    "message": "Tu es déjà béni(e) de tout ce que tu vis.",
+    "ritual": "Respire l’**orange douce**, garde ta **pyrite** sur ton plexus.",
+    "stone": "Pyrite",
+    "essential_oil": "Orange douce",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 7,
+    "message": "La reconnaissance attire la lumière.",
+    "ritual": "Diffuse de la **cannelle**, tiens ta **citrine** et dis : “Merci à la vie.”",
+    "stone": "Citrine",
+    "essential_oil": "Cannelle",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 8,
+    "message": "Chaque instant est un cadeau à ouvrir.",
+    "ritual": "Respire la **vanille**, ta **pierre de soleil** sur le cœur.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Vanille",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 9,
+    "message": "La gratitude rend chaque jour sacré.",
+    "ritual": "Diffuse de l’**encens**, garde ton **quartz rose** et reste en silence trois respirations.",
+    "stone": "Quartz rose",
+    "essential_oil": "Encens",
+    "symbol": "✧"
+  },
+  {
+    "day": 10,
+    "message": "Rien ne t’est dû, tout t’est offert.",
+    "ritual": "Respire la **orange douce**, tiens ton **aventurine verte** et souris.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Orange douce",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 11,
+    "message": "Remercier, c’est s’ouvrir à la paix.",
+    "ritual": "Diffuse du **bois de cèdre**, ta **améthyste** dans la main.",
+    "stone": "Améthyste",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 12,
+    "message": "Le bonheur est un état de gratitude.",
+    "ritual": "Respire une goutte de **cannelle**, garde ta **pyrite** sur le plexus.",
+    "stone": "Pyrite",
+    "essential_oil": "Cannelle",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 13,
+    "message": "Chaque respiration est un merci.",
+    "ritual": "Diffuse de la **vanille**, tiens ta **citrine** et observe ton souffle.",
+    "stone": "Citrine",
+    "essential_oil": "Vanille",
+    "symbol": "✧"
+  },
+  {
+    "day": 14,
+    "message": "L’abondance naît d’un cœur reconnaissant.",
+    "ritual": "Respire l’**encens**, ta **pierre de soleil** sur le cœur.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Encens",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 15,
+    "message": "La gratitude efface le poids du passé.",
+    "ritual": "Diffuse de l’**orange douce**, garde ton **quartz rose** et respire lentement.",
+    "stone": "Quartz rose",
+    "essential_oil": "Orange douce",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 16,
+    "message": "Ce que tu remercies devient lumière.",
+    "ritual": "Respire la **bois de cèdre**, tiens ton **aventurine verte** et souris doucement.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 17,
+    "message": "La paix intérieure est un merci silencieux.",
+    "ritual": "Diffuse du **cannelle**, garde ton **améthyste** et ferme les yeux.",
+    "stone": "Améthyste",
+    "essential_oil": "Cannelle",
+    "symbol": "✧"
+  },
+  {
+    "day": 18,
+    "message": "La gratitude t’aligne avec la joie.",
+    "ritual": "Respire la **vanille**, ta **pyrite** dans la main.",
+    "stone": "Pyrite",
+    "essential_oil": "Vanille",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 19,
+    "message": "Remercier, c’est reconnaître la beauté du présent.",
+    "ritual": "Diffuse du **encens**, tiens ta **citrine** et dis intérieurement “merci”.",
+    "stone": "Citrine",
+    "essential_oil": "Encens",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 20,
+    "message": "Tu es le fruit de tes propres bénédictions.",
+    "ritual": "Respire la **orange douce**, garde ta **pierre de soleil** sur ton plexus.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Orange douce",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 21,
+    "message": "La gratitude relie le cœur et la lumière.",
+    "ritual": "Diffuse du **bois de cèdre**, tiens ton **quartz rose** et souris à ton reflet.",
+    "stone": "Quartz rose",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "✧"
+  },
+  {
+    "day": 22,
+    "message": "Ce que tu remercies devient paix.",
+    "ritual": "Respire la **vanille**, ta **aventurine verte** dans la main.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Vanille",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 23,
+    "message": "La reconnaissance dissout les ombres.",
+    "ritual": "Diffuse de la **cannelle**, garde ton **améthyste** et observe la lumière d’une bougie.",
+    "stone": "Améthyste",
+    "essential_oil": "Cannelle",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 24,
+    "message": "Tu es lumière parmi les lumières.",
+    "ritual": "Respire la **encens**, tiens ta **pyrite** et ferme les yeux.",
+    "stone": "Pyrite",
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 25,
+    "message": "Remercier, c’est aimer sans condition.",
+    "ritual": "Diffuse de l’**orange douce**, garde ta **citrine** et respire profondément.",
+    "stone": "Citrine",
+    "essential_oil": "Orange douce",
+    "symbol": "✧"
+  },
+  {
+    "day": 26,
+    "message": "La gratitude est la mémoire du cœur.",
+    "ritual": "Respire la **bois de cèdre**, ta **pierre de soleil** sur ton plexus.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 27,
+    "message": "Ce que tu offres avec joie revient amplifié.",
+    "ritual": "Diffuse de la **vanille**, tiens ton **quartz rose** et souris à la vie.",
+    "stone": "Quartz rose",
+    "essential_oil": "Vanille",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 28,
+    "message": "La paix est un merci silencieux.",
+    "ritual": "Respire l’**encens**, garde ton **aventurine verte** dans la main.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 29,
+    "message": "Chaque fin est une bénédiction déguisée.",
+    "ritual": "Diffuse du **cannelle**, tiens ton **améthyste** et dis : “Je remercie pour tout.”",
+    "stone": "Améthyste",
+    "essential_oil": "Cannelle",
+    "symbol": "✧"
+  },
+  {
+    "day": 30,
+    "message": "Le cycle se ferme dans la lumière.",
+    "ritual": "Respire la **orange douce**, ta **pyrite** sur le cœur, et souris au chemin parcouru.",
+    "stone": "Pyrite",
+    "essential_oil": "Orange douce",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 31,
+    "message": "La gratitude est ton ultime renaissance.",
+    "ritual": "Diffuse de la **vanille**, garde ta **citrine** et dis : “Merci à la vie, merci à moi.”",
+    "stone": "Citrine",
+    "essential_oil": "Vanille",
+    "symbol": "☁︎"
+  }
+]

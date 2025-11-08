@@ -1,0 +1,234 @@
+[
+  {
+    "day": 2,
+    "message": "Ce que tu accueilles s’apaise.",
+    "ritual": "Respire une goutte de **camomille romaine**, ta **rhodonite** sur le cœur.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 3,
+    "message": "Pardonner, c’est se libérer soi-même.",
+    "ritual": "Diffuse du **bois de santal**, garde ta **morganite** dans la main.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
+  },
+  {
+    "day": 4,
+    "message": "La douceur répare plus que la force.",
+    "ritual": "Respire la **rose**, tiens ta **pierre de lune** et souris doucement.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "☽"
+  },
+  {
+    "day": 5,
+    "message": "Le calme est un baume invisible.",
+    "ritual": "Diffuse de l’**encens**, garde ton **améthyste** et observe ton souffle.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 6,
+    "message": "Tu n’as rien à corriger, seulement à apaiser.",
+    "ritual": "Respire la **camomille romaine**, ta **quartz rose** sur ton plexus.",
+    "stone": "Quartz rose",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 7,
+    "message": "La guérison vient avec la patience.",
+    "ritual": "Diffuse du **bois de santal**, tiens ta **rhodonite** et ferme les yeux quelques secondes.",
+    "stone": "Rhodonite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
+  },
+  {
+    "day": 8,
+    "message": "Tu ne peux pas guérir sans tendresse.",
+    "ritual": "Respire la **géranium rosat**, garde ta **morganite** dans la main.",
+    "stone": "Morganite",
+    "essential_oil": "Géranium rosat",
+    "symbol": "☽"
+  },
+  {
+    "day": 9,
+    "message": "L’amour que tu donnes te soigne aussi.",
+    "ritual": "Diffuse de la **rose**, ta **pierre de lune** sur ton cœur.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 10,
+    "message": "La guérison est un retour à l’amour.",
+    "ritual": "Respire l’**encens**, garde ton **améthyste** et souris à ton reflet.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 11,
+    "message": "La compassion est une lumière douce.",
+    "ritual": "Diffuse la **lavande**, tiens ton **quartz rose** et dis : “Je m’accueille pleinement.”",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "✧"
+  },
+  {
+    "day": 12,
+    "message": "L’apaisement se trouve dans la lenteur.",
+    "ritual": "Respire la **camomille romaine**, ta **rhodonite** sur ton plexus.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☽"
+  },
+  {
+    "day": 13,
+    "message": "Guérir, c’est apprendre à rester doux avec soi.",
+    "ritual": "Diffuse du **bois de santal**, garde ta **morganite** et respire lentement.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 14,
+    "message": "Les larmes sont une forme de libération.",
+    "ritual": "Respire la **rose**, tiens ta **pierre de lune** et laisse venir ce qui vient.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 15,
+    "message": "La guérison n’est pas linéaire, elle est vivante.",
+    "ritual": "Diffuse de l’**encens**, ta **améthyste** dans la main.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "✧"
+  },
+  {
+    "day": 16,
+    "message": "Le repos est une médecine du cœur.",
+    "ritual": "Respire la **lavande**, garde ton **quartz rose** et reste immobile un instant.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "☽"
+  },
+  {
+    "day": 17,
+    "message": "Guérir, c’est aimer ses propres cicatrices.",
+    "ritual": "Diffuse de la **camomille romaine**, tiens ta **rhodonite** et dis : “Je me pardonne.”",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 18,
+    "message": "La douceur est ton abri.",
+    "ritual": "Respire le **bois de santal**, ta **morganite** sur ton cœur.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 19,
+    "message": "Guérir, c’est se souvenir sans douleur.",
+    "ritual": "Diffuse du **géranium rosat**, garde ta **pierre de lune** et souris au passé.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Géranium rosat",
+    "symbol": "✧"
+  },
+  {
+    "day": 20,
+    "message": "Ce qui se brise en toi apprend à aimer autrement.",
+    "ritual": "Respire la **rose**, ta **améthyste** dans la main.",
+    "stone": "Améthyste",
+    "essential_oil": "Rose",
+    "symbol": "☽"
+  },
+  {
+    "day": 21,
+    "message": "La paix du cœur guérit tout le reste.",
+    "ritual": "Diffuse de la **lavande**, garde ton **quartz rose** et respire trois fois.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 22,
+    "message": "Le calme soigne mieux que la colère.",
+    "ritual": "Respire la **camomille romaine**, tiens ta **rhodonite** et souris doucement.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 23,
+    "message": "Tu n’as rien à réparer, seulement à comprendre.",
+    "ritual": "Diffuse du **bois de santal**, ta **morganite** sur ton plexus.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
+  },
+  {
+    "day": 24,
+    "message": "L’amour est la forme la plus haute de guérison.",
+    "ritual": "Respire la **géranium rosat**, garde ta **pierre de lune** et ferme les yeux.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Géranium rosat",
+    "symbol": "☽"
+  },
+  {
+    "day": 25,
+    "message": "La paix vient quand tu cesses de te blâmer.",
+    "ritual": "Diffuse de l’**encens**, tiens ton **améthyste** et dis : “Je me choisis.”",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 26,
+    "message": "La guérison n’est pas un effort, c’est une ouverture.",
+    "ritual": "Respire la **rose**, ta **quartz rose** sur le cœur.",
+    "stone": "Quartz rose",
+    "essential_oil": "Rose",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 27,
+    "message": "Chaque respiration est un début.",
+    "ritual": "Diffuse de la **camomille romaine**, garde ta **rhodonite** dans la main.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "✧"
+  },
+  {
+    "day": 28,
+    "message": "L’amour guérit ce que le temps n’efface pas.",
+    "ritual": "Respire le **bois de santal**, ta **morganite** sur ton plexus.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "☽"
+  },
+  {
+    "day": 29,
+    "message": "Ce que tu acceptes s’apaise.",
+    "ritual": "Diffuse de la **lavande**, tiens ta **pierre de lune** et respire lentement.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Lavande",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 30,
+    "message": "Guérir, c’est redevenir entier.",
+    "ritual": "Respire l’**encens**, garde ton **améthyste** et remercie-toi.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "☁︎"
+  }
+]

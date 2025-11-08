@@ -1,0 +1,218 @@
+[
+  {
+    "day": 2,
+    "message": "Tout ce que tu fuis finit par te rattraper en douceur.",
+    "ritual": "Respire la myrrhe, ta améthyste sur le cœur.",
+    "stone": "Améthyste",
+    "essential_oil": "Myrrhe",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 3,
+    "message": "La profondeur commence là où le bruit cesse.",
+    "ritual": "Diffuse du santal, garde ta labradorite dans la main et reste en silence.",
+    "stone": "Labradorite",
+    "essential_oil": "Santal",
+    "symbol": "✦"
+  },
+  {
+    "day": 4,
+    "message": "Ce que tu regardes en face perd son pouvoir sur toi.",
+    "ritual": "Respire la patchouli, tiens ton onyx et répète : “Je me choisis.”",
+    "stone": "Onyx",
+    "essential_oil": "Patchouli",
+    "symbol": "🜄"
+  },
+  {
+    "day": 5,
+    "message": "L’introspection n’est pas isolement, c’est rencontre.",
+    "ritual": "Diffuse du cèdre, ta fluorite violette sur le plexus.",
+    "stone": "Fluorite violette",
+    "essential_oil": "Cèdre",
+    "symbol": "☽"
+  },
+  {
+    "day": 6,
+    "message": "La vérité intérieure n’a pas besoin de décor.",
+    "ritual": "Respire la rose, garde ton Quartz rose et regarde la flamme d’une bougie.",
+    "stone": "Quartz rose",
+    "essential_oil": "Rose",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 7,
+    "message": "Le calme révèle ce que l’agitation cache.",
+    "ritual": "Diffuse de la myrrhe, tiens ton améthyste et ferme les yeux lentement.",
+    "stone": "Améthyste",
+    "essential_oil": "Myrrhe",
+    "symbol": "✦"
+  },
+  {
+    "day": 8,
+    "message": "Observer, ce n’est pas juger.",
+    "ritual": "Respire le santal, ta labradorite dans la main, et laisse les pensées défiler.",
+    "stone": "Labradorite",
+    "essential_oil": "Santal",
+    "symbol": "🜄"
+  },
+  {
+    "day": 9,
+    "message": "Le silence n’est pas vide, il est plein de réponses.",
+    "ritual": "Diffuse du patchouli, garde ton œil de faucon sur le cœur.",
+    "stone": "Œil de faucon",
+    "essential_oil": "Patchouli",
+    "symbol": "☽"
+  },
+  {
+    "day": 10,
+    "message": "La clarté vient du recul, pas de la lutte.",
+    "ritual": "Respire la cèdre, tiens ta fluorite violette et observe ton état intérieur.",
+    "stone": "Fluorite violette",
+    "essential_oil": "Cèdre",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 11,
+    "message": "Ce que tu comprends de toi change ton regard sur le monde.",
+    "ritual": "Diffuse de l’encens, ta obsidienne sur le plexus.",
+    "stone": "Obsidienne",
+    "essential_oil": "Encens",
+    "symbol": "✦"
+  },
+  {
+    "day": 12,
+    "message": "L’introspection est une lumière douce.",
+    "ritual": "Respire la myrrhe, garde ton améthyste et souris légèrement.",
+    "stone": "Améthyste",
+    "essential_oil": "Myrrhe",
+    "symbol": "🜄"
+  },
+  {
+    "day": 13,
+    "message": "La lucidité n’est pas dureté, c’est clarté.",
+    "ritual": "Diffuse du santal, tiens ta labradorite et inspire profondément.",
+    "stone": "Labradorite",
+    "essential_oil": "Santal",
+    "symbol": "☽"
+  },
+  {
+    "day": 14,
+    "message": "L’ombre n’est pas l’ennemie de la lumière.",
+    "ritual": "Respire la patchouli, ta onyx dans la main.",
+    "stone": "Onyx",
+    "essential_oil": "Patchouli",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 15,
+    "message": "Se comprendre, c’est déjà guérir.",
+    "ritual": "Diffuse du cèdre, garde ta fluorite violette et reste en silence trois respirations.",
+    "stone": "Fluorite violette",
+    "essential_oil": "Cèdre",
+    "symbol": "✦"
+  },
+  {
+    "day": 16,
+    "message": "Le silence dit la vérité que les mots cachent.",
+    "ritual": "Respire la encens, tiens ton obsidienne et ferme les yeux.",
+    "stone": "Obsidienne",
+    "essential_oil": "Encens",
+    "symbol": "🜄"
+  },
+  {
+    "day": 17,
+    "message": "Ce que tu refuses d’écouter en toi reviendra frapper.",
+    "ritual": "Diffuse la myrrhe, ta améthyste sur le cœur.",
+    "stone": "Améthyste",
+    "essential_oil": "Myrrhe",
+    "symbol": "☽"
+  },
+  {
+    "day": 18,
+    "message": "Le calme est une lampe dans la nuit.",
+    "ritual": "Respire le santal, garde ta labradorite dans la main.",
+    "stone": "Labradorite",
+    "essential_oil": "Santal",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 19,
+    "message": "L’introspection, c’est oser être nu devant soi.",
+    "ritual": "Diffuse du patchouli, tiens ton onyx et souris doucement.",
+    "stone": "Onyx",
+    "essential_oil": "Patchouli",
+    "symbol": "✦"
+  },
+  {
+    "day": 20,
+    "message": "Ta vérité ne se dit pas, elle se vit.",
+    "ritual": "Respire la cèdre, ta fluorite violette sur ton plexus.",
+    "stone": "Fluorite violette",
+    "essential_oil": "Cèdre",
+    "symbol": "🜄"
+  },
+  {
+    "day": 21,
+    "message": "Le silence est ton enseignant le plus ancien.",
+    "ritual": "Diffuse de l’encens, garde ton obsidienne et observe ton souffle.",
+    "stone": "Obsidienne",
+    "essential_oil": "Encens",
+    "symbol": "☽"
+  },
+  {
+    "day": 22,
+    "message": "Ce que tu comprends dans la solitude devient sagesse.",
+    "ritual": "Respire la myrrhe, tiens ton améthyste et dis : “Je m’écoute vraiment.”",
+    "stone": "Améthyste",
+    "essential_oil": "Myrrhe",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 23,
+    "message": "Regarder en soi, c’est déjà changer.",
+    "ritual": "Diffuse du santal, ta labradorite dans la main.",
+    "stone": "Labradorite",
+    "essential_oil": "Santal",
+    "symbol": "✦"
+  },
+  {
+    "day": 24,
+    "message": "L’introspection n’est pas fermeture, c’est ouverture consciente.",
+    "ritual": "Respire la patchouli, garde ton œil de faucon sur le cœur.",
+    "stone": "Œil de faucon",
+    "essential_oil": "Patchouli",
+    "symbol": "🜄"
+  },
+  {
+    "day": 25,
+    "message": "Le calme profond est une puissance stable.",
+    "ritual": "Diffuse du cèdre, tiens ta fluorite violette et ferme les yeux un instant.",
+    "stone": "Fluorite violette",
+    "essential_oil": "Cèdre",
+    "symbol": "☽"
+  },
+  {
+    "day": 26,
+    "message": "Ce que tu acceptes en toi s’apaise.",
+    "ritual": "Respire l’encens, garde ton obsidienne dans la main.",
+    "stone": "Obsidienne",
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 27,
+    "message": "Le silence rend visible l’essentiel.",
+    "ritual": "Diffuse de la myrrhe, tiens ton améthyste et respire lentement.",
+    "stone": "Améthyste",
+    "essential_oil": "Myrrhe",
+    "symbol": "✦"
+  },
+  {
+    "day": 28,
+    "message": "Tu n’as rien à fuir quand tu es dans la vérité.",
+    "ritual": "Respire le santal, ta labradorite sur le plexus.",
+    "stone": "Labradorite",
+    "essential_oil": "Santal",
+    "symbol": "🜄"
+  }
+]
