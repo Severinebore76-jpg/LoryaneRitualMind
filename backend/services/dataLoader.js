@@ -60,7 +60,7 @@ export function getRitualByDay(monthFileName, day) {
   const monthData = loadMonthData(monthFileName);
   if (!monthData || !Array.isArray(monthData)) return null;
 
-  return monthData.find((entry) => entry.day === day) || null;
+  return monthData.find((entry) => Number(entry.day) === Number(day)) || null;
 }
 
 /**
@@ -83,6 +83,32 @@ export function loadAllRituals() {
   }
 
   return allData;
+}
+
+/**
+ * 📦 Charge un fichier JSON générique (ex: messages.json)
+ * @param {string} fileName — nom du fichier JSON dans /data/
+ * @returns {object|null} — contenu JSON ou null en cas d’erreur
+ */
+export function loadJSON(fileName) {
+  try {
+    // Cherche d’abord dans /data/, sinon dans /data/rituals_json/
+    let filePath = path.join(__dirname, "../data", fileName);
+
+    if (!fs.existsSync(filePath)) {
+      filePath = path.join(__dirname, "../data/rituals_json", fileName);
+    }
+
+    if (!fs.existsSync(filePath)) {
+      throw new Error(`Fichier JSON introuvable : ${fileName}`);
+    }
+
+    const fileData = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(fileData);
+  } catch (err) {
+    console.error(`❌ Erreur lors du chargement de ${fileName}:`, err);
+    return null;
+  }
 }
 
 console.log("✅ dataLoader prêt — lecture des rituels depuis :", DATA_DIR);

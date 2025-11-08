@@ -92,3 +92,51 @@ export const getAvailableMonths = (req, res) => {
     res.status(500).json({ success: false, message: "Erreur serveur interne" });
   }
 };
+
+/**
+ * 🌞 GET /api/rituals/today
+ * Retourne le rituel du jour selon la date système.
+ */
+export const getTodayRitual = (req, res) => {
+  try {
+    const now = new Date();
+    const day = now.getDate();
+    const month = now.getMonth() + 1;
+
+    // correspondances mois/fichiers
+    const monthFiles = [
+      "01_Janvier_Renaissance",
+      "02_Fevrier_DouceurAmour",
+      "03_Mars_Eveil",
+      "04_Avril_Renouveau",
+      "05_Mai_Equilibre",
+      "06_Juin_Energie",
+      "07_Juillet_Liberte",
+      "08_Aout_Connexion",
+      "09_Septembre_Harmonie",
+      "10_Octobre_Transformation",
+      "11_Novembre_Guerison",
+      "12_Decembre_Paix",
+    ];
+
+    const monthFile = monthFiles[month - 1];
+    const ritual = getRitualByDay(monthFile, day);
+
+    if (!ritual) {
+      return res.status(404).json({
+        success: false,
+        message: `Aucun rituel trouvé pour le ${day} ${monthFile}.`,
+      });
+    }
+
+    return res.status(200).json({
+      success: true,
+      month: monthFile,
+      day,
+      ritual,
+    });
+  } catch (error) {
+    console.error("❌ Erreur getTodayRitual :", error);
+    res.status(500).json({ success: false, message: "Erreur serveur interne" });
+  }
+};

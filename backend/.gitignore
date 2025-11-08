@@ -1,2 +1,56 @@
-node_modules
+# ---------------------------
+# 🌿 Orelys Ritual Mind — .gitignore
+# Expo + React Native + Node.js backend
+# ---------------------------
+
+# 📦 Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# ⚙️ Build / Cache
+dist/
+build/
+.cache/
+.expo/
+.expo-shared/
+web-build/
+
+# 🧠 IDE / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# 🌐 Environment
 .env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# 🪶 Logs
+*.log
+logs/
+*.tmp
+
+# 🧩 Expo
+.expo/
+.expo-shared/
+.expo-dev-cache/
+.expo-tmp/
+
+# 📁 Backend outputs
+backend/node_modules/
+backend/.env
+backend/logs/
+backend/tmp/
+backend/data/backups/
+backend/uploads/
+
+# 🔒 Misc
+coverage/
+__pycache__/
+Thumbs.db

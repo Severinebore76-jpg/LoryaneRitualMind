@@ -1,29 +1,20 @@
-// 🧩 routes/rituals.js
-// ------------------------------------------------------------
-// Définition des routes principales liées aux rituels.
-// Chaque route appelle les fonctions du contrôleur correspondant.
-// ------------------------------------------------------------
-
+// backend/routes/rituals.js
 import express from "express";
 import {
   getAllRituals,
   getAvailableMonths,
   getRitualByMonthAndDay,
   getRitualsByMonth,
-} from "../controllers/ritualsController.js";
+  getTodayRitual,
+} from "../controllers/ritualsController.js"; // <- vérifie bien l’orthographe du chemin réel
 
 const router = express.Router();
 
-// 🔹 GET /api/rituals — Retourne tous les rituels (12 mois)
-router.get("/", getAllRituals);
-
-// 🔹 GET /api/rituals/months — Liste des fichiers (mois) disponibles
-router.get("/months", getAvailableMonths);
-
-// 🔹 GET /api/rituals/:month — Données d’un mois spécifique
-router.get("/:month", getRitualsByMonth);
-
-// 🔹 GET /api/rituals/:month/:day — Rituel d’un jour précis
-router.get("/:month/:day", getRitualByMonthAndDay);
+// Spécifiques d'abord, dynamiques ensuite
+router.get("/", getAllRituals); // /api/rituals
+router.get("/months", getAvailableMonths); // /api/rituals/months
+router.get("/today", getTodayRitual); // /api/rituals/today  ✅ avant toute dynamique
+router.get("/:month/:day", getRitualByMonthAndDay); // /api/rituals/:month/:day
+router.get("/:month", getRitualsByMonth); // /api/rituals/:month
 
 export default router;

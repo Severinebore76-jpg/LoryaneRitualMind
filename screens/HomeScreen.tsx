@@ -13,7 +13,7 @@ export default function HomeScreen() {
       setLoading(true);
       // iOS Simulator → localhost = ta machine (OK).
       // Si tu passes sur iPhone physique : remplace par l’IP de ton Mac, ex: http://192.168.0.xx:5050
-      const res = await fetch("http://localhost:5050/api/test");
+      const res = await fetch("http://192.168.0.22:5050/api/test");
       const data = await res.json();
       setApiOk({ ok: true, message: data?.message ?? "OK" });
     } catch (e: any) {
