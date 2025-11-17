@@ -1,0 +1,212 @@
+[
+  {
+    "day": 1,
+    "message": "La guérison commence quand tu t’autorises à sentir.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 2,
+    "message": "Ce que tu accueilles s’apaise.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 3,
+    "message": "Pardonner, c’est se libérer soi-même.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
+  },
+  {
+    "day": 4,
+    "message": "La douceur répare plus que la force.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "☽"
+  },
+  {
+    "day": 5,
+    "message": "Le calme est un baume invisible.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 6,
+    "message": "Tu n’as rien à corriger, seulement à apaiser.",
+    "stone": "Quartz rose",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 7,
+    "message": "La guérison vient avec la patience.",
+    "stone": "Rhodonite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
+  },
+  {
+    "day": 8,
+    "message": "Tu ne peux pas guérir sans tendresse.",
+    "stone": "Morganite",
+    "essential_oil": "Géranium rosat",
+    "symbol": "☽"
+  },
+  {
+    "day": 9,
+    "message": "L’amour que tu donnes te soigne aussi.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 10,
+    "message": "La guérison est un retour à l’amour.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 11,
+    "message": "La compassion est une lumière douce.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "✧"
+  },
+  {
+    "day": 12,
+    "message": "L’apaisement se trouve dans la lenteur.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☽"
+  },
+  {
+    "day": 13,
+    "message": "Guérir, c’est apprendre à rester doux avec soi.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 14,
+    "message": "Les larmes sont une forme de libération.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 15,
+    "message": "La guérison n’est pas linéaire, elle est vivante.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "✧"
+  },
+  {
+    "day": 16,
+    "message": "Le repos est une médecine du cœur.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "☽"
+  },
+  {
+    "day": 17,
+    "message": "Guérir, c’est aimer ses propres cicatrices.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 18,
+    "message": "La douceur est ton abri.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 19,
+    "message": "Guérir, c’est se souvenir sans douleur.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Géranium rosat",
+    "symbol": "✧"
+  },
+  {
+    "day": 20,
+    "message": "Ce qui se brise en toi apprend à aimer autrement.",
+    "stone": "Améthyste",
+    "essential_oil": "Rose",
+    "symbol": "☽"
+  },
+  {
+    "day": 21,
+    "message": "La paix du cœur guérit tout le reste.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 22,
+    "message": "Le calme soigne mieux que la colère.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 23,
+    "message": "Tu n’as rien à réparer, seulement à comprendre.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
+  },
+  {
+    "day": 24,
+    "message": "L’amour est la forme la plus haute de guérison.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Géranium rosat",
+    "symbol": "☽"
+  },
+  {
+    "day": 25,
+    "message": "La paix vient quand tu cesses de te blâmer.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 26,
+    "message": "La guérison n’est pas un effort, c’est une ouverture.",
+    "stone": "Quartz rose",
+    "essential_oil": "Rose",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 27,
+    "message": "Chaque respiration est un début.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "✧"
+  },
+  {
+    "day": 28,
+    "message": "L’amour guérit ce que le temps n’efface pas.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "☽"
+  },
+  {
+    "day": 29,
+    "message": "Ce que tu acceptes s’apaise.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Lavande",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 30,
+    "message": "Guérir, c’est redevenir entier.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "☁︎"
+  }
+]

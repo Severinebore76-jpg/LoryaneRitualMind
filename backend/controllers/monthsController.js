@@ -1,37 +1,57 @@
-// backend/controllers/monthsController.js
-// ----------------------------------------------------
-// Gère les requêtes liées aux mois (ensemble des fichiers mensuels JSON)
-// ----------------------------------------------------
+// @ts-nocheck
 
 import fs from "fs";
 import path from "path";
-import { fileURLToPath } from "url";
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const jsonDir = path.join(__dirname, "../content/json");
+// ---------------------------
+// Charge un fichier JSON de mois
+// ---------------------------
+const loadMonthJSON = async (fileName) => {
+  const filePath = path.join(
+    process.cwd(),
+    "backend",
+    "data",
+    "months_json",
+    fileName
+  );
+  const raw = await fs.promises.readFile(filePath, "utf-8");
+  return JSON.parse(raw);
+};
 
+// ---------------------------
+// Récupère la liste des mois
+// ---------------------------
 export const getAllMonths = async (req, res, next) => {
   try {
-    const files = fs.readdirSync(jsonDir).filter((f) => f.endsWith(".json"));
-    const months = files.map((f) => f.replace(".json", ""));
-    res.status(200).json({ months });
-  } catch (err) {
-    next(err);
+    const monthsPath = path.join(
+      process.cwd(),
+      "backend",
+      "data",
+      "months_json"
+    );
+    const files = await fs.promises.readdir(monthsPath);
+
+    const months = files
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => f.replace(".json", ""));
+
+    res.status(200).json(months);
+  } catch (error) {
+    next(error);
   }
 };
 
+// ---------------------------
+// Récupère le contenu d’un mois
+// ---------------------------
 export const getMonthContent = async (req, res, next) => {
   try {
-    const { month } = req.params;
-    const filePath = path.join(jsonDir, `${month}.json`);
+    const monthKey = req.params.month;
+    const filename = `${monthKey}.json`;
+    const data = await loadMonthJSON(filename);
 
-    if (!fs.existsSync(filePath)) {
-      return res.status(404).json({ message: "Fichier mensuel introuvable" });
-    }
-
-    const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
     res.status(200).json(data);
-  } catch (err) {
-    next(err);
+  } catch (error) {
+    next(error);
   }
 };

@@ -1,9 +1,12 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Home, Orbit, Star } from "lucide-react-native";
+import { Home, Moon, Orbit, Scroll, Star, User } from "lucide-react-native";
 import React from "react";
 import { getOrelysTheme } from "../constants/theme";
 import FavoritesScreen from "../screens/FavoritesScreen";
+import HistoryScreen from "../screens/HistoryScreen";
 import HomeScreen from "../screens/HomeScreen";
+import MeditationScreen from "../screens/MeditationScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 import RitualScreen from "../screens/RitualScreen";
 
 const Tab = createBottomTabNavigator();
@@ -59,6 +62,15 @@ export default function AppNavigator() {
         }}
       />
 
+      {/* 🌙 MÉDITATION DU MOIS */}
+      <Tab.Screen
+        name="Méditation"
+        component={MeditationScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Moon size={26} color={color} />,
+        }}
+      />
+
       {/* ⭐ FAVORIS */}
       <Tab.Screen
         name="Favoris"
@@ -70,6 +82,24 @@ export default function AppNavigator() {
           tabBarLabel: "Favoris",
         }}
       />
+        {/* 📜 HISTORIQUE */}
+      <Tab.Screen
+        name="Historique"
+        component={HistoryScreen}
+        options={{
+          tabBarIcon: ({ color }) => <Scroll size={26} color={color} />,
+        }}
+      />
+
+      {/* 👤 PROFIL */}
+      <Tab.Screen
+        name="Profil"
+        component={ProfileScreen}
+        options={{
+          tabBarIcon: ({ color }) => <User size={26} color={color} />,
+        }}
+      />
+
     </Tab.Navigator>
   );
 }

@@ -1,15 +1,22 @@
 // 🧩 ritualsController.js
 // ------------------------------------------------------------
 // Contrôleur des routes liées aux rituels Orelys Ritual Mind.
-// Utilise le service dataLoader.js pour lire les fichiers JSON.
 // ------------------------------------------------------------
+
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 import {
   getRitualByDay,
   listAvailableMonths,
   loadAllRituals,
   loadMonthData,
-} from "../services/dataLoader.js";
+} from "../services/dataLoader.js"; // ⭐ Nécessaire pour __dirname en ES Modules
+
+// Reconstruction __dirname (ES Modules)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 /**
  * 📚 GET /api/rituals
@@ -68,9 +75,12 @@ export const getRitualByMonthAndDay = (req, res) => {
       });
     }
 
-    return res
-      .status(200)
-      .json({ success: true, month, day: Number(day), ritual });
+    return res.status(200).json({
+      success: true,
+      month,
+      day: Number(day),
+      ritual,
+    });
   } catch (error) {
     console.error("❌ Erreur getRitualByMonthAndDay :", error);
     res.status(500).json({ success: false, message: "Erreur serveur interne" });
@@ -84,9 +94,11 @@ export const getRitualByMonthAndDay = (req, res) => {
 export const getAvailableMonths = (req, res) => {
   try {
     const months = listAvailableMonths();
-    return res
-      .status(200)
-      .json({ success: true, count: months.length, months });
+    return res.status(200).json({
+      success: true,
+      count: months.length,
+      months,
+    });
   } catch (error) {
     console.error("❌ Erreur getAvailableMonths :", error);
     res.status(500).json({ success: false, message: "Erreur serveur interne" });
@@ -95,7 +107,7 @@ export const getAvailableMonths = (req, res) => {
 
 /**
  * 🌞 GET /api/rituals/today
- * Retourne le rituel du jour selon la date système.
+ * Version DYNAMIQUE — fiable et propre.
  */
 export const getTodayRitual = (req, res) => {
   try {
@@ -103,40 +115,48 @@ export const getTodayRitual = (req, res) => {
     const day = now.getDate();
     const month = now.getMonth() + 1;
 
-    // correspondances mois/fichiers
-    const monthFiles = [
-      "01_Janvier_Renaissance",
-      "02_Fevrier_DouceurAmour",
-      "03_Mars_Eveil",
-      "04_Avril_Renouveau",
-      "05_Mai_Equilibre",
-      "06_Juin_Energie",
-      "07_Juillet_Liberte",
-      "08_Aout_Connexion",
-      "09_Septembre_Harmonie",
-      "10_Octobre_Transformation",
-      "11_Novembre_Guerison",
-      "12_Decembre_Paix",
-    ];
+    // 📂 Chemin correct (SANS backend/backend)
+    const ritualsDir = path.join(__dirname, "../data/rituals_json");
 
-    const monthFile = monthFiles[month - 1];
-    const ritual = getRitualByDay(monthFile, day);
+    // 📄 Liste réelle des fichiers
+    const files = fs.readdirSync(ritualsDir);
+
+    // Format préfixe : "11_" pour novembre
+    const monthPrefix = String(month).padStart(2, "0") + "_";
+    const monthFile = files.find((f) => f.startsWith(monthPrefix));
+
+    if (!monthFile) {
+      return res.status(404).json({
+        success: false,
+        message: `Aucun fichier JSON trouvé pour le mois ${month}`,
+      });
+    }
+
+    // Nom sans extension
+    const monthKey = monthFile.replace(".json", "");
+
+    // Récupération du rituel
+    const ritual = getRitualByDay(monthKey, day);
 
     if (!ritual) {
       return res.status(404).json({
         success: false,
-        message: `Aucun rituel trouvé pour le ${day} ${monthFile}.`,
+        message: `Aucun rituel trouvé pour le jour ${day} (${monthKey}).`,
       });
     }
 
+    // Réponse complète
     return res.status(200).json({
       success: true,
-      month: monthFile,
+      month: monthKey,
       day,
       ritual,
     });
   } catch (error) {
     console.error("❌ Erreur getTodayRitual :", error);
-    res.status(500).json({ success: false, message: "Erreur serveur interne" });
+    res.status(500).json({
+      success: false,
+      message: "Erreur serveur interne",
+    });
   }
 };

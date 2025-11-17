@@ -1,9 +1,11 @@
 // screens/FavoritesScreen.tsx
+// @ts-nocheck
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import {
   Alert,
+  Image,
   ScrollView,
   StyleSheet,
   Text,
@@ -18,18 +20,70 @@ import {
   getThemeForMonth,
 } from "../constants/theme";
 
+// Symboles luxe (icônes)
+import { SYMBOLS_MAP } from "../constants/symbols";
+
+// 🆕 Import du composant “symbole + label”
+import SymbolDisplay from "../components/SymbolDisplay";
+
 export default function FavoritesScreen() {
   const theme = getOrelysTheme("light");
   const styles = makeStyles(theme);
   const navigation = useNavigation();
+
   const [favorites, setFavorites] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // ——————————————————————————————————————
+  // MIGRATION ANCIENS FAVORIS
+  // ——————————————————————————————————————
+  const migrateOldFavorites = async (oldList: any[]) => {
+    let updated = [...oldList];
+    let changed = false;
+
+    updated = updated.map((fav) => {
+      if (fav.dateSaved && fav.day && fav.monthNumber && fav.year) {
+        return fav;
+      }
+
+      changed = true;
+
+      const monthNumber = fav.month
+        ? parseInt(fav.month.substring(0, 2))
+        : fav.monthNumber || new Date().getMonth() + 1;
+
+      const day = fav.day || new Date().getDate();
+
+      const d = new Date(2025, monthNumber - 1, day);
+
+      return {
+        ...fav,
+        day,
+        monthNumber,
+        year: 2025,
+        dateSaved: d.toISOString(),
+        monthKey: fav.monthKey || fav.month,
+      };
+    });
+
+    if (changed) {
+      await AsyncStorage.setItem("favorites", JSON.stringify(updated));
+    }
+
+    return updated;
+  };
+
+  // ——————————————————————————————————————
+  // CHARGEMENT FAVORIS
+  // ——————————————————————————————————————
   const loadFavorites = async () => {
     try {
       const stored = await AsyncStorage.getItem("favorites");
       const data = stored ? JSON.parse(stored) : [];
-      setFavorites(data);
+
+      const migrated = await migrateOldFavorites(data);
+
+      setFavorites(migrated);
     } catch (err) {
       console.error("❌ Erreur chargement favoris :", err);
     } finally {
@@ -37,6 +91,9 @@ export default function FavoritesScreen() {
     }
   };
 
+  // ——————————————————————————————————————
+  // SUPPRESSION
+  // ——————————————————————————————————————
   const removeFavorite = async (index: number) => {
     try {
       const updated = [...favorites];
@@ -66,6 +123,9 @@ export default function FavoritesScreen() {
     loadFavorites();
   }, []);
 
+  // ——————————————————————————————————————
+  // LOADING
+  // ——————————————————————————————————————
   if (loading) {
     return (
       <View style={styles.centered}>
@@ -74,6 +134,9 @@ export default function FavoritesScreen() {
     );
   }
 
+  // ——————————————————————————————————————
+  // LISTE VIDE
+  // ——————————————————————————————————————
   if (favorites.length === 0) {
     return (
       <View style={styles.centered}>
@@ -90,6 +153,9 @@ export default function FavoritesScreen() {
     );
   }
 
+  // ——————————————————————————————————————
+  // LISTE FAVORIS
+  // ——————————————————————————————————————
   return (
     <ScrollView
       style={styles.container}
@@ -100,56 +166,85 @@ export default function FavoritesScreen() {
 
       {favorites.map((item, idx) => {
         const themeMonth = getThemeForMonth(
-          Number(item.month?.substring(0, 2)) ||
-            new Date(item.dateSaved).getMonth() + 1
+          item.monthNumber ||
+            parseInt(item.month?.substring(0, 2)) ||
+            new Date().getMonth() + 1
         );
 
-        // ✅ Corrige la date inconnue
-        const date =
-          item.dateSaved && !isNaN(Date.parse(item.dateSaved))
-            ? new Date(item.dateSaved).toLocaleDateString("fr-FR", {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              })
-            : new Date().toLocaleDateString("fr-FR", {
-                day: "2-digit",
-                month: "long",
-                year: "numeric",
-              });
+        // Reconstruction date
+        let date: string;
+
+        if (item.dateSaved && !isNaN(Date.parse(item.dateSaved))) {
+          date = new Date(item.dateSaved).toLocaleDateString("fr-FR", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          });
+        } else {
+          const d = new Date(item.year || 2025, item.monthNumber - 1, item.day);
+          date = d.toLocaleDateString("fr-FR", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric",
+          });
+        }
 
         return (
           <TouchableOpacity
             key={idx}
             activeOpacity={0.9}
-            // @ts-ignore → on force la navigation sans casser le typage
             onPress={() =>
-              // @ts-ignore
-              navigation.navigate("Rituel", {
-                fromFavorites: true,
-                favorite: item,
-              })
+              navigation.navigate(
+                // @ts-ignore
+                "Rituel",
+                { fromFavorites: true, favorite: item }
+              )
             }
           >
-            <View
-              style={[styles.card, { borderColor: themeMonth.primary }]}
-            >
+            <View style={[styles.card, { borderColor: themeMonth.primary }]}>
+
+              {/* Date */}
               <Text style={[styles.date, { color: "#3f2f28" }]}>{date}</Text>
 
-              {/* 🟤 Message marron comme sur RituelScreen */}
-              <Text
-                style={[
-                  styles.message,
-                  { color: "#3f2f28", fontStyle: "italic" },
-                ]}
-              >
-                {item.message}
+              {/* Message */}
+              <Text style={[styles.message, { color: "#3f2f28" }]}>
+                “{item.message}”
               </Text>
 
-              <Text style={[styles.details, { color: "#3f2f28" }]}>
-                💎 {item.stone} | 🌿 {item.essential_oil} | {item.symbol}
-              </Text>
+              {/* ————————————————————— */}
+              {/*   ICONES LUXE + LABEL */}
+              {/* ————————————————————— */}
+              <View style={styles.elementsRow}>
 
+                {/* Pierre */}
+                {item.stone && (
+                  <View style={styles.elementItem}>
+                    <Image
+                      source={require("../assets/symbols/symbol_crystal.png")}
+                      style={styles.elementIcon}
+                    />
+                    <Text style={styles.elementText}>{item.stone}</Text>
+                  </View>
+                )}
+
+                {/* Huile essentielle */}
+                {item.essential_oil && (
+                  <View style={styles.elementItem}>
+                    <Image
+                      source={require("../assets/symbols/symbol_oil.png")}
+                      style={styles.elementIcon}
+                    />
+                    <Text style={styles.elementText}>{item.essential_oil}</Text>
+                  </View>
+                )}
+
+                {/* 🆕 SYMBOLE + LABEL (luxueux et cohérent) */}
+                {item.symbol && SYMBOLS_MAP[item.symbol] && (
+                  <SymbolDisplay symbol={item.symbol} />
+                )}
+              </View>
+
+              {/* Bouton supprimer */}
               <TouchableOpacity
                 onPress={() => removeFavorite(idx)}
                 style={[styles.removeBtn, { backgroundColor: theme.accent }]}
@@ -175,6 +270,9 @@ export default function FavoritesScreen() {
   );
 }
 
+// ——————————————————————————————————————
+// STYLES
+// ——————————————————————————————————————
 const makeStyles = (theme: Theme) =>
   StyleSheet.create({
     container: { flex: 1, backgroundColor: theme.background },
@@ -205,17 +303,40 @@ const makeStyles = (theme: Theme) =>
     },
     message: {
       fontSize: 16,
-      marginBottom: 8,
+      fontStyle: "italic",
+      marginBottom: 12,
       lineHeight: 22,
     },
-    details: { fontSize: 13, marginBottom: 8 },
+
+    elementsRow: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 2,
+      marginBottom: 8,
+    },
+    elementItem: {
+      flexDirection: "row",
+      alignItems: "center",
+      gap: 6,
+    },
+    elementIcon: {
+      width: 28,
+      height: 28,
+      resizeMode: "contain",
+    },
+    elementText: {
+      fontSize: 15,
+      fontWeight: "500",
+      color: "#3f2f28",
+    },
+
     removeBtn: {
       borderRadius: 6,
       paddingVertical: 8,
       alignItems: "center",
     },
     removeText: {
-      color: "#f5ede6", // beige clair
+      color: "#f5ede6",
       fontWeight: "600",
       letterSpacing: 0.5,
     },
@@ -230,7 +351,7 @@ const makeStyles = (theme: Theme) =>
       alignItems: "center",
     },
     clearText: {
-      color: "#f5ede6", // beige clair
+      color: "#f5ede6",
       fontWeight: "600",
     },
   });

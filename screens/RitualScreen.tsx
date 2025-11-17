@@ -1,6 +1,7 @@
 // screens/RitualScreen.tsx
 // @ts-nocheck
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useRoute } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
@@ -14,17 +15,28 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import OrelysRotatingIcon from "../components/OrelysRotatingIcon";
-import { moderateScale, scale, verticalScale } from "../constants/layout";
+import { scale, verticalScale } from "../constants/layout";
 import { plantesMensuelles } from "../constants/plantes";
 import { getErrorColor, getOrelysTheme } from "../constants/theme";
 import { typography } from "../constants/typography";
 import { normalizeMonthKey } from "../utils/normalizeMonthKey";
 
+// Import symboles dorés
+import { SYMBOLS_MAP } from "../constants/symbols";
+
+// 🆕 Ajout : symbole + label
+import SymbolDisplay from "../components/SymbolDisplay";
+
 export default function RitualScreen() {
+  const route = useRoute();
+  const fromFavorites = route.params?.fromFavorites || false;
+  const favoriteData = route.params?.favorite || null;
+
   const [ritual, setRitual] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [monthFile, setMonthFile] = useState<string | null>(null);
+
   const theme = getOrelysTheme("light");
 
   const formatDate2026 = () => {
@@ -34,15 +46,26 @@ export default function RitualScreen() {
     return `${day} ${month} 2026`;
   };
 
+  // FAVORIS — chargement
+  const loadFavoriteRitual = () => {
+    setRitual(favoriteData);
+    setMonthFile(favoriteData.month || null);
+    setLoading(false);
+  };
+
+  // NORMAL — API
   const loadTodayRitual = async () => {
     try {
       setLoading(true);
       setError(null);
       const res = await fetch("http://192.168.0.22:5050/api/rituals/today");
+
       if (!res.ok) throw new Error("Échec de la récupération du rituel");
+
       const data = await res.json();
       setRitual(data.ritual);
       setMonthFile(data.month);
+
       await saveRitualToHistory(data);
     } catch (err: any) {
       setError(err.message ?? "Erreur inconnue");
@@ -51,19 +74,24 @@ export default function RitualScreen() {
     }
   };
 
+  // SAUVEGARDE HISTORIQUE
   const saveRitualToHistory = async (data: any) => {
     try {
       const existing = await AsyncStorage.getItem("ritualHistory");
       const history = existing ? JSON.parse(existing) : [];
+
       const exists = history.some(
         (r: any) => r.day === data.ritual.day && r.month === data.month
       );
+
       if (!exists) {
         const updated = [
           ...history,
           {
             ...data.ritual,
             month: data.month,
+            monthNumber: parseInt(data.month.substring(0, 2)),
+            day: data.ritual.day,
             dateSaved: new Date().toISOString(),
           },
         ];
@@ -74,23 +102,35 @@ export default function RitualScreen() {
     }
   };
 
+  // FAVORIS — nouvelle structure
   const addToFavorites = async () => {
     try {
       if (!ritual) return;
+
       const existingFavorites = await AsyncStorage.getItem("favorites");
       const favorites = existingFavorites ? JSON.parse(existingFavorites) : [];
+
       const alreadySaved = favorites.some(
-        (fav: any) => fav.day === ritual.day && fav.month === monthFile
+        (fav: any) =>
+          fav.day === ritual.day &&
+          fav.monthNumber === parseInt(monthFile.substring(0, 2))
       );
+
       if (alreadySaved) {
         Alert.alert("⭐ Déjà enregistré", "Ce rituel est déjà dans vos favoris.");
         return;
       }
+
+      const monthNumber = parseInt(monthFile.substring(0, 2));
+
       favorites.push({
         ...ritual,
         month: monthFile,
-        dateAdded: new Date().toISOString(),
+        monthNumber,
+        day: ritual.day,
+        dateSaved: new Date().toISOString(),
       });
+
       await AsyncStorage.setItem("favorites", JSON.stringify(favorites));
       Alert.alert("✨ Ajouté", "Ce rituel a été ajouté à vos favoris !");
     } catch {
@@ -98,15 +138,20 @@ export default function RitualScreen() {
     }
   };
 
+  // INIT
   useEffect(() => {
-    loadTodayRitual();
+    if (fromFavorites && favoriteData) {
+      loadFavoriteRitual();
+    } else {
+      loadTodayRitual();
+    }
   }, []);
 
   if (loading) {
     return (
       <View style={styles.centered}>
         <ActivityIndicator size="large" color="#c6a56f" />
-        <Text style={styles.loadingText}>Chargement du rituel du jour...</Text>
+        <Text style={styles.loadingText}>Chargement du rituel...</Text>
       </View>
     );
   }
@@ -115,14 +160,13 @@ export default function RitualScreen() {
     return (
       <View style={styles.centered}>
         <Text style={[styles.errorText, { color: getErrorColor("light") }]}>
-          ⚠️ {error ?? "Aucun rituel disponible pour aujourd’hui."}
+          ⚠️ {error ?? "Aucun rituel disponible."}
         </Text>
       </View>
     );
   }
 
   const monthKey = normalizeMonthKey(monthFile);
-  console.log("🌿 monthFile:", monthFile, "→ monthKey:", monthKey);
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: theme.background }}>
@@ -135,14 +179,17 @@ export default function RitualScreen() {
           alignItems: "center",
         }}
       >
+        {/* HEADER */}
         <View style={styles.header}>
           <Text style={{ fontSize: 22, marginBottom: 4 }}>✨</Text>
           <Text style={[styles.title, { color: theme.primary }]}>
             Rituel du jour
           </Text>
+
           <Text style={[styles.subtitle, { color: "#3f2f28", marginTop: 2 }]}>
             {formatDate2026()}
           </Text>
+
           {monthFile && (
             <Text style={[styles.subtitle, { color: "#3f2f28" }]}>
               {monthFile.replace(/^\d+_/, "").replace(/_/g, " ")}
@@ -150,13 +197,8 @@ export default function RitualScreen() {
           )}
         </View>
 
-        <View
-          style={[
-            styles.card,
-            { borderColor: theme.primary },
-          ]}
-        >
-          {/* 🌿 Image de fond visible */}
+        {/* CARTE */}
+        <View style={[styles.card, { borderColor: theme.primary }]}>
           <Image
             source={plantesMensuelles[monthKey] || plantesMensuelles.default}
             style={styles.cardBackground}
@@ -166,12 +208,13 @@ export default function RitualScreen() {
             {ritual.message}
           </Text>
 
-          <View style={[styles.iconWrapper, { height: 220, justifyContent: "center" }]}>
+          <View style={[styles.iconWrapper, { height: 220 }]}>
             <View pointerEvents="none">
               <OrelysRotatingIcon />
             </View>
           </View>
 
+          {/* RITUEL TEXTE */}
           <View
             style={[
               styles.ritualBox,
@@ -184,21 +227,40 @@ export default function RitualScreen() {
             </Text>
           </View>
 
-          <View style={styles.row}>
-            <Text style={[styles.item, { color: "#3f2f28" }]}>
-              💎 Pierre :{" "}
-              <Text style={[styles.itemValue, { color: theme.primary }]}>
-                {ritual.stone}
-              </Text>
-            </Text>
-            <Text style={[styles.item, { color: "#3f2f28" }]}>
-              🌿 Huile :{" "}
-              <Text style={[styles.itemValue, { color: theme.primary }]}>
-                {ritual.essential_oil}
-              </Text>
-            </Text>
+          {/* —————————————————————————————— */}
+          {/*   ICÔNES LUXE : pierre / huile / symbole + LABEL */}
+          {/* —————————————————————————————— */}
+          <View style={styles.elementsRow}>
+
+            {/* Pierre */}
+            {ritual.stone && (
+              <View style={styles.elementItem}>
+                <Image
+                  source={require("../assets/symbols/symbol_crystal.png")}
+                  style={styles.elementIcon}
+                />
+                <Text style={styles.elementText}>{ritual.stone}</Text>
+              </View>
+            )}
+
+            {/* Huile essentielle */}
+            {ritual.essential_oil && (
+              <View style={styles.elementItem}>
+                <Image
+                  source={require("../assets/symbols/symbol_oil.png")}
+                  style={styles.elementIcon}
+                />
+                <Text style={styles.elementText}>{ritual.essential_oil}</Text>
+              </View>
+            )}
+
+            {/* Symbole + LABEL */}
+            {ritual.symbol && SYMBOLS_MAP[ritual.symbol] && (
+              <SymbolDisplay symbol={ritual.symbol} />
+            )}
           </View>
 
+          {/* FAVORIS */}
           <TouchableOpacity
             onPress={addToFavorites}
             activeOpacity={0.8}
@@ -208,37 +270,34 @@ export default function RitualScreen() {
               ⭐ Ajouter aux favoris
             </Text>
           </TouchableOpacity>
-
-          <Text style={[styles.symbol, { color: theme.primary }]}>
-            {ritual.symbol}
-          </Text>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
+// ——————————————————————————————————————
+// STYLES (inchangés)
+// ——————————————————————————————————————
 const styles = StyleSheet.create({
   centered: { flex: 1, justifyContent: "center", alignItems: "center" },
   loadingText: { marginTop: verticalScale(10) },
-  errorText: { textAlign: "center", fontSize: typography.size.md },
+  errorText: {
+    textAlign: "center",
+    fontSize: typography.size.md,
+  },
   header: {
     alignItems: "center",
-    justifyContent: "center",
     marginBottom: verticalScale(10),
   },
   title: {
     fontSize: typography.size.xl,
     fontWeight: typography.weight.semibold,
-    textAlign: "center",
   },
-  subtitle: { fontSize: typography.size.md, textAlign: "center" },
-
+  subtitle: { fontSize: typography.size.md },
   card: {
     borderRadius: scale(16),
     padding: scale(18),
-    shadowOpacity: 0.25,
-    elevation: 3,
     borderWidth: 1,
     marginTop: verticalScale(20),
     marginBottom: verticalScale(40),
@@ -249,27 +308,24 @@ const styles = StyleSheet.create({
   cardBackground: {
     position: "absolute",
     top: "-5%",
-    left: "auto",
-    right: "0%",
-    bottom: "-5%",
-    width: "110%",
+    width: "120%",
     height: "110%",
-     marginLeft: "-5%",
-    opacity: 1, 
-    resizeMode: "cover", 
+    resizeMode: "cover",
+    opacity: 1,
     zIndex: -1,
     transform: [{ scale: 1.05 }],
   },
-
   message: {
     fontSize: typography.size.lg,
     fontStyle: "italic",
     lineHeight: typography.lineHeight.spacious,
     textAlign: "center",
-    marginBottom: verticalScale(30),
-    marginTop: verticalScale(20),
+    marginVertical: verticalScale(30),
   },
-  iconWrapper: { alignItems: "center", marginVertical: verticalScale(4) },
+  iconWrapper: {
+    alignItems: "center",
+    marginVertical: verticalScale(4),
+  },
   ritualBox: {
     borderRadius: scale(10),
     padding: scale(14),
@@ -281,18 +337,31 @@ const styles = StyleSheet.create({
     marginBottom: verticalScale(4),
     fontSize: typography.size.md,
   },
-  ritualText: { fontSize: typography.size.md, lineHeight: typography.lineHeight.relaxed },
-  row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    marginTop: verticalScale(12),
+  ritualText: {
+    fontSize: typography.size.md,
+    lineHeight: typography.lineHeight.relaxed,
   },
-  item: { fontSize: typography.size.sm },
-  itemValue: { fontWeight: "600" },
-  symbol: {
-    fontSize: moderateScale(30),
-    textAlign: "center",
-    marginTop: verticalScale(16),
+  elementsRow: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 8,
+    marginTop: verticalScale(20),
+  },
+  elementItem: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+  },
+  elementIcon: {
+    width: 32,
+    height: 32,
+    resizeMode: "contain",
+  },
+  elementText: {
+    fontSize: typography.size.md,
+    fontFamily: typography.fontFamily.primary,
+    fontWeight: "500",
+    color: "#3f2f28",
   },
   favoriteBtn: {
     marginTop: verticalScale(30),

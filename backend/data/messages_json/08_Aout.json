@@ -1,0 +1,219 @@
+[
+  {
+    "day": 1,
+    "message": "La joie est une forme de gratitude.",
+    "stone": "Citrine",
+    "essential_oil": "Pamplemousse",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 2,
+    "message": "Réveille ton feu intérieur.",
+    "stone": "Cornaline",
+    "essential_oil": "Gingembre",
+    "symbol": "✺"
+  },
+  {
+    "day": 3,
+    "message": "La vitalité vient du mouvement, pas de la vitesse.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "🜂"
+  },
+  {
+    "day": 4,
+    "message": "Rayonne sans réserve.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 5,
+    "message": "Ton corps est ton premier soleil.",
+    "stone": "Grenat",
+    "essential_oil": "Orange douce",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 6,
+    "message": "Danse avant d’y croire.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "✺"
+  },
+  {
+    "day": 7,
+    "message": "La joie se sème dans le corps avant de fleurir dans l’âme.",
+    "stone": "Citrine",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "🜂"
+  },
+  {
+    "day": 8,
+    "message": "L’énergie circule quand tu respires pleinement.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Romarin",
+    "symbol": "✦"
+  },
+  {
+    "day": 9,
+    "message": "La vitalité n’est pas agitation, c’est présence.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Citron",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 10,
+    "message": "Ton rire est une prière.",
+    "stone": "Grenat",
+    "essential_oil": "Pamplemousse",
+    "symbol": "✺"
+  },
+  {
+    "day": 11,
+    "message": "L’énergie se renouvelle dans la simplicité.",
+    "stone": "Cornaline",
+    "essential_oil": "Orange douce",
+    "symbol": "🜂"
+  },
+  {
+    "day": 12,
+    "message": "Ose briller sans t’excuser.",
+    "stone": "Citrine",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 13,
+    "message": "La joie nourrit la force.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Gingembre",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 14,
+    "message": "Ton souffle est ton carburant.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "✺"
+  },
+  {
+    "day": 15,
+    "message": "Accueille la chaleur du jour comme une bénédiction.",
+    "stone": "Citrine",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "🜂"
+  },
+  {
+    "day": 16,
+    "message": "L’énergie suit la joie, toujours.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Orange douce",
+    "symbol": "✦"
+  },
+  {
+    "day": 17,
+    "message": "Sois vivant(e) sans te justifier.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 18,
+    "message": "Ta force, c’est ta lumière en mouvement.",
+    "stone": "Grenat",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "✺"
+  },
+  {
+    "day": 19,
+    "message": "Ton feu intérieur éclaire sans brûler.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Gingembre",
+    "symbol": "🜂"
+  },
+  {
+    "day": 20,
+    "message": "La vitalité aime le jeu.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 21,
+    "message": "Ton énergie inspire celle des autres.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Romarin",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 22,
+    "message": "Nourris ta flamme chaque matin.",
+    "stone": "Citrine",
+    "essential_oil": "Orange douce",
+    "symbol": "✺"
+  },
+  {
+    "day": 23,
+    "message": "Le corps heureux est un corps libre.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "🜂"
+  },
+  {
+    "day": 24,
+    "message": "Rayonner, c’est partager sans s’épuiser.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 25,
+    "message": "Ta vitalité est un langage silencieux.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Romarin",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 26,
+    "message": "La joie simple est la plus durable.",
+    "stone": "Grenat",
+    "essential_oil": "Orange douce",
+    "symbol": "✺"
+  },
+  {
+    "day": 27,
+    "message": "Réveille ton énergie avec gratitude.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "🜂"
+  },
+  {
+    "day": 28,
+    "message": "L’énergie positive se crée, elle ne s’attend pas.",
+    "stone": "Citrine",
+    "essential_oil": "Citron",
+    "symbol": "✦"
+  },
+  {
+    "day": 29,
+    "message": "Ta lumière nourrit ton entourage.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "☀︎"
+  },
+  {
+    "day": 30,
+    "message": "La vitalité, c’est l’art de dire oui à la vie.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "✺"
+  },
+  {
+    "day": 31,
+    "message": "La joie partagée devient énergie infinie.",
+    "stone": "Citrine",
+    "essential_oil": "Romarin",
+    "symbol": "🜂"
+  }
+]

@@ -1,0 +1,205 @@
+[
+  {
+    "day": 1,
+    "message": "L’amour commence toujours par une écoute.",
+    "stone": "Quartz rose",
+    "essential_oil": "Rose",
+    "symbol": "☽"
+  },
+  {
+    "day": 2,
+    "message": "Offre-toi la patience que tu donnes aux autres.",
+    "stone": "Rhodonite",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "✦"
+  },
+  {
+    "day": 3,
+    "message": "Le silence est une preuve d’amour envers soi.",
+    "stone": "Kunzite",
+    "essential_oil": "Lavande",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 4,
+    "message": "La douceur est une langue que ton âme comprend.",
+    "stone": "Morganite",
+    "essential_oil": "Vanille",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 5,
+    "message": "Souris à ton reflet, il t’attend depuis longtemps.",
+    "stone": "Quartz rose",
+    "essential_oil": "Géranium rosat",
+    "symbol": "☽"
+  },
+  {
+    "day": 6,
+    "message": "L’amour ne demande pas d’effort, juste de la présence.",
+    "stone": "Jade rose",
+    "essential_oil": "Bois de rose",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 7,
+    "message": "Tu mérites la paix, même sans raison.",
+    "stone": "Améthyste",
+    "essential_oil": "Orange douce",
+    "symbol": "✦"
+  },
+  {
+    "day": 8,
+    "message": "Pardonner, c’est cesser de se retenir d’aimer.",
+    "stone": "Rhodonite",
+    "essential_oil": "Rose",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 9,
+    "message": "Chaque larme porte une graine de lumière.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Lavande",
+    "symbol": "☽"
+  },
+  {
+    "day": 10,
+    "message": "Aime ce que tu deviens, même lentement.",
+    "stone": "Kunzite",
+    "essential_oil": "Bois de rose",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 11,
+    "message": "Le corps parle le langage du cœur.",
+    "stone": "Morganite",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "✦"
+  },
+  {
+    "day": 12,
+    "message": "L’amour véritable est calme, jamais pressé.",
+    "stone": "Quartz rose",
+    "essential_oil": "Géranium rosat",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 13,
+    "message": "Caresse ton âme avec des pensées tendres.",
+    "stone": "Rhodonite",
+    "essential_oil": "Orange douce",
+    "symbol": "☽"
+  },
+  {
+    "day": 14,
+    "message": "Aimer, c’est se rappeler qu’on est vivant.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "✦"
+  },
+  {
+    "day": 15,
+    "message": "La bienveillance est un parfum qui ne s’oublie pas.",
+    "stone": "Améthyste",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 16,
+    "message": "Chaque douceur est une victoire sur la dureté.",
+    "stone": "Kunzite",
+    "essential_oil": "Géranium rosat",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 17,
+    "message": "L’amour te trouve quand tu cesses de te fuir.",
+    "stone": "Jade rose",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "☽"
+  },
+  {
+    "day": 18,
+    "message": "Rien n’est plus fort qu’un cœur apaisé.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de rose",
+    "symbol": "✦"
+  },
+  {
+    "day": 19,
+    "message": "L’amour ne guérit pas tout, mais il adoucit tout.",
+    "stone": "Quartz rose",
+    "essential_oil": "Vanille",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 20,
+    "message": "Ouvre-toi à la tendresse que tu inspires.",
+    "stone": "Rhodonite",
+    "essential_oil": "Orange douce",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 21,
+    "message": "La douceur est une révolution silencieuse.",
+    "stone": "Améthyste",
+    "essential_oil": "Lavande",
+    "symbol": "☽"
+  },
+  {
+    "day": 22,
+    "message": "Le vrai amour ne serre pas, il enveloppe.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Géranium rosat",
+    "symbol": "✦"
+  },
+  {
+    "day": 23,
+    "message": "Accueille-toi comme tu accueilles un être cher.",
+    "stone": "Kunzite",
+    "essential_oil": "Bois de rose",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 24,
+    "message": "Les gestes lents guérissent mieux que les mots.",
+    "stone": "Jade rose",
+    "essential_oil": "Vanille",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 25,
+    "message": "Le cœur sait ce que la raison tait.",
+    "stone": "Morganite",
+    "essential_oil": "Ylang-ylang",
+    "symbol": "☽"
+  },
+  {
+    "day": 26,
+    "message": "La tendresse est une force tranquille.",
+    "stone": "Rhodonite",
+    "essential_oil": "Orange douce",
+    "symbol": "✦"
+  },
+  {
+    "day": 27,
+    "message": "L’amour se cultive chaque jour, sans promesse.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 28,
+    "message": "L’âme apaisée devient un jardin d’amour.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Géranium rosat",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 29,
+    "message": "L’amour de soi n’a pas de fin, seulement des recommencements.",
+    "stone": "Kunzite",
+    "essential_oil": "Bois de rose",
+    "symbol": "☽"
+  }
+]

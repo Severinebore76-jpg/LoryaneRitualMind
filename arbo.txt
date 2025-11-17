@@ -1,0 +1,192 @@
+.
+├── .DS_Store
+├── .expo
+│   ├── devices.json
+│   ├── README.md
+│   └── types
+│       └── router.d.ts
+├── .gitignore
+├── .vscode
+│   ├── extensions.json
+│   └── settings.json
+├── app.json
+├── App.tsx
+├── arbo.txt
+├── assets
+│   ├── .DS_Store
+│   ├── images
+│   │   ├── .DS_Store
+│   │   ├── icone_orelys.png
+│   │   └── logo_orelys.png
+│   ├── meditations
+│   │   ├── audio
+│   │   │   ├── 01_Janvier.mp3
+│   │   │   ├── 02_Fevrier.mp3
+│   │   │   ├── 03_Mars.mp3
+│   │   │   ├── 04_Avril.mp3
+│   │   │   ├── 05_Mai.mp3
+│   │   │   ├── 06_Juin.mp3
+│   │   │   ├── 07_Juillet.mp3
+│   │   │   ├── 08_Aout.mp3
+│   │   │   ├── 09_Septembre.mp3
+│   │   │   ├── 10_Octobre.mp3
+│   │   │   ├── 11_Novembre.mp3
+│   │   │   └── 12_Decembre.mp3
+│   │   ├── images
+│   │   │   ├── meditation-01-janvier.jpg
+│   │   │   ├── meditation-02-fevrier.jpg
+│   │   │   ├── meditation-03-mars.jpg
+│   │   │   ├── meditation-04-avril.jpg
+│   │   │   ├── meditation-05-mai.jpg
+│   │   │   ├── meditation-06-juin.jpg
+│   │   │   ├── meditation-07-juillet.jpg
+│   │   │   ├── meditation-08-aout.jpg
+│   │   │   ├── meditation-09-septembre.jpg
+│   │   │   ├── meditation-10-octobre.jpg
+│   │   │   ├── meditation-11-novembre.jpg
+│   │   │   └── meditation-12-decembre.jpg
+│   │   └── texts
+│   │       ├── 01_Janvier_Renaissance.json
+│   │       ├── 02_Fevrier_Douceur_et_Amour.json
+│   │       ├── 03_Mars_Confiance.json
+│   │       ├── 04_Avril_Lacher-Prise.json
+│   │       ├── 05_Mai_Vitalite.json
+│   │       ├── 06_Juin_Lumiere.json
+│   │       ├── 07_Juillet_Serenite.json
+│   │       ├── 08_Aout_Alignement.json
+│   │       ├── 09_Septembre_Transformation.json
+│   │       ├── 10_Octobre_Introspection.json
+│   │       ├── 11_Novembre_Guerison.json
+│   │       └── 12_Decembre_Gratitude.json
+│   ├── plantes
+│   │   ├── camomille.png
+│   │   ├── cannelle.png
+│   │   ├── eucalyptus.png
+│   │   ├── jasmin.png
+│   │   ├── lavande.png
+│   │   ├── menthe.png
+│   │   ├── pin.png
+│   │   ├── romarin.png
+│   │   ├── rose.png
+│   │   ├── sauge.png
+│   │   ├── thym.png
+│   │   └── verveine.png
+│   └── symbols
+│       ├── .DS_Store
+│       ├── symbol_balance.png
+│       ├── symbol_circle.png
+│       ├── symbol_cloud.png
+│       ├── symbol_crystal.png
+│       ├── symbol_earth.png
+│       ├── symbol_fire.png
+│       ├── symbol_heal.png
+│       ├── symbol_moon.png
+│       ├── symbol_oil.png
+│       ├── symbol_rosace.png
+│       ├── symbol_spark.png
+│       ├── symbol_star_big.png
+│       ├── symbol_star_small.png
+│       ├── symbol_sun.png
+│       └── symbol_water.png
+├── backend
+│   ├── .gitignore
+│   ├── controllers
+│   │   ├── messagesController.js
+│   │   ├── monthsController.js
+│   │   └── ritualsController.js
+│   ├── data
+│   │   ├── messages_json
+│   │   │   ├── 01_Janvier.json
+│   │   │   ├── 02_Fevrier.json
+│   │   │   ├── 03_Mars.json
+│   │   │   ├── 04_Avril.json
+│   │   │   ├── 05_Mai.json
+│   │   │   ├── 06_Juin.json
+│   │   │   ├── 07_Juillet.json
+│   │   │   ├── 08_Aout.json
+│   │   │   ├── 09_Septembre.json
+│   │   │   ├── 10_Octobre.json
+│   │   │   ├── 11_Novembre.json
+│   │   │   └── 12_Decembre.json
+│   │   └── rituals_json
+│   │       ├── 01_Janvier_Renaissance.json
+│   │       ├── 02_Fevrier_DouceurAmour.json
+│   │       ├── 03_Mars_Confiance.json
+│   │       ├── 04_Avril_LacherPrise.json
+│   │       ├── 05_Mai_Vitalite.json
+│   │       ├── 06_Juin_Lumiere.json
+│   │       ├── 07_Juillet_Serenite.json
+│   │       ├── 08_Aout_Alignement.json
+│   │       ├── 09_Septembre_Transformation.json
+│   │       ├── 10_Octobre_Introspection.json
+│   │       ├── 11_Novembre_Guerison.json
+│   │       └── 12_Decembre_Gratitude.json
+│   ├── docs
+│   │   └── postman
+│   │       └── OrelysRitualMind_API.postman_collection.json
+│   ├── middlewares
+│   │   └── errorHandler.js
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── routes
+│   │   ├── messages.js
+│   │   ├── months.js
+│   │   └── rituals.js
+│   ├── server.js
+│   └── services
+│       └── dataLoader.js
+├── components
+│   ├── AnimatedIcon.tsx
+│   ├── external-link.tsx
+│   ├── haptic-tab.tsx
+│   ├── hello-wave.tsx
+│   ├── icons
+│   │   ├── PauseIcon.tsx
+│   │   ├── PlayIcon.tsx
+│   │   └── StopIcon.tsx
+│   ├── OrelysRotatingIcon.tsx
+│   ├── parallax-scroll-view.tsx
+│   ├── SymbolDisplay.tsx
+│   ├── themed-text.tsx
+│   ├── themed-view.tsx
+│   └── ui
+│       ├── collapsible.tsx
+│       ├── icon-symbol.ios.tsx
+│       └── icon-symbol.tsx
+├── constants
+│   ├── layout.ts
+│   ├── meditationAssets.ts
+│   ├── meditationEnergies.ts
+│   ├── meditationTexts.ts
+│   ├── plantes.ts
+│   ├── symbol_labels.ts
+│   ├── symbols.ts
+│   ├── theme.ts
+│   └── typography.ts
+├── eslint.config.js
+├── expo-env.d.ts
+├── hooks
+│   ├── use-color-scheme.ts
+│   ├── use-color-scheme.web.ts
+│   └── use-theme-color.ts
+├── index.js
+├── metro.config.js
+├── navigation
+│   └── AppNavigator.tsx
+├── package-lock.json
+├── package.json
+├── README.md
+├── screens
+│   ├── FavoritesScreen.tsx
+│   ├── HistoryScreen.tsx
+│   ├── HomeScreen.tsx
+│   ├── MeditationScreen.tsx
+│   ├── ProfileScreen.tsx
+│   └── RitualScreen.tsx
+├── scripts
+│   └── reset-project.js
+├── tsconfig.json
+└── utils
+    └── normalizeMonthKey.ts
+
+31 directories, 159 files

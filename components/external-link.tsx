@@ -1,25 +1,43 @@
-import { Href, Link } from 'expo-router';
-import { openBrowserAsync, WebBrowserPresentationStyle } from 'expo-web-browser';
-import { type ComponentProps } from 'react';
+// components/external-link.tsx
+import * as WebBrowser from "expo-web-browser";
+import React from "react";
+import { Linking, Platform, Pressable, StyleSheet, Text } from "react-native";
 
-type Props = Omit<ComponentProps<typeof Link>, 'href'> & { href: Href & string };
+type ExternalLinkProps = {
+  href: string;
+  children: React.ReactNode;
+};
 
-export function ExternalLink({ href, ...rest }: Props) {
+export function ExternalLink({ href, children }: ExternalLinkProps) {
+  const handlePress = async () => {
+    try {
+      if (Platform.OS === "web") {
+        // Sur le web : ouvre dans l’onglet du navigateur
+        await Linking.openURL(href);
+      } else {
+        // Sur iOS / Android : ouvre en in-app browser (équivalent à avant)
+        await WebBrowser.openBrowserAsync(href, {
+          presentationStyle: WebBrowser.WebBrowserPresentationStyle.AUTOMATIC,
+        });
+      }
+    } catch (error) {
+      console.warn("Impossible d'ouvrir l’URL :", href, error);
+    }
+  };
+
   return (
-    <Link
-      target="_blank"
-      {...rest}
-      href={href}
-      onPress={async (event) => {
-        if (process.env.EXPO_OS !== 'web') {
-          // Prevent the default behavior of linking to the default browser on native.
-          event.preventDefault();
-          // Open the link in an in-app browser.
-          await openBrowserAsync(href, {
-            presentationStyle: WebBrowserPresentationStyle.AUTOMATIC,
-          });
-        }
-      }}
-    />
+    <Pressable onPress={handlePress} style={styles.link}>
+      <Text style={styles.text}>{children}</Text>
+    </Pressable>
   );
 }
+
+const styles = StyleSheet.create({
+  link: {
+    opacity: 0.9,
+  },
+  text: {
+    color: "#c9a46a", // doré doux Orelys
+    textDecorationLine: "underline",
+  },
+});

@@ -1,0 +1,212 @@
+[
+  {
+    "day": 1,
+    "message": "Ce que tu laisses partir t’allège.",
+    "stone": "Amazonite",
+    "essential_oil": "Bergamote",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 2,
+    "message": "Laisse la vie respirer à travers toi.",
+    "stone": "Aigue-marine",
+    "essential_oil": "Eucalyptus",
+    "symbol": "✧"
+  },
+  {
+    "day": 3,
+    "message": "Accepte de ne pas tout comprendre.",
+    "stone": "Fluorite",
+    "essential_oil": "Lavande fine",
+    "symbol": "☽"
+  },
+  {
+    "day": 4,
+    "message": "Ce que tu contrôles t’échappe, ce que tu accueilles t’appartient.",
+    "stone": "Calcite bleue",
+    "essential_oil": "Sauge sclarée",
+    "symbol": "🜂"
+  },
+  {
+    "day": 5,
+    "message": "Libère ton souffle, il connaît le chemin.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Lemongrass",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 6,
+    "message": "Les vagues n’ont pas peur de retomber.",
+    "stone": "Aigue-marine",
+    "essential_oil": "Bois de hô",
+    "symbol": "✧"
+  },
+  {
+    "day": 7,
+    "message": "Ce que tu retiens t’éloigne du présent.",
+    "stone": "Amazonite",
+    "essential_oil": "Bergamote",
+    "symbol": "☽"
+  },
+  {
+    "day": 8,
+    "message": "Lâcher prise, c’est croire que tout est déjà en ordre.",
+    "stone": "Fluorite",
+    "essential_oil": "Eucalyptus",
+    "symbol": "🜂"
+  },
+  {
+    "day": 9,
+    "message": "L’air qui entre est une promesse de renouveau.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Citronnelle",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 10,
+    "message": "Tout revient quand on arrête de retenir.",
+    "stone": "Calcite bleue",
+    "essential_oil": "Bois de hô",
+    "symbol": "✧"
+  },
+  {
+    "day": 11,
+    "message": "Le calme ne se cherche pas, il s’autorise.",
+    "stone": "Lépidolite",
+    "essential_oil": "Lavande fine",
+    "symbol": "☽"
+  },
+  {
+    "day": 12,
+    "message": "Le lâcher-prise est une danse, pas un combat.",
+    "stone": "Aigue-marine",
+    "essential_oil": "Bergamote",
+    "symbol": "🜂"
+  },
+  {
+    "day": 13,
+    "message": "Laisse l’eau emporter ce qui ne te sert plus.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Eucalyptus",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 14,
+    "message": "Tu n’as pas besoin de tout réparer pour respirer.",
+    "stone": "Fluorite",
+    "essential_oil": "Sauge sclarée",
+    "symbol": "✧"
+  },
+  {
+    "day": 15,
+    "message": "Les réponses viennent quand tu cesses de les chercher.",
+    "stone": "Amazonite",
+    "essential_oil": "Lavande fine",
+    "symbol": "☽"
+  },
+  {
+    "day": 16,
+    "message": "Le vent ne demande pas la permission de souffler.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Lemongrass",
+    "symbol": "🜂"
+  },
+  {
+    "day": 17,
+    "message": "Le détachement n’est pas l’oubli, c’est la paix.",
+    "stone": "Calcite bleue",
+    "essential_oil": "Bois de hô",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 18,
+    "message": "Ne retiens pas ce qui veut se transformer.",
+    "stone": "Aigue-marine",
+    "essential_oil": "Eucalyptus",
+    "symbol": "✧"
+  },
+  {
+    "day": 19,
+    "message": "Lâcher prise, c’est faire confiance au rythme.",
+    "stone": "Lépidolite",
+    "essential_oil": "Bergamote",
+    "symbol": "☽"
+  },
+  {
+    "day": 20,
+    "message": "L’espace intérieur est un souffle infini.",
+    "stone": "Fluorite",
+    "essential_oil": "Citronnelle",
+    "symbol": "🜂"
+  },
+  {
+    "day": 21,
+    "message": "Ce que tu offres revient autrement.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Bois de hô",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 22,
+    "message": "Laisse les choses être incomplètes.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Lavande fine",
+    "symbol": "✧"
+  },
+  {
+    "day": 23,
+    "message": "Le lâcher-prise, c’est la foi sans contrôle.",
+    "stone": "Amazonite",
+    "essential_oil": "Sauge sclarée",
+    "symbol": "☽"
+  },
+  {
+    "day": 24,
+    "message": "La légèreté n’a rien de superficiel.",
+    "stone": "Aigue-marine",
+    "essential_oil": "Bergamote",
+    "symbol": "🜂"
+  },
+  {
+    "day": 25,
+    "message": "La gratitude est le souffle du cœur.",
+    "stone": "Fluorite",
+    "essential_oil": "Eucalyptus",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 26,
+    "message": "Ce que tu acceptes se transforme.",
+    "stone": "Calcite bleue",
+    "essential_oil": "Citronnelle",
+    "symbol": "✧"
+  },
+  {
+    "day": 27,
+    "message": "L’équilibre, c’est savoir quand relâcher.",
+    "stone": "Lépidolite",
+    "essential_oil": "Bois de hô",
+    "symbol": "☽"
+  },
+  {
+    "day": 28,
+    "message": "Lâcher, c’est ouvrir.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Lavande fine",
+    "symbol": "🜂"
+  },
+  {
+    "day": 29,
+    "message": "Les choses se placent d’elles-mêmes quand tu respires.",
+    "stone": "Aventurine verte",
+    "essential_oil": "Sauge sclarée",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 30,
+    "message": "L’apaisement n’est pas l’inaction, c’est la confiance tranquille.",
+    "stone": "Fluorite",
+    "essential_oil": "Bergamote",
+    "symbol": "✧"
+  }
+]
