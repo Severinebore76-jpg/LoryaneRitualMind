@@ -19,12 +19,10 @@ const ProfileScreen: React.FC = () => {
 
   return (
     <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
-      
-      <ScrollView 
+      <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 50, alignItems: "center" }}
       >
-        
         {/* TITRE */}
         <ThemedText type="title" style={{ color: theme.primary, marginTop: 40 }}>
           Profil
@@ -58,7 +56,7 @@ const ProfileScreen: React.FC = () => {
             style={[styles.primaryBtn, { marginTop: 12 }]}
             onPress={() => nav.navigate("Auth" as never)}
           >
-            <ThemedText style={styles.primaryBtnText}>
+            <ThemedText style={[styles.primaryBtnText, { color: "#aa755d" }]}>
               Créer un compte / Se connecter
             </ThemedText>
           </TouchableOpacity>
@@ -71,20 +69,19 @@ const ProfileScreen: React.FC = () => {
           {user.subscription === "freemium" ? (
             <>
               <ThemedText style={styles.statusFree}>
-                🔓 Freemium — accès limité
+                ✦ Freemium — accès limité
               </ThemedText>
 
               <ThemedText style={styles.subscriptionText}>
-                Profite des messages du jour et du rituel quotidien.{"\n"}
-                Passe à Loryane+ pour débloquer toutes les fonctionnalités premium.
+                Pour aller plus loin, activez Loryane+.
               </ThemedText>
 
               <TouchableOpacity
                 style={styles.primaryBtn}
                 onPress={() => nav.navigate("Subscription" as never)}
               >
-                <ThemedText style={styles.primaryBtnText}>
-                  ⭐ Passer à Loryane+
+                <ThemedText style={[styles.primaryBtnText, { color: "#aa755d" }]}>
+                  ⭐ Activer Loryane+
                 </ThemedText>
               </TouchableOpacity>
             </>
@@ -92,8 +89,8 @@ const ProfileScreen: React.FC = () => {
             <>
               <ThemedText style={styles.statusPlus}>✨ Loryane+ — accès complet</ThemedText>
               <ThemedText style={styles.subscriptionText}>
-                Merci pour ton soutien 🕊️  
-                Tu profites de toutes les fonctionnalités premium.
+                Merci pour votre soutien 🕊️  
+                Votre abonnement est actif.
               </ThemedText>
             </>
           )}
@@ -123,23 +120,55 @@ const ProfileScreen: React.FC = () => {
 
           <TouchableOpacity
             style={styles.linkBtn}
-            onPress={() => nav.navigate("Data" as never)}
+            onPress={() => nav.navigate("DataPolicy" as never)}
           >
             <ThemedText style={styles.linkText}>
               Données personnelles
             </ThemedText>
           </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.linkBtn}
+            onPress={() => nav.navigate("CGU" as never)}
+          >
+            <ThemedText style={styles.linkText}>
+              Conditions d’utilisation (CGU)
+            </ThemedText>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.linkBtn}
+            onPress={() => nav.navigate("CGV" as never)}
+          >
+            <ThemedText style={styles.linkText}>
+              Conditions de vente (CGV)
+            </ThemedText>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={styles.linkBtn}
+            onPress={() => nav.navigate("Billing" as never)}
+          >
+            <ThemedText style={styles.linkText}>
+              Facturation & remboursement
+            </ThemedText>
+          </TouchableOpacity>
         </ThemedView>
 
-        {/* 🅳 BLOC D — Loryane ESSENTIELLE */}
+        {/* 🅳 BOUTON — À PROPOS DE LORYANE */}
         <TouchableOpacity
           style={styles.aboutBtn}
-          onPress={() => setModalVisible(true)}
+          onPress={() => nav.navigate("Apropos" as never)}
         >
+          <ThemedText style={styles.aboutIcon}>✦</ThemedText>
+          <ThemedText style={styles.aboutText}>À propos de Loryane</ThemedText>
+        </TouchableOpacity>
+
+        {/* 🅴 BLOC D — Loryane ESSENTIELLE */}
+        <TouchableOpacity style={styles.aboutBtn} onPress={() => setModalVisible(true)}>
           <ThemedText style={styles.aboutIcon}>✦</ThemedText>
           <ThemedText style={styles.aboutText}>Loryane Essentielle</ThemedText>
         </TouchableOpacity>
-
       </ScrollView>
 
       {/* MODALE */}
@@ -161,7 +190,6 @@ const ProfileScreen: React.FC = () => {
           </View>
         </View>
       </Modal>
-
     </ThemedView>
   );
 };
@@ -169,13 +197,10 @@ const ProfileScreen: React.FC = () => {
 export default ProfileScreen;
 
 // ------------------------------------------------------
-// STYLES
+// STYLES (inchangés)
 // ------------------------------------------------------
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingHorizontal: 24,
-  },
+  container: { flex: 1, paddingHorizontal: 24 },
 
   card: {
     width: "90%",
@@ -200,11 +225,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
   },
 
-  avatarInitial: {
-    fontSize: 30,
-    color: "#aa755d",
-    fontWeight: "600",
-  },
+  avatarInitial: { fontSize: 30, color: "#aa755d", fontWeight: "600" },
 
   userName: {
     fontSize: 17,
@@ -241,22 +262,20 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
 
-  primaryBtnText: {
-    fontWeight: "600",
-    color: "#3f2f28",
-    fontSize: 15,
-  },
+  primaryBtnText: { fontWeight: "600", color: "#3f2f28", fontSize: 15 },
 
   secondaryBtn: {
     marginTop: 10,
-    backgroundColor: "#f2ece6",
     paddingVertical: 10,
     borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#d6b98c55",
+    backgroundColor: "transparent",
   },
 
   secondaryBtnText: {
     fontSize: 14,
-    color: "#3f2f28",
+    color: "#aa755d",
     textAlign: "center",
     fontWeight: "500",
   },
@@ -269,19 +288,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
 
-  statusFree: {
-    fontSize: 15,
-    fontWeight: "600",
-    color: "#aa755d",
-    textAlign: "center",
-  },
+  statusFree: { fontSize: 15, fontWeight: "600", color: "#aa755d", textAlign: "center" },
 
-  statusPlus: {
-    fontSize: 15,
-    fontWeight: "700",
-    color: "#d6b98c",
-    textAlign: "center",
-  },
+  statusPlus: { fontSize: 15, fontWeight: "700", color: "#d6b98c", textAlign: "center" },
 
   subscriptionText: {
     marginTop: 10,
@@ -291,15 +300,9 @@ const styles = StyleSheet.create({
     lineHeight: 20,
   },
 
-  linkBtn: {
-    paddingVertical: 10,
-  },
+  linkBtn: { paddingVertical: 10 },
 
-  linkText: {
-    color: "#3f2f28",
-    fontSize: 15,
-    textAlign: "center",
-  },
+  linkText: { color: "#3f2f28", fontSize: 15, textAlign: "center" },
 
   aboutBtn: {
     marginTop: 30,
@@ -314,17 +317,9 @@ const styles = StyleSheet.create({
     borderColor: "#d6b98c",
   },
 
-  aboutIcon: {
-    fontSize: 18,
-    color: "#d6b98c",
-    marginRight: 8,
-  },
+  aboutIcon: { fontSize: 18, color: "#d6b98c", marginRight: 8 },
 
-  aboutText: {
-    fontSize: 16,
-    fontWeight: "600",
-    color: "#3f2f28",
-  },
+  aboutText: { fontSize: 16, fontWeight: "600", color: "#3f2f28" },
 
   modalOverlay: {
     flex: 1,
@@ -343,16 +338,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 
-  modalTitle: {
-    fontSize: 18,
-    color: "#3f2f28",
-    fontWeight: "700",
-  },
+  modalTitle: { fontSize: 18, color: "#3f2f28", fontWeight: "700" },
 
-  modalText: {
-    marginTop: 12,
-    fontSize: 15,
-    color: "#3f2f28",
-    textAlign: "center",
-  },
+  modalText: { marginTop: 12, fontSize: 15, color: "#3f2f28", textAlign: "center" },
 });

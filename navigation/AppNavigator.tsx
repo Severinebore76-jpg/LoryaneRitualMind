@@ -5,25 +5,31 @@ import React from "react";
 
 import { getLoryaneTheme } from "../constants/theme";
 
-// Écrans
+// Écrans standards
 import AboutScreen from "../screens/AboutScreen";
 import FavoritesScreen from "../screens/FavoritesScreen";
 import HistoryScreen from "../screens/HistoryScreen";
 import HomeScreen from "../screens/HomeScreen";
-import LegalScreen from "../screens/LegalScreen";
 import MeditationScreen from "../screens/MeditationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import RitualScreen from "../screens/RitualScreen";
 
-// 🆕 Nouveaux écrans réglementaires
-import ConfidentialityScreen from "../screens/ConfidentialityScreen";
-import DataScreen from "../screens/DataScreen";
+// Écrans juridiques (FR uniquement)
+import BillingPolicyScreen from "../screens/Billing/BillingPolicyScreen";
+import CGUScreen from "../screens/CGU/CGUScreen";
+import SubscriptionPolicyScreen from "../screens/CGV/SubscriptionPolicyScreen";
+import ConfidentialityScreen from "../screens/Confidentiality/ConfidentialityScreen";
+import DataPolicyScreen from "../screens/Data/DataPolicyScreen";
+import LegalScreen from "../screens/Legal/LegalScreen";
+
+// Écran Premium
+import PremiumScreen from "../screens/PremiumScreen";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
 // -------------------------------
-// 📌 STACK PROFIL = profil + sous-pages
+// 📌 STACK PROFIL
 // -------------------------------
 function ProfileStack() {
   return (
@@ -34,49 +40,61 @@ function ProfileStack() {
         options={{ headerShown: false }}
       />
 
+      {/* ⚖️ Juridique */}
       <Stack.Screen
         name="Apropos"
         component={AboutScreen}
-        options={{
-          title: "À propos de Loryane",
-          headerShown: true,
-        }}
+        options={{ title: "À propos de Loryane", headerShown: true }}
       />
 
       <Stack.Screen
         name="Legal"
         component={LegalScreen}
-        options={{
-          title: "Mentions légales",
-          headerShown: true,
-        }}
+        options={{ title: "Mentions légales", headerShown: true }}
       />
 
-      {/* 🆕 Politique de confidentialité */}
       <Stack.Screen
         name="Confidentiality"
         component={ConfidentialityScreen}
-        options={{
-          title: "Politique de confidentialité",
-          headerShown: true,
-        }}
+        options={{ title: "Politique de confidentialité", headerShown: true }}
       />
 
-      {/* 🆕 Données personnelles */}
       <Stack.Screen
-        name="Data"
-        component={DataScreen}
-        options={{
-          title: "Données personnelles",
-          headerShown: true,
-        }}
+        name="DataPolicy"
+        component={DataPolicyScreen}
+        options={{ title: "Données & RGPD", headerShown: true }}
+      />
+
+      <Stack.Screen
+        name="CGU"
+        component={CGUScreen}
+        options={{ title: "Conditions d’utilisation", headerShown: true }}
+      />
+
+      <Stack.Screen
+        name="CGV"
+        component={SubscriptionPolicyScreen}
+        options={{ title: "CGV & Abonnement", headerShown: true }}
+      />
+
+      <Stack.Screen
+        name="Billing"
+        component={BillingPolicyScreen}
+        options={{ title: "Facturation & Remboursement", headerShown: true }}
+      />
+
+      {/* ⭐ Premium */}
+      <Stack.Screen
+        name="Subscription"
+        component={PremiumScreen}
+        options={{ headerShown: false }}
       />
     </Stack.Navigator>
   );
 }
 
 // -------------------------------
-// 📌 TAB PRINCIPALE : 6 ICÔNES
+// 📌 TAB PRINCIPALE
 // -------------------------------
 export default function AppNavigator() {
   const theme = getLoryaneTheme("light");
@@ -149,7 +167,6 @@ export default function AppNavigator() {
         }}
       />
 
-      {/* 👤 PROFIL + sous-écrans */}
       <Tab.Screen
         name="Profil"
         component={ProfileStack}

@@ -1,9 +1,9 @@
 // screens/LegalScreen.tsx
 import React from "react";
 import { ScrollView, StyleSheet } from "react-native";
-import { ThemedText } from "../components/themed-text";
-import { ThemedView } from "../components/themed-view";
-import { getLoryaneTheme } from "../constants/theme";
+import { ThemedText } from "../../components/themed-text";
+import { ThemedView } from "../../components/themed-view";
+import { getLoryaneTheme } from "../../constants/theme";
 
 export default function LegalScreen() {
   const theme = getLoryaneTheme("light");
