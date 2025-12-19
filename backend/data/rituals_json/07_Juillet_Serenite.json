@@ -1,242 +1,250 @@
 [
   {
     "day": 1,
-    "message": "Ce que tu laisses partir t’allège.",
-    "ritual": "Respire profondément une goutte de bergamote diffusée. Tiens ton amazonite dans la main et laisse s’envoler ce qui pèse.",
-    "stone": "Amazonite",
-    "essential_oil": "Bergamote",
-    "symbol": "☁︎"
+    "message": "Ose prendre ta place sans t’excuser.",
+    "ritual": "Respire l’arôme lumineux du citron diffusé. Tiens ta citrine et redresse doucement ta posture.",
+    "stone": "Citrine",
+    "essential_oil": "Citron",
+    "symbol": "☀︎"
   },
   {
     "day": 2,
-    "message": "Laisse la vie respirer à travers toi.",
-    "ritual": "Diffuse de l’**eucalyptus**, pose ton **aigue-marine** sur ton plexus et inspire la clarté.",
-    "stone": "Aigue-marine",
-    "essential_oil": "Eucalyptus",
-    "symbol": "✧"
+    "message": "Ta lumière n’écrase personne, elle éclaire.",
+    "ritual": "Diffuse de l’orange douce. Garde ta pierre de soleil sur le plexus et respire amplement.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Orange douce",
+    "symbol": "✦"
   },
   {
     "day": 3,
-    "message": "Accepte de ne pas tout comprendre.",
-    "ritual": "Tiens ta **fluorite** contre ton front, respire la **lavande fine** et laisse le mental se déposer.",
-    "stone": "Fluorite",
-    "essential_oil": "Lavande fine",
-    "symbol": "☽"
+    "message": "Avancer est déjà une victoire.",
+    "ritual": "Marche quelques minutes avec ton œil de tigre dans la poche. Respire l’air chaud consciemment.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Air libre",
+    "symbol": "⚕︎"
   },
   {
     "day": 4,
-    "message": "Ce que tu contrôles t’échappe, ce que tu accueilles t’appartient.",
-    "ritual": "Respire doucement une goutte de **sauge sclarée** sur un mouchoir, ta **calcite bleue** dans la paume.",
-    "stone": "Calcite bleue",
-    "essential_oil": "Sauge sclarée",
-    "symbol": "🜂"
+    "message": "Tu as le droit d’exister pleinement.",
+    "ritual": "Diffuse du pamplemousse. Tiens ta cornaline et affirme une intention à voix haute.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "☀︎"
   },
   {
     "day": 5,
-    "message": "Libère ton souffle, il connaît le chemin.",
-    "ritual": "Diffuse du **lemongrass**, tiens ton **aventurine verte** et respire en rythme avec le vent.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Lemongrass",
-    "symbol": "☁︎"
+    "message": "Ta joie est une force contagieuse.",
+    "ritual": "Respire la bergamote diffusée. Garde ta citrine près de toi toute la journée.",
+    "stone": "Citrine",
+    "essential_oil": "Bergamote",
+    "symbol": "✦"
   },
   {
     "day": 6,
-    "message": "Les vagues n’ont pas peur de retomber.",
-    "ritual": "Tiens ton **aigue-marine**, respire une goutte de **bois de hô** diffusée et sens la fluidité te traverser.",
-    "stone": "Aigue-marine",
-    "essential_oil": "Bois de hô",
-    "symbol": "✧"
+    "message": "Exprime-toi sans te restreindre.",
+    "ritual": "Diffuse de la menthe poivrée. Tiens ta turquoise et laisse sortir ce que tu retiens.",
+    "stone": "Turquoise",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "⚕︎"
   },
   {
     "day": 7,
-    "message": "Ce que tu retiens t’éloigne du présent.",
-    "ritual": "Diffuse de la **bergamote**, garde ton **amazonite** dans la main et relâche les épaules à chaque expiration.",
-    "stone": "Amazonite",
-    "essential_oil": "Bergamote",
-    "symbol": "☽"
+    "message": "Ton énergie mérite de circuler.",
+    "ritual": "Bouge librement pendant une musique. Garde ta cornaline et respire profondément.",
+    "stone": "Cornaline",
+    "essential_oil": "Orange douce",
+    "symbol": "☀︎"
   },
   {
     "day": 8,
-    "message": "Lâcher prise, c’est croire que tout est déjà en ordre.",
-    "ritual": "Respire une goutte d’**eucalyptus** et pose ta **fluorite** sur ton cœur.",
-    "stone": "Fluorite",
-    "essential_oil": "Eucalyptus",
-    "symbol": "🜂"
+    "message": "La spontanéité nourrit l’élan vital.",
+    "ritual": "Respire le citron vert diffusé. Tiens ta pierre de soleil et souris consciemment.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Citron vert",
+    "symbol": "✦"
   },
   {
     "day": 9,
-    "message": "L’air qui entre est une promesse de renouveau.",
-    "ritual": "Diffuse de la **citronnelle**, ouvre la fenêtre et tiens ta **aventurine verte** vers la lumière.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Citronnelle",
-    "symbol": "☁︎"
+    "message": "Rayonner n’est pas se disperser.",
+    "ritual": "Diffuse du bois de cèdre. Tiens ton œil de tigre et recentre-toi quelques instants.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "🜃"
   },
   {
     "day": 10,
-    "message": "Tout revient quand on arrête de retenir.",
-    "ritual": "Respire l’arôme doux du **bois de hô**, tiens ta **calcite bleue** et dis : “Je fais confiance.”",
-    "stone": "Calcite bleue",
-    "essential_oil": "Bois de hô",
-    "symbol": "✧"
+    "message": "Ton feu intérieur connaît sa juste mesure.",
+    "ritual": "Respire le gingembre diffusé. Garde ta citrine sur le cœur et ressens la chaleur.",
+    "stone": "Citrine",
+    "essential_oil": "Gingembre",
+    "symbol": "☀︎"
   },
   {
     "day": 11,
-    "message": "Le calme ne se cherche pas, il s’autorise.",
-    "ritual": "Diffuse de la **lavande fine**, tiens ta **lépidolite** et reste en silence une minute.",
-    "stone": "Lépidolite",
-    "essential_oil": "Lavande fine",
-    "symbol": "☽"
+    "message": "Avance avec confiance, même imparfaite.",
+    "ritual": "Diffuse de la bergamote. Tiens ta cornaline et répète : « J’ose. »",
+    "stone": "Cornaline",
+    "essential_oil": "Bergamote",
+    "symbol": "✦"
   },
   {
     "day": 12,
-    "message": "Le lâcher-prise est une danse, pas un combat.",
-    "ritual": "Respire une goutte de **bergamote**, fais bouger doucement ton corps avec ta **aigue-marine** sur le cœur.",
-    "stone": "Aigue-marine",
-    "essential_oil": "Bergamote",
-    "symbol": "🜂"
+    "message": "Ton élan est légitime.",
+    "ritual": "Respire l’orange douce. Garde ta pierre de soleil près de ton plexus.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Orange douce",
+    "symbol": "⚕︎"
   },
   {
     "day": 13,
-    "message": "Laisse l’eau emporter ce qui ne te sert plus.",
-    "ritual": "Passe ta **pierre de lune** sous un filet d’eau, respire l’**eucalyptus**, puis sèche-la lentement.",
-    "stone": "Pierre de lune",
-    "essential_oil": "Eucalyptus",
-    "symbol": "☁︎"
+    "message": "La clarté accompagne l’action.",
+    "ritual": "Diffuse du citron. Tiens ta citrine et note une action simple à accomplir.",
+    "stone": "Citrine",
+    "essential_oil": "Citron",
+    "symbol": "☀︎"
   },
   {
     "day": 14,
-    "message": "Tu n’as pas besoin de tout réparer pour respirer.",
-    "ritual": "Diffuse de la **sauge sclarée**, tiens ton **fluorite** et inspire profondément trois fois.",
-    "stone": "Fluorite",
-    "essential_oil": "Sauge sclarée",
-    "symbol": "✧"
+    "message": "Tu peux être visible sans te justifier.",
+    "ritual": "Respire la menthe poivrée. Tiens ta turquoise et parle avec assurance.",
+    "stone": "Turquoise",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "✦"
   },
   {
     "day": 15,
-    "message": "Les réponses viennent quand tu cesses de les chercher.",
-    "ritual": "Respire la **lavande fine**, garde ton **amazonite** près de toi et laisse le silence répondre.",
-    "stone": "Amazonite",
-    "essential_oil": "Lavande fine",
-    "symbol": "☽"
+    "message": "La joie est un choix renouvelé.",
+    "ritual": "Diffuse du pamplemousse. Garde ta pierre de soleil et ressens l’enthousiasme.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Pamplemousse",
+    "symbol": "☀︎"
   },
   {
     "day": 16,
-    "message": "Le vent ne demande pas la permission de souffler.",
-    "ritual": "Tiens ton **aventurine verte**, respire le **lemongrass** et laisse ton corps s’étirer librement.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Lemongrass",
-    "symbol": "🜂"
+    "message": "Ton énergie mérite d’être honorée.",
+    "ritual": "Respire la bergamote diffusée. Tiens ta cornaline et ralentis un instant.",
+    "stone": "Cornaline",
+    "essential_oil": "Bergamote",
+    "symbol": "⚕︎"
   },
   {
     "day": 17,
-    "message": "Le détachement n’est pas l’oubli, c’est la paix.",
-    "ritual": "Diffuse du **bois de hô**, garde ta **calcite bleue** et ferme les yeux quelques instants.",
-    "stone": "Calcite bleue",
-    "essential_oil": "Bois de hô",
-    "symbol": "☁︎"
+    "message": "Le rayonnement commence à l’intérieur.",
+    "ritual": "Diffuse du bois de cèdre. Tiens ton œil de tigre et respire calmement.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "🜃"
   },
   {
     "day": 18,
-    "message": "Ne retiens pas ce qui veut se transformer.",
-    "ritual": "Respire une goutte d’**eucalyptus** et tiens ta **aigue-marine** à la lumière.",
-    "stone": "Aigue-marine",
-    "essential_oil": "Eucalyptus",
-    "symbol": "✧"
+    "message": "Exprimer sa joie est un acte de courage.",
+    "ritual": "Respire l’orange douce. Garde ta citrine et laisse-toi sourire.",
+    "stone": "Citrine",
+    "essential_oil": "Orange douce",
+    "symbol": "☀︎"
   },
   {
     "day": 19,
-    "message": "Lâcher prise, c’est faire confiance au rythme.",
-    "ritual": "Diffuse de la **bergamote**, tiens ta **lépidolite** et laisse ton souffle t’apaiser.",
-    "stone": "Lépidolite",
-    "essential_oil": "Bergamote",
-    "symbol": "☽"
+    "message": "Ton mouvement crée ton équilibre.",
+    "ritual": "Marche quelques minutes avec ta cornaline. Respire profondément.",
+    "stone": "Cornaline",
+    "essential_oil": "Air libre",
+    "symbol": "✦"
   },
   {
     "day": 20,
-    "message": "L’espace intérieur est un souffle infini.",
-    "ritual": "Respire la **citronnelle**, garde ton **fluorite** dans la main et observe le vide comme un ami.",
-    "stone": "Fluorite",
-    "essential_oil": "Citronnelle",
-    "symbol": "🜂"
+    "message": "La vitalité se partage sans se perdre.",
+    "ritual": "Diffuse du citron vert. Tiens ta pierre de soleil et visualise ton énergie circuler.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Citron vert",
+    "symbol": "⚕︎"
   },
   {
     "day": 21,
-    "message": "Ce que tu offres revient autrement.",
-    "ritual": "Diffuse du **bois de hô**, tiens ta **pierre de lune** et souris simplement.",
-    "stone": "Pierre de lune",
-    "essential_oil": "Bois de hô",
-    "symbol": "☁︎"
+    "message": "Sois fidèle à ton élan.",
+    "ritual": "Respire la menthe poivrée. Tiens ta turquoise et exprime une vérité simple.",
+    "stone": "Turquoise",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "☀︎"
   },
   {
     "day": 22,
-    "message": "Laisse les choses être incomplètes.",
-    "ritual": "Respire une goutte de **lavande fine**, ta **aventurine verte** posée sur le cœur.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Lavande fine",
-    "symbol": "✧"
+    "message": "Ton enthousiasme est précieux.",
+    "ritual": "Diffuse de la bergamote. Garde ta citrine près de toi.",
+    "stone": "Citrine",
+    "essential_oil": "Bergamote",
+    "symbol": "✦"
   },
   {
     "day": 23,
-    "message": "Le lâcher-prise, c’est la foi sans contrôle.",
-    "ritual": "Diffuse de la **sauge sclarée**, tiens ton **amazonite** et répète : “Je laisse faire.”",
-    "stone": "Amazonite",
-    "essential_oil": "Sauge sclarée",
-    "symbol": "☽"
+    "message": "La joie te guide avec justesse.",
+    "ritual": "Respire l’orange douce. Tiens ta pierre de soleil et ancre ce sentiment.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Orange douce",
+    "symbol": "⚕︎"
   },
   {
     "day": 24,
-    "message": "La légèreté n’a rien de superficiel.",
-    "ritual": "Respire la **bergamote**, garde ta **aigue-marine** sur ton plexus et sens ta poitrine s’ouvrir.",
-    "stone": "Aigue-marine",
-    "essential_oil": "Bergamote",
-    "symbol": "🜂"
+    "message": "Ton feu intérieur éclaire ton chemin.",
+    "ritual": "Diffuse du gingembre. Tiens ta citrine et ressens la chaleur vitale.",
+    "stone": "Citrine",
+    "essential_oil": "Gingembre",
+    "symbol": "☀︎"
   },
   {
     "day": 25,
-    "message": "La gratitude est le souffle du cœur.",
-    "ritual": "Diffuse du **eucalyptus**, tiens ta **fluorite** et dis simplement “merci”.",
-    "stone": "Fluorite",
-    "essential_oil": "Eucalyptus",
-    "symbol": "☁︎"
+    "message": "Avancer avec plaisir est suffisant.",
+    "ritual": "Respire le pamplemousse diffusé. Garde ta cornaline près du corps.",
+    "stone": "Cornaline",
+    "essential_oil": "Pamplemousse",
+    "symbol": "✦"
   },
   {
     "day": 26,
-    "message": "Ce que tu acceptes se transforme.",
-    "ritual": "Respire la **citronnelle**, passe doucement ta **calcite bleue** sur ta joue.",
-    "stone": "Calcite bleue",
-    "essential_oil": "Citronnelle",
-    "symbol": "✧"
+    "message": "Ton rayonnement est naturel.",
+    "ritual": "Diffuse du citron. Tiens ta pierre de soleil et respire profondément.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Citron",
+    "symbol": "⚕︎"
   },
   {
     "day": 27,
-    "message": "L’équilibre, c’est savoir quand relâcher.",
-    "ritual": "Diffuse du **bois de hô**, garde ta **lépidolite** dans la main et observe ton souffle.",
-    "stone": "Lépidolite",
-    "essential_oil": "Bois de hô",
-    "symbol": "☽"
+    "message": "Exprimer ta force apaise ton esprit.",
+    "ritual": "Respire la menthe poivrée. Tiens ton œil de tigre et recentre-toi.",
+    "stone": "Œil de tigre",
+    "essential_oil": "Menthe poivrée",
+    "symbol": "🜃"
   },
   {
     "day": 28,
-    "message": "Lâcher, c’est ouvrir.",
-    "ritual": "Respire la **lavande fine**, tiens ta **pierre de lune** et imagine une porte qui s’ouvre en toi.",
-    "stone": "Pierre de lune",
-    "essential_oil": "Lavande fine",
-    "symbol": "🜂"
+    "message": "La vitalité se nourrit de présence.",
+    "ritual": "Diffuse de la bergamote. Garde ta citrine et observe ton énergie.",
+    "stone": "Citrine",
+    "essential_oil": "Bergamote",
+    "symbol": "☀︎"
   },
   {
     "day": 29,
-    "message": "Les choses se placent d’elles-mêmes quand tu respires.",
-    "ritual": "Diffuse de la **sauge sclarée**, tiens ton **aventurine verte** et écoute un son naturel.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Sauge sclarée",
-    "symbol": "☁︎"
+    "message": "Ton enthousiasme éclaire tes décisions.",
+    "ritual": "Respire l’orange douce. Tiens ta pierre de soleil et pose une intention claire.",
+    "stone": "Pierre de soleil",
+    "essential_oil": "Orange douce",
+    "symbol": "✦"
   },
   {
     "day": 30,
-    "message": "L’apaisement n’est pas l’inaction, c’est la confiance tranquille.",
-    "ritual": "Respire la **bergamote**, garde ton **fluorite** sur le cœur et dis : “Je fais confiance à la vie.”",
-    "stone": "Fluorite",
-    "essential_oil": "Bergamote",
-    "symbol": "✧"
+    "message": "La joie stabilise l’élan.",
+    "ritual": "Diffuse du bois de cèdre. Tiens ta cornaline et ralentis consciemment.",
+    "stone": "Cornaline",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "🜃"
+  },
+  {
+    "day": 31,
+    "message": "Rayonner, c’est rester aligné.",
+    "ritual": "Respire le citron vert diffusé. Tiens ta citrine et remercie ton énergie.",
+    "stone": "Citrine",
+    "essential_oil": "Citron vert",
+    "symbol": "☀︎"
   }
 ]

@@ -1,250 +1,242 @@
 [
   {
     "day": 1,
-    "message": "La gratitude ouvre toutes les portes.",
-    "ritual": "Diffuse de l’orange douce, tiens ta citrine et souris doucement.",
-    "stone": "Citrine",
-    "essential_oil": "Orange douce",
-    "symbol": "✧"
+    "message": "La guérison commence quand tu t’autorises à sentir.",
+    "ritual": "Diffuse de la lavande, tiens ton quartz rose et respire profondément.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "⚕︎"
   },
   {
     "day": 2,
-    "message": "Ce que tu remercies se multiplie.",
-    "ritual": "Respire la **cannelle**, ta **pierre de soleil** sur le cœur.",
-    "stone": "Pierre de soleil",
-    "essential_oil": "Cannelle",
-    "symbol": "☀︎"
+    "message": "Ce que tu accueilles s’apaise.",
+    "ritual": "Respire une goutte de camomille romaine, garde ta rhodonite sur le cœur.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
   },
   {
     "day": 3,
-    "message": "La paix vient de la reconnaissance du chemin.",
-    "ritual": "Diffuse de l’**encens**, garde ton **quartz rose** et dis : “Merci pour ce jour.”",
-    "stone": "Quartz rose",
-    "essential_oil": "Encens",
-    "symbol": "☁︎"
+    "message": "Pardonner, c’est se libérer soi-même.",
+    "ritual": "Diffuse du bois de santal, garde ta morganite dans la main.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
   },
   {
     "day": 4,
-    "message": "Remercier, c’est honorer la vie telle qu’elle est.",
-    "ritual": "Respire une goutte de **vanille**, ta **aventurine verte** dans la main.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Vanille",
-    "symbol": "⚕︎"
+    "message": "La douceur répare plus que la force.",
+    "ritual": "Respire la rose, tiens ta pierre de lune et souris doucement.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "☽"
   },
   {
     "day": 5,
-    "message": "La gratitude transforme le manque en plénitude.",
-    "ritual": "Diffuse du **bois de cèdre**, tiens ton **améthyste** et respire lentement.",
+    "message": "Le calme est un baume invisible.",
+    "ritual": "Diffuse de l’encens, garde ton améthyste et observe ton souffle.",
     "stone": "Améthyste",
-    "essential_oil": "Bois de cèdre",
-    "symbol": "✧"
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
   },
   {
     "day": 6,
-    "message": "Tu es déjà béni(e) de tout ce que tu vis.",
-    "ritual": "Respire l’**orange douce**, garde ta **pyrite** sur ton plexus.",
-    "stone": "Pyrite",
-    "essential_oil": "Orange douce",
-    "symbol": "☀︎"
+    "message": "Tu n’as rien à corriger, seulement à apaiser.",
+    "ritual": "Respire la camomille romaine, garde ton quartz rose sur ton plexus.",
+    "stone": "Quartz rose",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
   },
   {
     "day": 7,
-    "message": "La reconnaissance attire la lumière.",
-    "ritual": "Diffuse de la **cannelle**, tiens ta **citrine** et dis : “Merci à la vie.”",
-    "stone": "Citrine",
-    "essential_oil": "Cannelle",
-    "symbol": "☁︎"
+    "message": "La guérison vient avec la patience.",
+    "ritual": "Diffuse du bois de santal, tiens ta rhodonite et ferme les yeux quelques secondes.",
+    "stone": "Rhodonite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
   },
   {
     "day": 8,
-    "message": "Chaque instant est un cadeau à ouvrir.",
-    "ritual": "Respire la **vanille**, ta **pierre de soleil** sur le cœur.",
-    "stone": "Pierre de soleil",
-    "essential_oil": "Vanille",
-    "symbol": "⚕︎"
+    "message": "Tu ne peux pas guérir sans tendresse.",
+    "ritual": "Respire le géranium rosat, garde ta morganite dans la main.",
+    "stone": "Morganite",
+    "essential_oil": "Géranium rosat",
+    "symbol": "☽"
   },
   {
     "day": 9,
-    "message": "La gratitude rend chaque jour sacré.",
-    "ritual": "Diffuse de l’**encens**, garde ton **quartz rose** et reste en silence trois respirations.",
-    "stone": "Quartz rose",
-    "essential_oil": "Encens",
-    "symbol": "✧"
+    "message": "L’amour que tu donnes te soigne aussi.",
+    "ritual": "Diffuse de la rose, pose ta pierre de lune sur ton cœur.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "⚕︎"
   },
   {
     "day": 10,
-    "message": "Rien ne t’est dû, tout t’est offert.",
-    "ritual": "Respire la **orange douce**, tiens ton **aventurine verte** et souris.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Orange douce",
-    "symbol": "☀︎"
+    "message": "La guérison est un retour à l’amour.",
+    "ritual": "Respire l’encens, garde ton améthyste et souris à ton reflet.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "☁︎"
   },
   {
     "day": 11,
-    "message": "Remercier, c’est s’ouvrir à la paix.",
-    "ritual": "Diffuse du **bois de cèdre**, ta **améthyste** dans la main.",
-    "stone": "Améthyste",
-    "essential_oil": "Bois de cèdre",
-    "symbol": "☁︎"
+    "message": "La compassion est une lumière douce.",
+    "ritual": "Diffuse de la lavande, tiens ton quartz rose et dis : « Je m’accueille pleinement. »",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "✧"
   },
   {
     "day": 12,
-    "message": "Le bonheur est un état de gratitude.",
-    "ritual": "Respire une goutte de **cannelle**, garde ta **pyrite** sur le plexus.",
-    "stone": "Pyrite",
-    "essential_oil": "Cannelle",
-    "symbol": "⚕︎"
+    "message": "L’apaisement se trouve dans la lenteur.",
+    "ritual": "Respire la camomille romaine, garde ta rhodonite sur ton plexus.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☽"
   },
   {
     "day": 13,
-    "message": "Chaque respiration est un merci.",
-    "ritual": "Diffuse de la **vanille**, tiens ta **citrine** et observe ton souffle.",
-    "stone": "Citrine",
-    "essential_oil": "Vanille",
-    "symbol": "✧"
+    "message": "Guérir, c’est apprendre à rester doux avec soi.",
+    "ritual": "Diffuse du bois de santal, garde ta morganite et respire lentement.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "⚕︎"
   },
   {
     "day": 14,
-    "message": "L’abondance naît d’un cœur reconnaissant.",
-    "ritual": "Respire l’**encens**, ta **pierre de soleil** sur le cœur.",
-    "stone": "Pierre de soleil",
-    "essential_oil": "Encens",
-    "symbol": "☀︎"
+    "message": "Les larmes sont une forme de libération.",
+    "ritual": "Respire la rose, tiens ta pierre de lune et laisse venir ce qui vient.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Rose",
+    "symbol": "☁︎"
   },
   {
     "day": 15,
-    "message": "La gratitude efface le poids du passé.",
-    "ritual": "Diffuse de l’**orange douce**, garde ton **quartz rose** et respire lentement.",
-    "stone": "Quartz rose",
-    "essential_oil": "Orange douce",
-    "symbol": "☁︎"
+    "message": "La guérison n’est pas linéaire, elle est vivante.",
+    "ritual": "Diffuse de l’encens, garde ton améthyste dans la main.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
+    "symbol": "✧"
   },
   {
     "day": 16,
-    "message": "Ce que tu remercies devient lumière.",
-    "ritual": "Respire la **bois de cèdre**, tiens ton **aventurine verte** et souris doucement.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Bois de cèdre",
-    "symbol": "⚕︎"
+    "message": "Le repos est une médecine du cœur.",
+    "ritual": "Respire la lavande, garde ton quartz rose et reste immobile un instant.",
+    "stone": "Quartz rose",
+    "essential_oil": "Lavande",
+    "symbol": "☽"
   },
   {
     "day": 17,
-    "message": "La paix intérieure est un merci silencieux.",
-    "ritual": "Diffuse du **cannelle**, garde ton **améthyste** et ferme les yeux.",
-    "stone": "Améthyste",
-    "essential_oil": "Cannelle",
-    "symbol": "✧"
+    "message": "Guérir, c’est aimer ses propres cicatrices.",
+    "ritual": "Diffuse de la camomille romaine, tiens ta rhodonite et dis : « Je me pardonne. »",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "⚕︎"
   },
   {
     "day": 18,
-    "message": "La gratitude t’aligne avec la joie.",
-    "ritual": "Respire la **vanille**, ta **pyrite** dans la main.",
-    "stone": "Pyrite",
-    "essential_oil": "Vanille",
-    "symbol": "☀︎"
+    "message": "La douceur est ton abri.",
+    "ritual": "Respire le bois de santal, garde ta morganite sur ton cœur.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "☁︎"
   },
   {
     "day": 19,
-    "message": "Remercier, c’est reconnaître la beauté du présent.",
-    "ritual": "Diffuse du **encens**, tiens ta **citrine** et dis intérieurement “merci”.",
-    "stone": "Citrine",
-    "essential_oil": "Encens",
-    "symbol": "☁︎"
+    "message": "Guérir, c’est se souvenir sans douleur.",
+    "ritual": "Diffuse du géranium rosat, garde ta pierre de lune et souris au passé.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Géranium rosat",
+    "symbol": "✧"
   },
   {
     "day": 20,
-    "message": "Tu es le fruit de tes propres bénédictions.",
-    "ritual": "Respire la **orange douce**, garde ta **pierre de soleil** sur ton plexus.",
-    "stone": "Pierre de soleil",
-    "essential_oil": "Orange douce",
-    "symbol": "⚕︎"
+    "message": "Ce qui se brise en toi apprend à aimer autrement.",
+    "ritual": "Respire la rose, garde ton améthyste dans la main.",
+    "stone": "Améthyste",
+    "essential_oil": "Rose",
+    "symbol": "☽"
   },
   {
     "day": 21,
-    "message": "La gratitude relie le cœur et la lumière.",
-    "ritual": "Diffuse du **bois de cèdre**, tiens ton **quartz rose** et souris à ton reflet.",
+    "message": "La paix du cœur guérit tout le reste.",
+    "ritual": "Diffuse de la lavande, garde ton quartz rose dans la main et respire trois fois.",
     "stone": "Quartz rose",
-    "essential_oil": "Bois de cèdre",
-    "symbol": "✧"
+    "essential_oil": "Lavande",
+    "symbol": "⚕︎"
   },
   {
     "day": 22,
-    "message": "Ce que tu remercies devient paix.",
-    "ritual": "Respire la **vanille**, ta **aventurine verte** dans la main.",
-    "stone": "Aventurine verte",
-    "essential_oil": "Vanille",
-    "symbol": "☀︎"
+    "message": "Le calme soigne mieux que la colère.",
+    "ritual": "Respire la camomille romaine, tiens ta rhodonite dans la main et souris doucement.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
+    "symbol": "☁︎"
   },
   {
     "day": 23,
-    "message": "La reconnaissance dissout les ombres.",
-    "ritual": "Diffuse de la **cannelle**, garde ton **améthyste** et observe la lumière d’une bougie.",
-    "stone": "Améthyste",
-    "essential_oil": "Cannelle",
-    "symbol": "☁︎"
+    "message": "Tu n’as rien à réparer, seulement à comprendre.",
+    "ritual": "Diffuse du bois de santal, pose ta morganite sur ton plexus.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "✧"
   },
   {
     "day": 24,
-    "message": "Tu es lumière parmi les lumières.",
-    "ritual": "Respire la **encens**, tiens ta **pyrite** et ferme les yeux.",
-    "stone": "Pyrite",
-    "essential_oil": "Encens",
-    "symbol": "⚕︎"
+    "message": "L’amour est la forme la plus haute de guérison.",
+    "ritual": "Respire le géranium rosat, garde ta pierre de lune dans la main et ferme les yeux.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Géranium rosat",
+    "symbol": "☽"
   },
   {
     "day": 25,
-    "message": "Remercier, c’est aimer sans condition.",
-    "ritual": "Diffuse de l’**orange douce**, garde ta **citrine** et respire profondément.",
-    "stone": "Citrine",
-    "essential_oil": "Orange douce",
-    "symbol": "✧"
-  },
-  {
-    "day": 26,
-    "message": "La gratitude est la mémoire du cœur.",
-    "ritual": "Respire la **bois de cèdre**, ta **pierre de soleil** sur ton plexus.",
-    "stone": "Pierre de soleil",
-    "essential_oil": "Bois de cèdre",
-    "symbol": "☀︎"
-  },
-  {
-    "day": 27,
-    "message": "Ce que tu offres avec joie revient amplifié.",
-    "ritual": "Diffuse de la **vanille**, tiens ton **quartz rose** et souris à la vie.",
-    "stone": "Quartz rose",
-    "essential_oil": "Vanille",
-    "symbol": "☁︎"
-  },
-  {
-    "day": 28,
-    "message": "La paix est un merci silencieux.",
-    "ritual": "Respire l’**encens**, garde ton **aventurine verte** dans la main.",
-    "stone": "Aventurine verte",
+    "message": "La paix vient quand tu cesses de te blâmer.",
+    "ritual": "Diffuse de l’encens, tiens ton améthyste et dis : « Je me choisis. »",
+    "stone": "Améthyste",
     "essential_oil": "Encens",
     "symbol": "⚕︎"
   },
   {
-    "day": 29,
-    "message": "Chaque fin est une bénédiction déguisée.",
-    "ritual": "Diffuse du **cannelle**, tiens ton **améthyste** et dis : “Je remercie pour tout.”",
-    "stone": "Améthyste",
-    "essential_oil": "Cannelle",
+    "day": 26,
+    "message": "La guérison n’est pas un effort, c’est une ouverture.",
+    "ritual": "Respire la rose, garde ton quartz rose sur le cœur.",
+    "stone": "Quartz rose",
+    "essential_oil": "Rose",
+    "symbol": "☁︎"
+  },
+  {
+    "day": 27,
+    "message": "Chaque respiration est un début.",
+    "ritual": "Diffuse de la camomille romaine, garde ta rhodonite dans la main.",
+    "stone": "Rhodonite",
+    "essential_oil": "Camomille romaine",
     "symbol": "✧"
   },
   {
-    "day": 30,
-    "message": "Le cycle se ferme dans la lumière.",
-    "ritual": "Respire la **orange douce**, ta **pyrite** sur le cœur, et souris au chemin parcouru.",
-    "stone": "Pyrite",
-    "essential_oil": "Orange douce",
-    "symbol": "☀︎"
+    "day": 28,
+    "message": "L’amour guérit ce que le temps n’efface pas.",
+    "ritual": "Respire le bois de santal, garde ta morganite sur ton plexus.",
+    "stone": "Morganite",
+    "essential_oil": "Bois de santal",
+    "symbol": "☽"
   },
   {
-    "day": 31,
-    "message": "La gratitude est ton ultime renaissance.",
-    "ritual": "Diffuse de la **vanille**, garde ta **citrine** et dis : “Merci à la vie, merci à moi.”",
-    "stone": "Citrine",
-    "essential_oil": "Vanille",
+    "day": 29,
+    "message": "Ce que tu acceptes s’apaise.",
+    "ritual": "Diffuse de la lavande, tiens ta pierre de lune et respire lentement.",
+    "stone": "Pierre de lune",
+    "essential_oil": "Lavande",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 30,
+    "message": "Guérir, c’est redevenir entier.",
+    "ritual": "Respire l’encens, garde ton améthyste et remercie-toi.",
+    "stone": "Améthyste",
+    "essential_oil": "Encens",
     "symbol": "☁︎"
   }
 ]

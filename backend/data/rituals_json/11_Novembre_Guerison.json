@@ -1,31 +1,31 @@
 [
   {
     "day": 1,
-    "message": "L’intuition parle quand le mental se tait.",
-    "ritual": "Diffuse de l’encens, tiens ton améthyste et reste en silence quelques instants.",
+    "message": "Le silence ouvre la porte de l’intuition.",
+    "ritual": "Diffuse de l’encens, tiens ton améthyste et observe ton souffle.",
     "stone": "Améthyste",
     "essential_oil": "Encens",
     "symbol": "☽"
   },
   {
     "day": 2,
-    "message": "Ton corps sait avant ton esprit.",
-    "ritual": "Respire une goutte de bois de hô, ta labradorite posée sur le plexus.",
+    "message": "Ton corps perçoit avant ton esprit.",
+    "ritual": "Respire le bois de hô, garde ta labradorite sur le plexus.",
     "stone": "Labradorite",
     "essential_oil": "Bois de hô",
     "symbol": "✧"
   },
   {
     "day": 3,
-    "message": "L’alignement commence quand tu cesses de te forcer.",
-    "ritual": "Diffuse de la lavande, garde ta sodalite dans la main et inspire lentement.",
+    "message": "L’alignement commence dans l’écoute.",
+    "ritual": "Diffuse de la lavande, tiens ta sodalite et ralentis ton souffle.",
     "stone": "Sodalite",
     "essential_oil": "Lavande",
     "symbol": "🜃"
   },
   {
     "day": 4,
-    "message": "Suivre son intuition, c’est honorer sa vérité.",
+    "message": "L’intuition se ressent plus qu’elle ne s’explique.",
     "ritual": "Respire la myrrhe, tiens ton lapis-lazuli et écris une pensée spontanée.",
     "stone": "Lapis-lazuli",
     "essential_oil": "Myrrhe",
@@ -33,16 +33,16 @@
   },
   {
     "day": 5,
-    "message": "Ce qui est juste se sent, pas ne se prouve.",
-    "ritual": "Diffuse du néroli, garde ta fluorite et écoute ton souffle.",
+    "message": "Ce qui est juste laisse une paix durable.",
+    "ritual": "Diffuse du néroli, garde ta fluorite et reste immobile un instant.",
     "stone": "Fluorite",
     "essential_oil": "Néroli",
     "symbol": "☽"
   },
   {
     "day": 6,
-    "message": "L’alignement, c’est dire oui à ce qui est.",
-    "ritual": "Respire la sauge sclarée, ta améthyste dans la main.",
+    "message": "Dire oui à ce qui est apaise l’intérieur.",
+    "ritual": "Respire la sauge sclarée, tiens ton améthyste dans la main.",
     "stone": "Améthyste",
     "essential_oil": "Sauge sclarée",
     "symbol": "✧"
@@ -50,86 +50,86 @@
   {
     "day": 7,
     "message": "Ton cœur connaît la direction.",
-    "ritual": "Diffuse du bois de hô tiens ta labradorite et pose la main sur ton cœur.",
+    "ritual": "Diffuse du bois de hô, tiens ta labradorite et pose la main sur ton cœur.",
     "stone": "Labradorite",
     "essential_oil": "Bois de hô",
     "symbol": "🜃"
   },
   {
     "day": 8,
-    "message": "L’intuition ne crie pas, elle murmure.",
-    "ritual": "Respire l’encens garde ta sodalite et ferme les yeux doucement.",
+    "message": "L’intuition murmure quand le mental se tait.",
+    "ritual": "Respire l’encens, garde ta sodalite et ferme les yeux doucement.",
     "stone": "Sodalite",
     "essential_oil": "Encens",
     "symbol": "⚕︎"
   },
   {
     "day": 9,
-    "message": "L’alignement n’est pas une posture, c’est une paix.",
-    "ritual": "Diffuse de la lavande tiens ton lapis-lazuli et observe tes pensées passer.",
+    "message": "L’alignement est une paix intérieure.",
+    "ritual": "Diffuse de la lavande, tiens ton lapis-lazuli et observe tes pensées.",
     "stone": "Lapis-lazuli",
     "essential_oil": "Lavande",
     "symbol": "☽"
   },
   {
     "day": 10,
-    "message": "Le doute est un signe que tu écoutes encore trop fort le bruit.",
-    "ritual": "Respire la sauge sclarée ta fluorite sur ton front.",
+    "message": "Le doute diminue quand le silence s’installe.",
+    "ritual": "Respire la sauge sclarée, garde ta fluorite sur le front.",
     "stone": "Fluorite",
     "essential_oil": "Sauge sclarée",
     "symbol": "✧"
   },
   {
     "day": 11,
-    "message": "Ce qui résonne est souvent vrai.",
-    "ritual": "Diffuse du néroli tiens ton améthyste et pose une main sur ton ventre.",
+    "message": "Ce qui résonne profondément est souvent vrai.",
+    "ritual": "Diffuse du néroli, tiens ton améthyste et pose une main sur ton ventre.",
     "stone": "Améthyste",
     "essential_oil": "Néroli",
     "symbol": "🜃"
   },
   {
     "day": 12,
-    "message": "Aligne ton souffle, le reste suivra.",
-    "ritual": "Respire le bois de hô garde ta labradorite et fais trois respirations lentes.",
+    "message": "Quand le souffle s’aligne, l’esprit suit.",
+    "ritual": "Respire le bois de hô, garde ta labradorite et ralentis.",
     "stone": "Labradorite",
     "essential_oil": "Bois de hô",
     "symbol": "⚕︎"
   },
   {
     "day": 13,
-    "message": "La cohérence rend libre.",
-    "ritual": "Diffuse de l’encens, tiens ton améthyste et reste en silence quelques instants.",
+    "message": "La cohérence intérieure libère.",
+    "ritual": "Diffuse de l’encens, tiens ta sodalite et reste en silence.",
     "stone": "Sodalite",
     "essential_oil": "Encens",
     "symbol": "☽"
   },
   {
     "day": 14,
-    "message": "L’intuition n’a besoin de personne pour exister.",
-    "ritual": "Respire la myrrhe, garde ton lapis-lazuli dans la main et reste en silence.",
+    "message": "L’intuition n’a pas besoin d’approbation.",
+    "ritual": "Respire la myrrhe, garde ton lapis-lazuli dans la main.",
     "stone": "Lapis-lazuli",
     "essential_oil": "Myrrhe",
     "symbol": "✧"
   },
   {
     "day": 15,
-    "message": "L’alignement, c’est quand le cœur et la raison marchent ensemble.",
-    "ritual": "Diffuse de la lavande, ta fluorite sur le plexus.",
+    "message": "Quand le cœur et la raison s’accordent, tout s’éclaire.",
+    "ritual": "Diffuse de la lavande, tiens ta fluorite sur le plexus.",
     "stone": "Fluorite",
     "essential_oil": "Lavande",
     "symbol": "🜃"
   },
   {
     "day": 16,
-    "message": "Ce que tu sens profondément est rarement faux.",
-    "ritual": "Respire une goutte de bois de hô, tiens ton améthyste et laisse venir une image intérieure.",
+    "message": "Ce que tu ressens profondément mérite confiance.",
+    "ritual": "Respire le bois de hô, tiens ton améthyste et accueille une image intérieure.",
     "stone": "Améthyste",
     "essential_oil": "Bois de hô",
     "symbol": "⚕︎"
   },
   {
     "day": 17,
-    "message": "Le silence est ton plus grand guide.",
+    "message": "Le silence est un guide fidèle.",
     "ritual": "Diffuse du néroli, garde ta labradorite et observe sans analyser.",
     "stone": "Labradorite",
     "essential_oil": "Néroli",
@@ -137,16 +137,16 @@
   },
   {
     "day": 18,
-    "message": "Quand tu es aligné, les choix deviennent simples.",
-    "ritual": "Respire la sauge sclarée, ta sodalite dans la main.",
+    "message": "Quand l’alignement est là, le choix devient simple.",
+    "ritual": "Respire la sauge sclarée, tiens ta sodalite dans la main.",
     "stone": "Sodalite",
     "essential_oil": "Sauge sclarée",
     "symbol": "✧"
   },
   {
     "day": 19,
-    "message": "Le vrai alignement ne cherche pas à convaincre.",
-    "ritual": "Diffuse de la myrrhe, tiens ton lapis-lazuli et répète : “Je suis sur ma voie.”",
+    "message": "L’alignement n’a pas besoin de convaincre.",
+    "ritual": "Diffuse de la myrrhe, tiens ton lapis-lazuli et respire lentement.",
     "stone": "Lapis-lazuli",
     "essential_oil": "Myrrhe",
     "symbol": "🜃"
@@ -161,7 +161,7 @@
   },
   {
     "day": 21,
-    "message": "L’alignement est un ancrage du cœur, pas du contrôle.",
+    "message": "L’alignement est un ancrage intérieur.",
     "ritual": "Diffuse de l’encens, tiens ton améthyste et observe ton souffle.",
     "stone": "Améthyste",
     "essential_oil": "Encens",
@@ -169,23 +169,23 @@
   },
   {
     "day": 22,
-    "message": "La vérité se reconnaît par la paix qu’elle laisse.",
-    "ritual": "Respire la bois de hô, garde ta labradorite sur ton plexus.",
+    "message": "La vérité laisse une sensation de paix.",
+    "ritual": "Respire le bois de hô, garde ta labradorite sur le plexus.",
     "stone": "Labradorite",
     "essential_oil": "Bois de hô",
     "symbol": "✧"
   },
   {
     "day": 23,
-    "message": "Ton intuition est une ancienne mémoire.",
-    "ritual": "Diffuse du néroli, tiens ta sodalite et souris à ton reflet.",
+    "message": "Ton intuition est une mémoire ancienne.",
+    "ritual": "Diffuse du néroli, tiens ta sodalite et souris intérieurement.",
     "stone": "Sodalite",
     "essential_oil": "Néroli",
     "symbol": "🜃"
   },
   {
     "day": 24,
-    "message": "La sagesse n’a pas d’âge, elle a un silence.",
+    "message": "La sagesse naît du silence.",
     "ritual": "Respire la sauge sclarée, garde ton lapis-lazuli dans la main.",
     "stone": "Lapis-lazuli",
     "essential_oil": "Sauge sclarée",
@@ -193,7 +193,7 @@
   },
   {
     "day": 25,
-    "message": "Le calme, c’est l’alignement incarné.",
+    "message": "Le calme incarne l’alignement.",
     "ritual": "Diffuse de la lavande, tiens ta fluorite et reste immobile.",
     "stone": "Fluorite",
     "essential_oil": "Lavande",
@@ -201,8 +201,8 @@
   },
   {
     "day": 26,
-    "message": "L’alignement, c’est marcher sans forcer.",
-    "ritual": "Respire une goutte de myrrhe, ta améthyste sur le cœur.",
+    "message": "Marcher sans forcer clarifie la voie.",
+    "ritual": "Respire la myrrhe, garde ton améthyste sur le cœur.",
     "stone": "Améthyste",
     "essential_oil": "Myrrhe",
     "symbol": "✧"
@@ -210,41 +210,33 @@
   {
     "day": 27,
     "message": "L’intuition est la voix de ton essence.",
-    "ritual": "Diffuse de la bois de hô, tiens ta labradorite et ferme les yeux.",
+    "ritual": "Diffuse du bois de hô, tiens ta labradorite et ferme les yeux.",
     "stone": "Labradorite",
     "essential_oil": "Bois de hô",
     "symbol": "🜃"
   },
   {
     "day": 28,
-    "message": "L’harmonie ne s’impose pas, elle se ressent.",
-    "ritual": "Respire la encens, garde ta sodalite sur le plexus.",
+    "message": "L’harmonie se ressent avant de se comprendre.",
+    "ritual": "Respire l’encens, garde ta sodalite sur le plexus.",
     "stone": "Sodalite",
     "essential_oil": "Encens",
     "symbol": "⚕︎"
   },
   {
     "day": 29,
-    "message": "L’alignement, c’est la paix dans l’action.",
-    "ritual": "Diffuse du néroli, tiens ton lapis-lazuli et écris ton intention du mois.",
+    "message": "La paix guide l’action juste.",
+    "ritual": "Diffuse du néroli, tiens ton lapis-lazuli et écris ton intention.",
     "stone": "Lapis-lazuli",
     "essential_oil": "Néroli",
     "symbol": "☽"
   },
   {
     "day": 30,
-    "message": "Ce que tu sens vrai te guide mieux que mille conseils.",
-    "ritual": "Respire la lavande, garde ta fluorite et souris au silence.",
+    "message": "Quand tout se tait, l’essentiel apparaît.",
+    "ritual": "Respire la lavande, garde ta fluorite et remercie ce silence.",
     "stone": "Fluorite",
     "essential_oil": "Lavande",
     "symbol": "✧"
-  },
-  {
-    "day": 31,
-    "message": "L’intuition est la lumière du calme.",
-    "ritual": "Diffuse du bois de hô, tiens ton améthyste et dis : “Je me fais confiance.”",
-    "stone": "Améthyste",
-    "essential_oil": "Bois de hô",
-    "symbol": "🜃"
   }
 ]

@@ -1,250 +1,250 @@
 [
   {
     "day": 1,
-    "message": "Le silence répare ce que le bruit abîme.",
-    "ritual": "Diffuse de la lavande, tiens ton améthyste et reste en silence trois respirations.",
-    "stone": "Améthyste",
-    "essential_oil": "Lavande",
-    "symbol": "☁︎"
+    "message": "L’automne t’invite à revenir à l’essentiel.",
+    "ritual": "Diffuse du bois de cèdre, tiens ton jaspe rouge et respire lentement.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "🜃"
   },
   {
     "day": 2,
-    "message": "La paix commence quand tu cesses de lutter.",
-    "ritual": "Respire une goutte de **camomille romaine**, ta **howlite** sur le cœur.",
-    "stone": "Howlite",
-    "essential_oil": "Camomille romaine",
-    "symbol": "☽"
-  },
-  {
-    "day": 3,
-    "message": "Ton calme est une force invisible.",
-    "ritual": "Diffuse du **bois de santal**, garde ta **lépidolite** dans la main et observe ton souffle.",
-    "stone": "Lépidolite",
-    "essential_oil": "Bois de santal",
-    "symbol": "✦"
-  },
-  {
-    "day": 4,
-    "message": "L’océan ne s’excuse pas d’être calme.",
-    "ritual": "Respire la **orange douce**, tiens ta **calcédoine bleue** et souris doucement.",
-    "stone": "Calcédoine bleue",
-    "essential_oil": "Orange douce",
+    "message": "Ralentir, c’est aussi avancer.",
+    "ritual": "Respire une goutte de patchouli, garde ton hématite dans la main.",
+    "stone": "Hématite",
+    "essential_oil": "Patchouli",
     "symbol": "⚕︎"
   },
   {
-    "day": 5,
-    "message": "La sérénité est un choix répété.",
-    "ritual": "Diffuse de la **lavande**, garde ton **améthyste** et note une chose que tu laisses aller.",
-    "stone": "Améthyste",
-    "essential_oil": "Lavande",
-    "symbol": "☁︎"
-  },
-  {
-    "day": 6,
-    "message": "Le calme attire les bonnes réponses.",
-    "ritual": "Respire le **néroli**, ta **amazonite** sur le plexus.",
-    "stone": "Amazonite",
-    "essential_oil": "Néroli",
+    "day": 3,
+    "message": "Tout ce qui tombe libère de l’espace.",
+    "ritual": "Diffuse de l’encens, tiens ton obsidienne et observe ton souffle.",
+    "stone": "Obsidienne",
+    "essential_oil": "Encens",
     "symbol": "☽"
   },
   {
-    "day": 7,
-    "message": "Ton souffle connaît le chemin du repos.",
-    "ritual": "Diffuse du **bois de santal**, tiens ta **howlite** et respire en comptant jusqu’à quatre.",
-    "stone": "Howlite",
+    "day": 4,
+    "message": "La stabilité naît du lâcher-prise.",
+    "ritual": "Respire le vétiver, garde ton jaspe paysage près de toi.",
+    "stone": "Jaspe paysage",
+    "essential_oil": "Vétiver",
+    "symbol": "🜂"
+  },
+  {
+    "day": 5,
+    "message": "L’ancrage commence par l’écoute.",
+    "ritual": "Diffuse du bois de santal, tiens ton quartz fumé et reste en silence.",
+    "stone": "Quartz fumé",
     "essential_oil": "Bois de santal",
     "symbol": "✦"
   },
   {
-    "day": 8,
-    "message": "Rien n’est urgent quand tu es en paix.",
-    "ritual": "Respire une goutte d’**encens**, garde ta **lépidolite** dans la main et observe le silence.",
-    "stone": "Lépidolite",
+    "day": 6,
+    "message": "Ce qui se transforme te rend plus vrai(e).",
+    "ritual": "Respire la myrrhe, garde ton onyx dans la main.",
+    "stone": "Onyx",
+    "essential_oil": "Myrrhe",
+    "symbol": "🜃"
+  },
+  {
+    "day": 7,
+    "message": "La profondeur apporte la paix.",
+    "ritual": "Diffuse de l’encens, tiens ton obsidienne et ferme les yeux.",
+    "stone": "Obsidienne",
     "essential_oil": "Encens",
+    "symbol": "☽"
+  },
+  {
+    "day": 8,
+    "message": "Tu peux ralentir sans t’arrêter.",
+    "ritual": "Respire le patchouli, garde ton hématite sur le plexus.",
+    "stone": "Hématite",
+    "essential_oil": "Patchouli",
     "symbol": "⚕︎"
   },
   {
     "day": 9,
-    "message": "Le repos nourrit plus que l’effort.",
-    "ritual": "Diffuse de la **camomille romaine**, tiens ta **calcédoine bleue** et détends les épaules.",
-    "stone": "Calcédoine bleue",
-    "essential_oil": "Camomille romaine",
-    "symbol": "☁︎"
+    "message": "L’automne t’apprend la justesse.",
+    "ritual": "Diffuse du bois de cèdre, tiens ton jaspe rouge et observe ton corps.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Bois de cèdre",
+    "symbol": "🜂"
   },
   {
     "day": 10,
-    "message": "La lenteur révèle ce que la hâte cache.",
-    "ritual": "Respire la **lavande**, garde ton **quartz rose** sur le cœur et reste immobile un instant.",
-    "stone": "Quartz rose",
-    "essential_oil": "Lavande",
-    "symbol": "☽"
-  },
-  {
-    "day": 11,
-    "message": "Le calme, c’est la confiance sans bruit.",
-    "ritual": "Diffuse du **bois de santal**, tiens ton **améthyste** et ferme les yeux lentement.",
-    "stone": "Améthyste",
-    "essential_oil": "Bois de santal",
+    "message": "Ce qui s’efface prépare la clarté.",
+    "ritual": "Respire le vétiver, garde ton quartz fumé et relâche les épaules.",
+    "stone": "Quartz fumé",
+    "essential_oil": "Vétiver",
     "symbol": "✦"
   },
   {
+    "day": 11,
+    "message": "Le calme est une force discrète.",
+    "ritual": "Diffuse de la myrrhe, tiens ton onyx et ralentis ton souffle.",
+    "stone": "Onyx",
+    "essential_oil": "Myrrhe",
+    "symbol": "🜃"
+  },
+  {
     "day": 12,
-    "message": "Le silence parle quand tu apprends à l’écouter.",
-    "ritual": "Respire le **néroli**, garde ta **howlite** et écoute les sons autour de toi.",
-    "stone": "Howlite",
-    "essential_oil": "Néroli",
-    "symbol": "⚕︎"
-  },
-  {
-    "day": 13,
-    "message": "Tu n’as rien à prouver quand tu es en paix.",
-    "ritual": "Diffuse de la **camomille romaine**, ta **lépidolite** sur le plexus.",
-    "stone": "Lépidolite",
-    "essential_oil": "Camomille romaine",
-    "symbol": "☁︎"
-  },
-  {
-    "day": 14,
-    "message": "Le repos est un acte de confiance.",
-    "ritual": "Respire la **orange douce**, tiens ta **calcédoine bleue** et laisse ton corps se détendre.",
-    "stone": "Calcédoine bleue",
-    "essential_oil": "Orange douce",
+    "message": "L’ancrage apaise l’esprit.",
+    "ritual": "Respire le bois de santal, garde ton jaspe paysage près du cœur.",
+    "stone": "Jaspe paysage",
+    "essential_oil": "Bois de santal",
     "symbol": "☽"
   },
   {
+    "day": 13,
+    "message": "La stabilité te soutient.",
+    "ritual": "Diffuse de l’encens, tiens ton hématite et observe la sensation de poids.",
+    "stone": "Hématite",
+    "essential_oil": "Encens",
+    "symbol": "⚕︎"
+  },
+  {
+    "day": 14,
+    "message": "Ce que tu acceptes se transforme.",
+    "ritual": "Respire le patchouli, garde ton obsidienne et accueille le silence.",
+    "stone": "Obsidienne",
+    "essential_oil": "Patchouli",
+    "symbol": "🜂"
+  },
+  {
     "day": 15,
-    "message": "Le calme intérieur est contagieux.",
-    "ritual": "Diffuse de la **lavande**, garde ton **améthyste** et pense à une personne que tu veux apaiser.",
-    "stone": "Améthyste",
-    "essential_oil": "Lavande",
+    "message": "L’automne révèle ta solidité.",
+    "ritual": "Diffuse du bois de cèdre, tiens ton jaspe rouge et ancre tes pieds.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Bois de cèdre",
     "symbol": "✦"
   },
   {
     "day": 16,
-    "message": "Le silence est ton allié, pas ton vide.",
-    "ritual": "Respire une goutte de **bois de santal**, ta **amazonite** dans la main.",
-    "stone": "Amazonite",
-    "essential_oil": "Bois de santal",
-    "symbol": "⚕︎"
+    "message": "Rien ne se perd, tout se transforme.",
+    "ritual": "Respire la myrrhe, garde ton quartz fumé dans la main.",
+    "stone": "Quartz fumé",
+    "essential_oil": "Myrrhe",
+    "symbol": "🜃"
   },
   {
     "day": 17,
-    "message": "Le vrai repos commence quand tu arrêtes de t’en vouloir.",
-    "ritual": "Diffuse du **néroli**, tiens ta **howlite** et dis : “Je me pardonne.”",
-    "stone": "Howlite",
-    "essential_oil": "Néroli",
-    "symbol": "☁︎"
-  },
-  {
-    "day": 18,
-    "message": "La sérénité se cultive comme un jardin.",
-    "ritual": "Respire la **camomille romaine**, garde ta **lépidolite** sur ton cœur.",
-    "stone": "Lépidolite",
-    "essential_oil": "Camomille romaine",
+    "message": "Le ralentissement nourrit la clarté.",
+    "ritual": "Diffuse de l’encens, tiens ton onyx et observe ton souffle.",
+    "stone": "Onyx",
+    "essential_oil": "Encens",
     "symbol": "☽"
   },
   {
-    "day": 19,
-    "message": "Le calme te rend plus vivant que l’agitation.",
-    "ritual": "Diffuse de la **orange douce**, tiens ta **calcédoine bleue** et respire doucement.",
-    "stone": "Calcédoine bleue",
-    "essential_oil": "Orange douce",
-    "symbol": "✦"
-  },
-  {
-    "day": 20,
-    "message": "Le silence n’est jamais vide.",
-    "ritual": "Respire la **lavande**, garde ton **quartz rose** et laisse ton esprit flotter.",
-    "stone": "Quartz rose",
-    "essential_oil": "Lavande",
+    "day": 18,
+    "message": "La terre t’enseigne la patience.",
+    "ritual": "Respire le vétiver, garde ton jaspe paysage sur le plexus.",
+    "stone": "Jaspe paysage",
+    "essential_oil": "Vétiver",
     "symbol": "⚕︎"
   },
   {
-    "day": 21,
-    "message": "La paix s’installe quand tu arrêtes de comparer.",
-    "ritual": "Diffuse du **bois de santal**, tiens ton **améthyste** et souris légèrement.",
-    "stone": "Améthyste",
+    "day": 19,
+    "message": "L’essentiel ne fait pas de bruit.",
+    "ritual": "Diffuse du bois de santal, tiens ton hématite et reste immobile.",
+    "stone": "Hématite",
     "essential_oil": "Bois de santal",
-    "symbol": "☁︎"
+    "symbol": "🜂"
+  },
+  {
+    "day": 20,
+    "message": "Le calme consolide tes racines.",
+    "ritual": "Respire le patchouli, garde ton obsidienne près de toi.",
+    "stone": "Obsidienne",
+    "essential_oil": "Patchouli",
+    "symbol": "✦"
+  },
+  {
+    "day": 21,
+    "message": "L’automne est un retour à soi.",
+    "ritual": "Diffuse de l’encens, tiens ton jaspe rouge et observe tes sensations.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Encens",
+    "symbol": "🜃"
   },
   {
     "day": 22,
-    "message": "Le calme, c’est ton espace sacré.",
-    "ritual": "Respire une goutte de **néroli**, garde ta **howlite** sur ton plexus.",
-    "stone": "Howlite",
-    "essential_oil": "Néroli",
+    "message": "Ce qui s’alourdit t’ancre.",
+    "ritual": "Respire le bois de cèdre, garde ton quartz fumé dans la main.",
+    "stone": "Quartz fumé",
+    "essential_oil": "Bois de cèdre",
     "symbol": "☽"
   },
   {
     "day": 23,
-    "message": "Le repos est une prière silencieuse.",
-    "ritual": "Diffuse de la **camomille romaine**, tiens ta **lépidolite** et reste allongé quelques minutes.",
-    "stone": "Lépidolite",
-    "essential_oil": "Camomille romaine",
-    "symbol": "✦"
-  },
-  {
-    "day": 24,
-    "message": "Ton souffle est un refuge.",
-    "ritual": "Respire la **orange douce**, ta **calcédoine bleue** dans la main.",
-    "stone": "Calcédoine bleue",
-    "essential_oil": "Orange douce",
+    "message": "La profondeur t’apaise.",
+    "ritual": "Diffuse de la myrrhe, tiens ton onyx et respire lentement.",
+    "stone": "Onyx",
+    "essential_oil": "Myrrhe",
     "symbol": "⚕︎"
   },
   {
+    "day": 24,
+    "message": "La terre te soutient sans condition.",
+    "ritual": "Respire le vétiver, garde ton jaspe paysage près du cœur.",
+    "stone": "Jaspe paysage",
+    "essential_oil": "Vétiver",
+    "symbol": "🜂"
+  },
+  {
     "day": 25,
-    "message": "Le calme révèle ce que le bruit masque.",
-    "ritual": "Diffuse de la **lavande**, garde ta **améthyste** et ferme les yeux.",
-    "stone": "Améthyste",
-    "essential_oil": "Lavande",
-    "symbol": "☁︎"
-  },
-  {
-    "day": 26,
-    "message": "Tu n’as rien à ajouter pour être complet(e).",
-    "ritual": "Respire le **bois de santal**, tiens ta **howlite** et reste immobile.",
-    "stone": "Howlite",
+    "message": "L’automne stabilise ton énergie.",
+    "ritual": "Diffuse du bois de santal, tiens ton hématite et observe ta posture.",
+    "stone": "Hématite",
     "essential_oil": "Bois de santal",
-    "symbol": "☽"
-  },
-  {
-    "day": 27,
-    "message": "Le silence t’enseigne la vraie écoute.",
-    "ritual": "Diffuse de la **camomille romaine**, garde ta **lépidolite** et observe sans juger.",
-    "stone": "Lépidolite",
-    "essential_oil": "Camomille romaine",
     "symbol": "✦"
   },
   {
+    "day": 26,
+    "message": "La simplicité est un refuge.",
+    "ritual": "Respire le patchouli, garde ton obsidienne et relâche les tensions.",
+    "stone": "Obsidienne",
+    "essential_oil": "Patchouli",
+    "symbol": "🜃"
+  },
+  {
+    "day": 27,
+    "message": "Le silence nourrit la stabilité.",
+    "ritual": "Diffuse de l’encens, tiens ton jaspe rouge et ferme les yeux.",
+    "stone": "Jaspe rouge",
+    "essential_oil": "Encens",
+    "symbol": "☽"
+  },
+  {
     "day": 28,
-    "message": "La paix est ton état naturel.",
-    "ritual": "Respire la **orange douce**, ta **calcédoine bleue** sur ton cœur.",
-    "stone": "Calcédoine bleue",
-    "essential_oil": "Orange douce",
+    "message": "L’ancrage t’aide à te recentrer.",
+    "ritual": "Respire le bois de cèdre, garde ton quartz fumé sur le plexus.",
+    "stone": "Quartz fumé",
+    "essential_oil": "Bois de cèdre",
     "symbol": "⚕︎"
   },
   {
     "day": 29,
-    "message": "Le silence t’offre ce que le tumulte t’a pris.",
-    "ritual": "Diffuse du **néroli**, tiens ton **quartz rose** et souris doucement.",
-    "stone": "Quartz rose",
-    "essential_oil": "Néroli",
-    "symbol": "☁︎"
+    "message": "Ce qui s’apaise s’enracine.",
+    "ritual": "Diffuse de la myrrhe, tiens ton onyx et ralentis ton rythme.",
+    "stone": "Onyx",
+    "essential_oil": "Myrrhe",
+    "symbol": "🜂"
   },
   {
     "day": 30,
-    "message": "La sérénité ne se cherche pas, elle s’autorise.",
-    "ritual": "Respire la **lavande**, garde ta **améthyste** et dis : “Je choisis la paix.”",
-    "stone": "Améthyste",
-    "essential_oil": "Lavande",
-    "symbol": "☽"
+    "message": "La stabilité te rend plus libre.",
+    "ritual": "Respire le vétiver, garde ton jaspe paysage et observe ton souffle.",
+    "stone": "Jaspe paysage",
+    "essential_oil": "Vétiver",
+    "symbol": "✦"
   },
   {
     "day": 31,
-    "message": "Le silence est ton retour à la source.",
-    "ritual": "Diffuse du **bois de santal**, tiens ta **howlite** et respire trois fois lentement.",
-    "stone": "Howlite",
-    "essential_oil": "Bois de santal",
-    "symbol": "✦"
+    "message": "L’automne t’a préparé à l’intériorité.",
+    "ritual": "Diffuse de l’encens, tiens ton hématite et remercie ce cycle.",
+    "stone": "Hématite",
+    "essential_oil": "Encens",
+    "symbol": "🜃"
   }
 ]

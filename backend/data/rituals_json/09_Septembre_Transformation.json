@@ -10,7 +10,7 @@
   {
     "day": 2,
     "message": "Tu es déjà ce que tu cherches à devenir.",
-    "ritual": "Respire l’arôme chaud du **bois de cèdre**, garde ta **pierre de soleil** sur ton cœur.",
+    "ritual": "Respire l’arôme chaud du bois de cèdre, garde ta pierre de soleil sur ton cœur.",
     "stone": "Pierre de soleil",
     "essential_oil": "Bois de cèdre",
     "symbol": "✧"
@@ -18,7 +18,7 @@
   {
     "day": 3,
     "message": "Laisse ta lumière toucher sans éblouir.",
-    "ritual": "Diffuse de la **bergamote**, tiens ton **topaze** et pense à une personne à qui envoyer de la douceur.",
+    "ritual": "Diffuse de la bergamote, tiens ta topaze et pense à une personne à qui envoyer de la douceur.",
     "stone": "Topaze",
     "essential_oil": "Bergamote",
     "symbol": "✦"
@@ -26,7 +26,7 @@
   {
     "day": 4,
     "message": "Rayonner, c’est partager sa paix.",
-    "ritual": "Respire une goutte d’**orange douce**, ta **quartz clair** entre les mains.",
+    "ritual": "Respire une goutte d’orange douce, tiens ton quartz clair entre les mains.",
     "stone": "Quartz clair",
     "essential_oil": "Orange douce",
     "symbol": "☽"
@@ -34,7 +34,7 @@
   {
     "day": 5,
     "message": "La clarté ne se force pas, elle se découvre.",
-    "ritual": "Diffuse de l’**encens**, garde ta **calcite dorée** sur ton plexus et reste en silence une minute.",
+    "ritual": "Diffuse de l’encens, garde ta calcite dorée sur ton plexus et reste en silence une minute.",
     "stone": "Calcite dorée",
     "essential_oil": "Encens",
     "symbol": "☀︎"
@@ -42,7 +42,7 @@
   {
     "day": 6,
     "message": "Le soleil brille aussi pour toi.",
-    "ritual": "Respire le parfum du **citron**, tiens ta **pierre de soleil** et souris à ton reflet.",
+    "ritual": "Respire le parfum du citron, tiens ta pierre de soleil et souris à ton reflet.",
     "stone": "Pierre de soleil",
     "essential_oil": "Citron",
     "symbol": "✧"
@@ -50,7 +50,7 @@
   {
     "day": 7,
     "message": "La gratitude est la lumière du cœur.",
-    "ritual": "Diffuse du **pamplemousse**, tiens ta **citrine** et dis : “Merci pour ce jour.”",
+    "ritual": "Diffuse du pamplemousse, tiens ta citrine et dis : « Merci pour ce jour. »",
     "stone": "Citrine",
     "essential_oil": "Pamplemousse",
     "symbol": "✦"
@@ -58,7 +58,7 @@
   {
     "day": 8,
     "message": "Laisse-toi traverser par la clarté.",
-    "ritual": "Respire une goutte de **bergamote** sur un mouchoir, ta **aventurine** sur le cœur.",
+    "ritual": "Respire une goutte de bergamote sur un mouchoir, garde ton aventurine sur le cœur.",
     "stone": "Aventurine",
     "essential_oil": "Bergamote",
     "symbol": "☽"
@@ -66,7 +66,7 @@
   {
     "day": 9,
     "message": "Le rayonnement ne dépend pas du regard des autres.",
-    "ritual": "Diffuse du **bois de cèdre**, tiens ton **topaze** et répète : “Je brille pour moi.”",
+    "ritual": "Diffuse du bois de cèdre, tiens ta topaze et répète : « Je brille pour moi. »",
     "stone": "Topaze",
     "essential_oil": "Bois de cèdre",
     "symbol": "☀︎"
@@ -74,7 +74,7 @@
   {
     "day": 10,
     "message": "Chaque sourire éclaire une part du monde.",
-    "ritual": "Respire la **orange douce**, garde ta **quartz clair** et souris consciemment.",
+    "ritual": "Respire l’orange douce, garde ton quartz clair et souris consciemment.",
     "stone": "Quartz clair",
     "essential_oil": "Orange douce",
     "symbol": "✧"
@@ -82,7 +82,7 @@
   {
     "day": 11,
     "message": "La lumière intérieure ne faiblit jamais.",
-    "ritual": "Diffuse de la **lavande**, tiens ta **citrine** et ressens la chaleur douce dans ton ventre.",
+    "ritual": "Diffuse de la lavande, tiens ta citrine et ressens la chaleur douce dans ton ventre.",
     "stone": "Citrine",
     "essential_oil": "Lavande",
     "symbol": "✦"
@@ -90,7 +90,7 @@
   {
     "day": 12,
     "message": "Regarde autour de toi : la beauté est partout.",
-    "ritual": "Respire le parfum frais du **citron**, ta **pierre de soleil** dans la main.",
+    "ritual": "Respire le parfum frais du citron, tiens ta pierre de soleil dans la main.",
     "stone": "Pierre de soleil",
     "essential_oil": "Citron",
     "symbol": "☽"
@@ -98,7 +98,7 @@
   {
     "day": 13,
     "message": "Rayonner, c’est inspirer sans parler.",
-    "ritual": "Diffuse de la **bergamote**, garde ta **topaze** et reste en silence trois respirations.",
+    "ritual": "Diffuse de la bergamote, garde ta topaze et reste en silence trois respirations.",
     "stone": "Topaze",
     "essential_oil": "Bergamote",
     "symbol": "☀︎"
@@ -106,7 +106,7 @@
   {
     "day": 14,
     "message": "La lumière reconnaît la lumière.",
-    "ritual": "Respire une goutte d’**encens**, tiens ton **calcite dorée** et pense à quelqu’un qui t’inspire.",
+    "ritual": "Respire une goutte d’encens, tiens ta calcite dorée et pense à quelqu’un qui t’inspire.",
     "stone": "Calcite dorée",
     "essential_oil": "Encens",
     "symbol": "✧"
@@ -114,7 +114,7 @@
   {
     "day": 15,
     "message": "La clarté dissout la peur.",
-    "ritual": "Diffuse du **pamplemousse**, garde ta **quartz clair** et dis : “Je choisis la lumière.”",
+    "ritual": "Diffuse du pamplemousse, garde ton quartz clair et dis : « Je choisis la lumière. »",
     "stone": "Quartz clair",
     "essential_oil": "Pamplemousse",
     "symbol": "✦"
@@ -122,7 +122,7 @@
   {
     "day": 16,
     "message": "La joie simple éclaire plus qu’un grand soleil.",
-    "ritual": "Respire le parfum doux de **orange douce**, ta **aventurine** sur le plexus.",
+    "ritual": "Respire le parfum doux de l’orange douce, garde ton aventurine sur le plexus.",
     "stone": "Aventurine",
     "essential_oil": "Orange douce",
     "symbol": "☽"
@@ -130,7 +130,7 @@
   {
     "day": 17,
     "message": "Le calme est la plus belle des lumières.",
-    "ritual": "Diffuse de la **lavande**, tiens ta **citrine** et ferme les yeux un instant.",
+    "ritual": "Diffuse de la lavande, tiens ta citrine et ferme les yeux un instant.",
     "stone": "Citrine",
     "essential_oil": "Lavande",
     "symbol": "☀︎"
@@ -138,7 +138,7 @@
   {
     "day": 18,
     "message": "La lumière intérieure ne se compare pas.",
-    "ritual": "Respire une goutte de **citron**, garde ta **pierre de soleil** et observe ton souffle.",
+    "ritual": "Respire une goutte de citron, garde ta pierre de soleil et observe ton souffle.",
     "stone": "Pierre de soleil",
     "essential_oil": "Citron",
     "symbol": "✧"
@@ -146,7 +146,7 @@
   {
     "day": 19,
     "message": "Laisse le soleil te traverser sans résistance.",
-    "ritual": "Diffuse de la **bergamote**, tiens ton **topaze** et tends les mains vers la lumière.",
+    "ritual": "Diffuse de la bergamote, tiens ta topaze et tends les mains vers la lumière.",
     "stone": "Topaze",
     "essential_oil": "Bergamote",
     "symbol": "✦"
@@ -154,7 +154,7 @@
   {
     "day": 20,
     "message": "Ta lumière n’a besoin de permission de personne.",
-    "ritual": "Respire le parfum du **bois de cèdre**, ta **calcite dorée** sur le cœur.",
+    "ritual": "Respire le parfum du bois de cèdre, garde ta calcite dorée sur le cœur.",
     "stone": "Calcite dorée",
     "essential_oil": "Bois de cèdre",
     "symbol": "☽"
@@ -162,7 +162,7 @@
   {
     "day": 21,
     "message": "Aujourd’hui, choisis d’éclairer.",
-    "ritual": "Diffuse du **pamplemousse**, tiens ta **quartz clair** et souris à la vie.",
+    "ritual": "Diffuse du pamplemousse, tiens ton quartz clair et souris à la vie.",
     "stone": "Quartz clair",
     "essential_oil": "Pamplemousse",
     "symbol": "☀︎"
@@ -170,7 +170,7 @@
   {
     "day": 22,
     "message": "La lumière, c’est la clarté sans jugement.",
-    "ritual": "Respire la **orange douce**, garde ta **aventurine** et laisse ton cœur s’ouvrir.",
+    "ritual": "Respire l’orange douce, garde ton aventurine et laisse ton cœur s’ouvrir.",
     "stone": "Aventurine",
     "essential_oil": "Orange douce",
     "symbol": "✧"
@@ -178,7 +178,7 @@
   {
     "day": 23,
     "message": "Les ombres existent pour révéler la lumière.",
-    "ritual": "Diffuse de la **lavande**, tiens ta **citrine** et dis intérieurement “merci” à tes zones d’ombre.",
+    "ritual": "Diffuse de la lavande, tiens ta citrine et remercie intérieurement tes zones d’ombre.",
     "stone": "Citrine",
     "essential_oil": "Lavande",
     "symbol": "✦"
@@ -186,7 +186,7 @@
   {
     "day": 24,
     "message": "Le soleil ne doute jamais de lui-même.",
-    "ritual": "Respire le **citron**, garde ta **pierre de soleil** et ressens la chaleur dans ton plexus.",
+    "ritual": "Respire le citron, garde ta pierre de soleil et ressens la chaleur dans ton plexus.",
     "stone": "Pierre de soleil",
     "essential_oil": "Citron",
     "symbol": "☽"
@@ -194,7 +194,7 @@
   {
     "day": 25,
     "message": "Le rayonnement vient de la gratitude, pas de l’effort.",
-    "ritual": "Diffuse du **bergamote**, tiens ton **topaze** et note trois raisons d’être reconnaissant(e).",
+    "ritual": "Diffuse de la bergamote, tiens ta topaze et note trois raisons d’être reconnaissant(e).",
     "stone": "Topaze",
     "essential_oil": "Bergamote",
     "symbol": "☀︎"
@@ -202,7 +202,7 @@
   {
     "day": 26,
     "message": "La lumière te trouve quand tu t’arrêtes de chercher.",
-    "ritual": "Respire l’arôme de **bois de cèdre**, garde ta **calcite dorée** dans la main.",
+    "ritual": "Respire l’arôme du bois de cèdre, garde ta calcite dorée dans la main.",
     "stone": "Calcite dorée",
     "essential_oil": "Bois de cèdre",
     "symbol": "✧"
@@ -210,7 +210,7 @@
   {
     "day": 27,
     "message": "La paix éclaire plus que le feu.",
-    "ritual": "Diffuse du **encens**, tiens ta **quartz clair** et respire lentement.",
+    "ritual": "Diffuse de l’encens, tiens ton quartz clair et respire lentement.",
     "stone": "Quartz clair",
     "essential_oil": "Encens",
     "symbol": "✦"
@@ -218,7 +218,7 @@
   {
     "day": 28,
     "message": "Ton cœur est une lampe inépuisable.",
-    "ritual": "Respire la **orange douce**, ta **aventurine** sur ton cœur, et souris doucement.",
+    "ritual": "Respire l’orange douce, garde ton aventurine sur le cœur et souris doucement.",
     "stone": "Aventurine",
     "essential_oil": "Orange douce",
     "symbol": "☽"
@@ -226,7 +226,7 @@
   {
     "day": 29,
     "message": "La lumière suit la joie, toujours.",
-    "ritual": "Diffuse du **pamplemousse**, tiens ta **citrine** et ris sans raison.",
+    "ritual": "Diffuse du pamplemousse, tiens ta citrine et ris sans raison.",
     "stone": "Citrine",
     "essential_oil": "Pamplemousse",
     "symbol": "☀︎"
@@ -234,7 +234,7 @@
   {
     "day": 30,
     "message": "Laisse la lumière du jour saluer la tienne.",
-    "ritual": "Respire la **lavande**, garde ta **pierre de soleil** et dis : “Je suis lumière.”",
+    "ritual": "Respire la lavande, garde ta pierre de soleil et dis : « Je suis lumière. »",
     "stone": "Pierre de soleil",
     "essential_oil": "Lavande",
     "symbol": "✧"

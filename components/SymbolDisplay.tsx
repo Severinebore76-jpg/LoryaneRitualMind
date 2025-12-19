@@ -4,6 +4,7 @@ import React from "react";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { SYMBOL_LABELS } from "../constants/symbol_labels";
 import { SYMBOLS_MAP } from "../constants/symbols";
+import { typography } from "../constants/typography";
 
 export default function SymbolDisplay({ symbol, size = 26, color = "#3f2f28" }) {
   if (!symbol || !SYMBOLS_MAP[symbol]) return null;
@@ -33,7 +34,7 @@ const styles = StyleSheet.create({
     height: 26,
   },
   label: {
-    fontSize: 15,
-    fontWeight: "500",
-  },
+  fontSize: typography.size.md,
+  fontWeight: "500",
+},
 });

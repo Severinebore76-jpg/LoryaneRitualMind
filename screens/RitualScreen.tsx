@@ -4,14 +4,14 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRoute } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
 import {
-    ActivityIndicator,
-    Alert,
-    Image,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  ActivityIndicator,
+  Alert,
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import LoryaneRotatingIcon from "../components/LoryaneRotatingIcon";
@@ -55,7 +55,7 @@ export default function RitualScreen() {
     try {
       setLoading(true);
       setError(null);
-      const res = await fetch("http://192.168.0.22:5050/api/rituals/today");
+      const res = await fetch("http://192.168.0.16:5050/api/rituals/today");
 
       if (!res.ok) throw new Error("Échec de la récupération du rituel");
 
@@ -288,7 +288,7 @@ const styles = StyleSheet.create({
   cardBackground: {
     position: "absolute",
     top: 0,
-    width: "110%",
+    width: "120%",
     height: "120%",
     resizeMode: "cover",
     opacity: 1,
