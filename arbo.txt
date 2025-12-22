@@ -1,10 +1,6 @@
 .
 ├── .DS_Store
-├── .expo
-│   ├── devices.json
-│   ├── README.md
-│   └── types
-│       └── router.d.ts
+├── .gitattributes
 ├── .gitignore
 ├── .vscode
 │   ├── extensions.json
@@ -16,9 +12,11 @@
 │   ├── .DS_Store
 │   ├── images
 │   │   ├── .DS_Store
-│   │   ├── icone_Loryane.png
-│   │   └── logo_Loryane.png
+│   │   ├── avatar_placeholder.png
+│   │   ├── icone_loryane.png
+│   │   └── logo_loryane.png
 │   ├── meditations
+│   │   ├── .DS_Store
 │   │   ├── audio
 │   │   │   ├── 01_Janvier.mp3
 │   │   │   ├── 02_Fevrier.mp3
@@ -89,11 +87,17 @@
 │       ├── symbol_sun.png
 │       └── symbol_water.png
 ├── backend
+│   ├── .DS_Store
+│   ├── .env
 │   ├── .gitignore
+│   ├── config
+│   │   └── db.js
 │   ├── controllers
+│   │   ├── .DS_Store
+│   │   ├── authController.js
 │   │   ├── messagesController.js
-│   │   ├── monthsController.js
-│   │   └── ritualsController.js
+│   │   ├── ritualsController.js
+│   │   └── userController.js
 │   ├── data
 │   │   ├── messages_json
 │   │   │   ├── 01_Janvier.json
@@ -123,18 +127,25 @@
 │   │       └── 12_Decembre_Gratitude.json
 │   ├── docs
 │   │   └── postman
-│   │       └── LoryaneRitualMind_API.postman_collection.json
+│   │       ├── LoryaneRitualMind_API.postman_collection.json
+│   │       └── OrelysRitualMind_API.postman_collection.json
 │   ├── middlewares
+│   │   ├── authMiddleware.js
 │   │   └── errorHandler.js
-│   ├── package-lock.json
+│   ├── models
+│   │   └── User.js
 │   ├── package.json
 │   ├── routes
+│   │   ├── .DS_Store
+│   │   ├── authRoutes.js
 │   │   ├── messages.js
-│   │   ├── months.js
-│   │   └── rituals.js
+│   │   ├── rituals.js
+│   │   └── userRoutes.js
 │   ├── server.js
-│   └── services
-│       └── dataLoader.js
+│   ├── services
+│   │   └── dataLoader.js
+│   └── utils
+│       └── generationToken.js
 ├── components
 │   ├── AnimatedIcon.tsx
 │   ├── external-link.tsx
@@ -149,10 +160,18 @@
 │   ├── SymbolDisplay.tsx
 │   ├── themed-text.tsx
 │   ├── themed-view.tsx
-│   └── ui
-│       ├── collapsible.tsx
-│       ├── icon-symbol.ios.tsx
-│       └── icon-symbol.tsx
+│   ├── Title.tsx
+│   ├── ui
+│   │   ├── buttons
+│   │   │   └── PrimaryButton.tsx
+│   │   ├── cards
+│   │   │   └── BaseCard.tsx
+│   │   ├── collapsible.tsx
+│   │   ├── elements
+│   │   │   └── DailyElementsRow.tsx
+│   │   ├── icon-symbol.ios.tsx
+│   │   └── icon-symbol.tsx
+│   └── UserInfoCard.tsx
 ├── constants
 │   ├── layout.ts
 │   ├── meditationAssets.ts
@@ -177,10 +196,30 @@
 ├── package.json
 ├── README.md
 ├── screens
+│   ├── AboutScreen.tsx
+│   ├── Billing
+│   │   ├── BillingPolicyScreen.tsx
+│   │   └── BillingPolicyScreenEN.tsx
+│   ├── CGU
+│   │   ├── CGUScreen.tsx
+│   │   └── CGUScreenEN.tsx
+│   ├── CGV
+│   │   ├── SubscriptionPolicyScreen.tsx
+│   │   └── SubscriptionPolicyScreenEN.tsx
+│   ├── Confidentiality
+│   │   ├── ConfidentialityScreen.tsx
+│   │   └── ConfidentialityScreenEN.tsx
+│   ├── Data
+│   │   ├── DataPolicyScreen.tsx
+│   │   └── DataPolicyScreenEN.tsx
 │   ├── FavoritesScreen.tsx
 │   ├── HistoryScreen.tsx
 │   ├── HomeScreen.tsx
+│   ├── Legal
+│   │   ├── LegalScreen.tsx
+│   │   └── LegalScreenEN.tsx
 │   ├── MeditationScreen.tsx
+│   ├── PremiumScreen.tsx
 │   ├── ProfileScreen.tsx
 │   └── RitualScreen.tsx
 ├── scripts
@@ -189,4 +228,4 @@
 └── utils
     └── normalizeMonthKey.ts
 
-31 directories, 159 files
+41 directories, 188 files

@@ -1,20 +1,23 @@
+// screens/MeditationScreen.tsx
+// @ts-nocheck
 import { Audio } from "expo-av";
 import React, { useEffect, useRef, useState } from "react";
 import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
 
 import { ThemedText } from "../components/themed-text";
 import { ThemedView } from "../components/themed-view";
+import BaseCard from "../components/ui/cards/BaseCard";
 
 import {
-    meditationAudios,
-    meditationImages,
-    meditationTexts,
+  meditationAudios,
+  meditationImages,
+  meditationTexts,
 } from "../constants/meditationAssets";
 
 import { energiesByMonth } from "../constants/meditationEnergies";
 import { getLoryaneTheme, getThemeForMonth } from "../constants/theme";
 
-// ⭐ IMPORTS SVG PREMIUM
+// SVG icons
 import { PauseIcon } from "../components/icons/PauseIcon";
 import { PlayIcon } from "../components/icons/PlayIcon";
 import { StopIcon } from "../components/icons/StopIcon";
@@ -36,7 +39,7 @@ const MeditationScreen: React.FC = () => {
   const [audioStatus, setAudioStatus] =
     useState<"stopped" | "playing" | "paused">("stopped");
 
-  // ⭐ Lecture JSON
+  // ----- TEXTE -----
   useEffect(() => {
     try {
       if (monthlyTextFile && monthlyTextFile.text) {
@@ -44,12 +47,12 @@ const MeditationScreen: React.FC = () => {
       } else {
         setMeditationText("Texte indisponible pour le moment.");
       }
-    } catch (e) {
+    } catch {
       setMeditationText("Texte indisponible pour le moment.");
     }
   }, [monthlyTextFile]);
 
-  // ---------------- AUDIO ----------------
+  // ----- AUDIO -----
   const playMeditation = async () => {
     try {
       if (!soundRef.current) {
@@ -82,103 +85,97 @@ const MeditationScreen: React.FC = () => {
   return (
     <ScrollView
       style={{ flex: 1, backgroundColor: theme.background }}
-      contentContainerStyle={{ paddingBottom: 60, backgroundColor: theme.background }}
+      contentContainerStyle={{ paddingBottom: 70, backgroundColor: theme.background }}
+      showsVerticalScrollIndicator={false}
     >
-      <ThemedView style={[styles.container, { backgroundColor: theme.background, flex: 1 }]}>
-        
+      <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
+        {/* TITRE */}
         <ThemedText type="title" style={[styles.title, { color: monthlyTheme.primary }]}>
           Méditation de {monthlyEnergy.name}
         </ThemedText>
 
+        {/* IMAGE */}
         <View style={[styles.imageWrapper, { borderColor: monthlyTheme.accent }]}>
           <Image source={monthlyImage} style={styles.image} />
         </View>
 
-        {/* ⭐ CARD PREMIUM POUR LA MÉDITATION AUDIO */}
-        <View style={[styles.audioCard, { borderColor: monthlyTheme.primary }]}>
-          <ThemedText style={[styles.audioTitle, { color: monthlyTheme.primary }]}>
+        {/* CARD AUDIO (reste indépendante) */}
+        <View style={[styles.card, { borderColor: monthlyTheme.primary }]}>
+          <ThemedText style={[styles.cardTitle, { color: monthlyTheme.primary }]}>
             🎧 Méditation audio
           </ThemedText>
 
-          <View style={[styles.audioBar, { borderColor: monthlyTheme.primary }]}>
+          <View style={[styles.controlsRow, { borderColor: monthlyTheme.primary }]}>
             <TouchableOpacity
               onPress={audioStatus === "playing" ? pauseMeditation : playMeditation}
+              activeOpacity={0.8}
+              style={[styles.iconBtn, { borderColor: monthlyTheme.primary }]}
             >
-              {audioStatus === "playing" ? (
-                <PauseIcon size={28} />
-              ) : (
-                <PlayIcon size={28} />
-              )}
+              {audioStatus === "playing" ? <PauseIcon size={26} /> : <PlayIcon size={26} />}
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={stopMeditation}>
-              <StopIcon size={28} />
+            <TouchableOpacity
+              onPress={stopMeditation}
+              activeOpacity={0.8}
+              style={[styles.iconBtn, { borderColor: monthlyTheme.primary }]}
+            >
+              <StopIcon size={26} />
             </TouchableOpacity>
           </View>
         </View>
 
-        {/* ⭐ CARD PREMIUM POUR ÉNERGIES DU MOIS */}
-        <View
-          style={[
-            styles.energyBox,
-            {
-              backgroundColor: "#F6F2EC",
-              borderColor: monthlyTheme.primary,
-            },
-          ]}
-        >
-          <ThemedText style={[styles.energyTitle, { color: monthlyTheme.primary }]}>
+        {/* CARD ENERGIES — BaseCard */}
+        <BaseCard borderColor={monthlyTheme.primary}>
+          <ThemedText style={[styles.cardTitle, { color: monthlyTheme.primary }]}>
             ✨ Énergies du mois
           </ThemedText>
 
-          <ThemedText style={[styles.energyText, { color: theme.text }]}>
+          <ThemedText style={[styles.bodyText, { color: theme.text }]}>
             {monthlyEnergy.description}
           </ThemedText>
-        </View>
+        </BaseCard>
 
-        {/* ⭐ CARD PREMIUM TEXTE DE LA MÉDITATION */}
-        <View
-          style={[
-            styles.textInnerCard,
-            { borderColor: monthlyTheme.primary }
-          ]}
-        >
-          <ThemedText style={[styles.textTitle, { color: monthlyTheme.primary }]}>
+        {/* CARD TEXTE — BaseCard */}
+        <BaseCard borderColor={monthlyTheme.primary}>
+          <ThemedText style={[styles.cardTitle, { color: monthlyTheme.primary }]}>
             🕊️ Texte de la méditation
           </ThemedText>
 
-          <ThemedText style={[styles.textContent, { color: theme.text }]}>
+          <ThemedText style={[styles.bodyText, { color: theme.text }]}>
             {meditationText}
           </ThemedText>
-        </View>
+        </BaseCard>
       </ThemedView>
     </ScrollView>
   );
 };
+
+export default MeditationScreen;
 
 // ---------------- STYLES ----------------
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     alignItems: "center",
-    paddingHorizontal: 24,
-    paddingTop: 40,
+    paddingHorizontal: 22,
+    paddingTop: 36,
   },
 
   title: {
-    marginBottom: 20,
-    fontSize: 26,
+    marginBottom: 18,
+    fontSize: 28,
     fontWeight: "700",
     textAlign: "center",
   },
 
   imageWrapper: {
-    width: 220,
-    height: 220,
+    width: 230,
+    height: 230,
     borderRadius: 18,
     overflow: "hidden",
-    marginBottom: 30,
+    marginBottom: 22,
     borderWidth: 2,
+    backgroundColor: "#fff5f0",
   },
 
   image: {
@@ -187,85 +184,45 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
 
-  // —— CARD AUDIO PREMIUM ——
-  audioCard: {
+  // Card audio spécifique (volontairement conservée)
+  card: {
     width: "100%",
     backgroundColor: "#F6F2EC",
     borderRadius: 16,
-    borderWidth: 1.8,
+    borderWidth: 1.5,
     paddingVertical: 18,
     paddingHorizontal: 18,
-    marginBottom: 28,
-    shadowColor: "#C5A572",
-    shadowOpacity: 0.12,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 4,
-    elevation: 3,
-    alignItems: "center",
+    marginBottom: 18,
   },
 
-  audioTitle: {
+  cardTitle: {
     fontSize: 18,
     fontWeight: "700",
     marginBottom: 12,
   },
 
-  // ⭐ NOUVELLE BARRE RECTANGULAIRE
-  audioBar: {
-    width: 230,
-    height: 60,
-    borderWidth: 1.8,
-    borderRadius: 16,
-    flexDirection: "row",
-    justifyContent: "space-evenly",
-    alignItems: "center",
-    backgroundColor: "transparent",
-    marginTop: 6,
+  bodyText: {
+    fontSize: 15,
+    lineHeight: 22,
   },
 
-  // —— CARD PREMIUM ÉNERGIES ——
-  energyBox: {
+  controlsRow: {
     width: "100%",
-    borderWidth: 1,
-    borderRadius: 14,
-    padding: 16,
-    marginBottom: 28,
-  },
-
-  energyTitle: {
-    fontSize: 18,
-    fontWeight: "700",
-    marginBottom: 8,
-  },
-
-  energyText: {
-    fontSize: 15,
-    lineHeight: 22,
-  },
-
-  // —— CARD PREMIUM TEXTE ——
-  textInnerCard: {
-    backgroundColor: "#F6F2EC",
+    borderWidth: 1.5,
     borderRadius: 16,
-    borderWidth: 1.8,
-    padding: 18,
-    shadowColor: "#C5A572",
-    shadowOpacity: 0.12,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 4,
-    elevation: 3,
+    paddingVertical: 12,
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: 16,
   },
 
-  textTitle: {
-    fontSize: 18,
-    fontWeight: "700",
-    marginBottom: 8,
-  },
-
-  textContent: {
-    fontSize: 15,
-    lineHeight: 22,
+  iconBtn: {
+    width: 62,
+    height: 50,
+    borderRadius: 14,
+    borderWidth: 1.5,
+    backgroundColor: "rgba(255,245,240,0.65)",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
-
-export default MeditationScreen;

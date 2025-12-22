@@ -1,24 +1,18 @@
 // screens/PremiumScreen.tsx
 import { useNavigation } from "@react-navigation/native";
-import React, { useState } from "react";
-import {
-  Modal,
-  ScrollView,
-  StyleSheet,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import React from "react";
+import { ScrollView, StyleSheet } from "react-native";
+
 import { ThemedText } from "../components/themed-text";
 import { ThemedView } from "../components/themed-view";
+
+import SecondaryButton from "../components/ui/buttons/SecondaryButton";
+
 import { getLoryaneTheme } from "../constants/theme";
 
 const PremiumScreen: React.FC = () => {
   const theme = getLoryaneTheme("light");
   const nav = useNavigation();
-  const [modalVisible, setModalVisible] = useState(false);
-
-  const accent = "#aa755d";
-  const cardBg = "#f7efe8";
 
   return (
     <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
@@ -26,7 +20,7 @@ const PremiumScreen: React.FC = () => {
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.scrollContent}
       >
-        {/* TITRE / HERO */}
+        {/* TITRE */}
         <ThemedText type="title" style={[styles.title, { color: theme.primary }]}>
           Loryane+
         </ThemedText>
@@ -35,8 +29,8 @@ const PremiumScreen: React.FC = () => {
           Un espace intérieur, rien que pour toi.
         </ThemedText>
 
-        {/* BLOC STORY / PROMESSE */}
-        <ThemedView style={[styles.heroCard, { backgroundColor: cardBg }]}>
+        {/* PROMESSE */}
+        <ThemedView style={styles.heroCard}>
           <ThemedText style={styles.heroTitle}>
             Quand le rituel devient un refuge
           </ThemedText>
@@ -51,122 +45,47 @@ const PremiumScreen: React.FC = () => {
           </ThemedText>
         </ThemedView>
 
-        {/* BLOC AVANTAGES CLÉS */}
-        <ThemedView style={[styles.card, { backgroundColor: cardBg }]}>
+        {/* AVANTAGES */}
+        <ThemedView style={styles.card}>
           <ThemedText style={styles.sectionTitle}>
             Ce que Loryane+ débloque
           </ThemedText>
 
-          <View style={styles.bulletRow}>
-            <ThemedText style={styles.bulletIcon}>✦</ThemedText>
-            <ThemedText style={styles.bulletText}>
-              Rituels audio-guidés pour t’accompagner pas à pas.
-            </ThemedText>
-          </View>
-
-          <View style={styles.bulletRow}>
-            <ThemedText style={styles.bulletIcon}>✦</ThemedText>
-            <ThemedText style={styles.bulletText}>
-              Accès complet aux archives : 365 jours de messages & rituels.
-            </ThemedText>
-          </View>
-
-          <View style={styles.bulletRow}>
-            <ThemedText style={styles.bulletIcon}>✦</ThemedText>
-            <ThemedText style={styles.bulletText}>
-              Favoris synchronisés entre tes appareils.
-            </ThemedText>
-          </View>
-
-          <View style={styles.bulletRow}>
-            <ThemedText style={styles.bulletIcon}>✦</ThemedText>
-            <ThemedText style={styles.bulletText}>
-              Rappels personnalisés pour ancrer ton rituel dans le quotidien.
-            </ThemedText>
-          </View>
-
-          <View style={styles.bulletRow}>
-            <ThemedText style={styles.bulletIcon}>✦</ThemedText>
-            <ThemedText style={styles.bulletText}>
-              Thèmes visuels premium, pour une ambiance encore plus enveloppante.
-            </ThemedText>
-          </View>
+          <ThemedText style={styles.bullet}>✦ Rituels audio-guidés</ThemedText>
+          <ThemedText style={styles.bullet}>✦ Accès aux archives complètes</ThemedText>
+          <ThemedText style={styles.bullet}>✦ Favoris synchronisés</ThemedText>
+          <ThemedText style={styles.bullet}>✦ Rappels personnalisés</ThemedText>
+          <ThemedText style={styles.bullet}>✦ Ambiances premium</ThemedText>
         </ThemedView>
 
-        {/* BLOC OFFRES / PLANS */}
-        <ThemedView style={[styles.card, { backgroundColor: cardBg }]}>
+        {/* OFFRES — CTA */}
+        <ThemedView style={styles.card}>
           <ThemedText style={styles.sectionTitle}>
             Choisis ton rythme
           </ThemedText>
 
-          {/* Plan mensuel */}
-          <ThemedView style={[styles.planCard, styles.planCardPrimary]}>
-            <ThemedText style={styles.planLabel}>Formule mensuelle</ThemedText>
-            <ThemedText style={styles.planPrice}>9,90 € / mois</ThemedText>
-            <ThemedText style={styles.planNote}>
-              Accès illimité, sans engagement.
-            </ThemedText>
-          </ThemedView>
+          <SecondaryButton
+            label="Formule mensuelle — 9,90 € / mois"
+            onPress={() => {}}
+          />
 
-          {/* Plan annuel */}
-          <ThemedView style={styles.planCard}>
-            <ThemedText style={styles.planLabel}>Formule annuelle</ThemedText>
-            <ThemedText style={styles.planPrice}>94,90 € / an</ThemedText>
-            <ThemedText style={styles.planBadge}>
-              ✨ Économies sur l’année
-            </ThemedText>
-          </ThemedView>
+          <SecondaryButton
+            label="Formule annuelle — 94,90 € / an"
+            onPress={() => {}}
+          />
 
           <ThemedText style={styles.legalNote}>
-            Le paiement sécurisé sera géré via Stripe / App Store en phase suivante.
+            Le paiement sécurisé sera activé ultérieurement.
           </ThemedText>
         </ThemedView>
 
-        {/* CTA PRINCIPAL */}
-        <TouchableOpacity
-          style={[styles.ctaButton, { borderColor: accent }]}
-          onPress={() => setModalVisible(true)}
-        >
-          <ThemedText style={[styles.ctaText, { color: accent }]}>
-            ⭐ Devenir membre Loryane+
-          </ThemedText>
-        </TouchableOpacity>
-
-        {/* CTA SECONDAIRE */}
-        <TouchableOpacity
-          style={styles.secondaryBtn}
+        {/* SORTIE */}
+        <SecondaryButton
+          label="Continuer en mode Free"
           onPress={() => nav.goBack()}
-        >
-          <ThemedText style={styles.secondaryBtnText}>
-            Continuer en mode Free
-          </ThemedText>
-        </TouchableOpacity>
+          style={{ marginTop: 30 }}
+        />
       </ScrollView>
-
-      {/* MODALE PLACEHOLDER PAIEMENT */}
-      <Modal transparent animationType="fade" visible={modalVisible}>
-        <View style={styles.modalOverlay}>
-          <View style={styles.modalBox}>
-            <ThemedText style={styles.modalTitle}>
-              Bientôt disponible ✨
-            </ThemedText>
-
-            <ThemedText style={styles.modalText}>
-              L’activation de Loryane+ se fera ici, via un paiement sécurisé
-              (Stripe / App Store) dans la prochaine sous-phase de développement.
-            </ThemedText>
-
-            <TouchableOpacity
-              style={styles.modalBtn}
-              onPress={() => setModalVisible(false)}
-            >
-              <ThemedText style={styles.modalBtnText}>
-                Compris
-              </ThemedText>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
     </ThemedView>
   );
 };
@@ -174,22 +93,25 @@ const PremiumScreen: React.FC = () => {
 export default PremiumScreen;
 
 // ------------------------------------------------------
-// STYLES
+// STYLES — STRUCTURE SEULEMENT
 // ------------------------------------------------------
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 24,
   },
+
   scrollContent: {
     paddingBottom: 40,
     alignItems: "center",
   },
+
   title: {
     marginTop: 40,
     marginBottom: 4,
     textAlign: "center",
   },
+
   subtitle: {
     fontSize: 15,
     textAlign: "center",
@@ -204,25 +126,27 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     borderWidth: 1,
     borderColor: "#d6b98c66",
+    backgroundColor: "#f7efe8",
     marginBottom: 20,
   },
+
   heroTitle: {
     fontSize: 18,
     fontWeight: "700",
     color: "#3f2f28",
     marginBottom: 8,
-    textAlign: "left",
   },
+
   heroText: {
     fontSize: 14,
     lineHeight: 20,
     color: "#3f2f28",
     marginBottom: 10,
   },
+
   heroHint: {
     fontSize: 13,
     color: "#aa755d",
-    marginTop: 4,
   },
 
   card: {
@@ -232,143 +156,26 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
     borderWidth: 1,
     borderColor: "#d6b98c55",
+    backgroundColor: "#f7efe8",
     marginTop: 18,
+    gap: 12,
   },
+
   sectionTitle: {
     fontSize: 16,
     fontWeight: "700",
     color: "#3f2f28",
-    marginBottom: 14,
+    marginBottom: 6,
   },
 
-  bulletRow: {
-    flexDirection: "row",
-    alignItems: "flex-start",
-    marginBottom: 8,
-  },
-  bulletIcon: {
-    width: 20,
-    marginTop: 2,
-    fontSize: 13,
-    color: "#d6b98c",
-  },
-  bulletText: {
-    flex: 1,
+  bullet: {
     fontSize: 14,
     color: "#3f2f28",
-    lineHeight: 20,
-  },
-
-  planCard: {
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: "#d6b98c44",
-    paddingVertical: 14,
-    paddingHorizontal: 14,
-    marginTop: 10,
-  },
-  planCardPrimary: {
-    borderColor: "#aa755d",
-    backgroundColor: "#fff5f0",
-  },
-  planLabel: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#3f2f28",
-  },
-  planPrice: {
-    fontSize: 18,
-    fontWeight: "700",
-    color: "#aa755d",
-    marginTop: 4,
-  },
-  planNote: {
-    fontSize: 13,
-    color: "#6c5448",
-    marginTop: 4,
-  },
-  planBadge: {
-    fontSize: 13,
-    color: "#aa755d",
-    marginTop: 4,
   },
 
   legalNote: {
     fontSize: 11,
     color: "#8a7162",
     marginTop: 10,
-  },
-
-  ctaButton: {
-    marginTop: 24,
-    paddingVertical: 14,
-    paddingHorizontal: 22,
-    borderRadius: 999,
-    borderWidth: 1.5,
-    alignItems: "center",
-    justifyContent: "center",
-    alignSelf: "center",
-    minWidth: "70%",
-    backgroundColor: "#fff5f0",
-  },
-  ctaText: {
-    fontSize: 15,
-    fontWeight: "700",
-  },
-
-  secondaryBtn: {
-    marginTop: 10,
-    paddingVertical: 10,
-    paddingHorizontal: 18,
-    alignSelf: "center",
-  },
-  secondaryBtnText: {
-    fontSize: 14,
-    color: "#6c5448",
-    textDecorationLine: "underline",
-  },
-
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.45)",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  modalBox: {
-    width: "82%",
-    backgroundColor: "#fff5f0",
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: "#d6b98c",
-    paddingVertical: 22,
-    paddingHorizontal: 18,
-  },
-  modalTitle: {
-    fontSize: 17,
-    fontWeight: "700",
-    color: "#3f2f28",
-    textAlign: "center",
-    marginBottom: 8,
-  },
-  modalText: {
-    fontSize: 14,
-    color: "#3f2f28",
-    textAlign: "center",
-    lineHeight: 20,
-  },
-  modalBtn: {
-    marginTop: 16,
-    alignSelf: "center",
-    paddingVertical: 10,
-    paddingHorizontal: 24,
-    borderRadius: 999,
-    borderWidth: 1,
-    borderColor: "#aa755d",
-    backgroundColor: "#fff5f0",
-  },
-  modalBtnText: {
-    fontSize: 14,
-    fontWeight: "600",
-    color: "#aa755d",
   },
 });

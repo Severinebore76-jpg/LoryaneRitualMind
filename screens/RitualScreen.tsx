@@ -10,19 +10,20 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
 import LoryaneRotatingIcon from "../components/LoryaneRotatingIcon";
+import PrimaryButton from "../components/ui/buttons/PrimaryButton";
+import BaseCard from "../components/ui/cards/BaseCard";
+import DailyElementsRow from "../components/ui/elements/DailyElementsRow";
+
 import { scale, verticalScale } from "../constants/layout";
 import { plantesMensuelles } from "../constants/plantes";
 import { getErrorColor, getLoryaneTheme } from "../constants/theme";
 import { typography } from "../constants/typography";
 import { normalizeMonthKey } from "../utils/normalizeMonthKey";
-
-import SymbolDisplay from "../components/SymbolDisplay";
-import { SYMBOLS_MAP } from "../constants/symbols";
 
 export default function RitualScreen() {
   const route = useRoute();
@@ -43,20 +44,17 @@ export default function RitualScreen() {
     return `${day} ${month} 2026`;
   };
 
-  // FAVORIS — chargement
   const loadFavoriteRitual = () => {
     setRitual(favoriteData);
     setMonthFile(favoriteData.month || null);
     setLoading(false);
   };
 
-  // NORMAL — API
   const loadTodayRitual = async () => {
     try {
       setLoading(true);
       setError(null);
       const res = await fetch("http://192.168.0.16:5050/api/rituals/today");
-
       if (!res.ok) throw new Error("Échec de la récupération du rituel");
 
       const data = await res.json();
@@ -134,11 +132,8 @@ export default function RitualScreen() {
   };
 
   useEffect(() => {
-    if (fromFavorites && favoriteData) {
-      loadFavoriteRitual();
-    } else {
-      loadTodayRitual();
-    }
+    if (fromFavorites && favoriteData) loadFavoriteRitual();
+    else loadTodayRitual();
   }, []);
 
   if (loading) {
@@ -173,20 +168,16 @@ export default function RitualScreen() {
           alignItems: "center",
         }}
       >
-        {/* HEADER */}
         <View style={styles.header}>
           <Text style={{ fontSize: 22, marginBottom: 4 }}>✨</Text>
-
           <Text style={[styles.title, { color: theme.primary }]}>
             Rituel du jour
           </Text>
-
           <Text style={[styles.subtitle, { color: "#3f2f28", marginTop: 2 }]}>
             {formatDate2026()}
           </Text>
         </View>
 
-        {/* CARTE */}
         <View style={[styles.card, { borderColor: theme.primary }]}>
           <Image
             source={plantesMensuelles[monthKey] || plantesMensuelles.default}
@@ -203,78 +194,51 @@ export default function RitualScreen() {
             </View>
           </View>
 
-          {/* RITUEL */}
-          <View
+          {/* ✅ RITUEL : maintenant via BaseCard (sans changer le rendu) */}
+          <BaseCard
+            borderColor={theme.accent}
             style={[
-              styles.ritualBox,
-              { backgroundColor: "#efe6e0", borderColor: theme.accent },
+              styles.ritualBoxOverrides,
+              { backgroundColor: "#efe6e0" },
             ]}
           >
-            <Text style={[styles.ritualLabel, { color: "#3f2f28" }]}>Rituel :</Text>
+            <Text style={[styles.ritualLabel, { color: "#3f2f28" }]}>
+              Rituel :
+            </Text>
             <Text style={[styles.ritualText, { color: "#3f2f28" }]}>
               {ritual.ritual}
             </Text>
+          </BaseCard>
+
+          <DailyElementsRow
+            stone={ritual.stone}
+            essential_oil={ritual.essential_oil}
+            symbol={ritual.symbol}
+          />
+
+          <View style={{ marginTop: verticalScale(18) }}>
+            <PrimaryButton
+              label="Ajouter aux favoris"
+              icon="⭐"
+              size="md"
+              onPress={addToFavorites}
+            />
           </View>
-
-          {/* ÉLÉMENTS */}
-          <View style={styles.elementsRow}>
-            {ritual.stone && (
-              <View style={styles.elementItem}>
-                <Image
-                  source={require("../assets/symbols/symbol_crystal.png")}
-                  style={styles.elementIcon}
-                />
-                <Text style={styles.elementText}>{ritual.stone}</Text>
-              </View>
-            )}
-
-            {ritual.essential_oil && (
-              <View style={styles.elementItem}>
-                <Image
-                  source={require("../assets/symbols/symbol_oil.png")}
-                  style={styles.elementIcon}
-                />
-                <Text style={styles.elementText}>{ritual.essential_oil}</Text>
-              </View>
-            )}
-
-            {ritual.symbol && SYMBOLS_MAP[ritual.symbol] && (
-              <SymbolDisplay symbol={ritual.symbol} />
-            )}
-          </View>
-
-          <TouchableOpacity
-            onPress={addToFavorites}
-            activeOpacity={0.8}
-            style={[styles.favoriteBtn, { backgroundColor: theme.accent }]}
-          >
-            <Text style={{ color: "#fff", fontWeight: "600" }}>
-              ⭐ Ajouter aux favoris
-            </Text>
-          </TouchableOpacity>
         </View>
       </ScrollView>
     </SafeAreaView>
   );
 }
 
-// STYLES (inchangés)
 const styles = StyleSheet.create({
   centered: { flex: 1, justifyContent: "center", alignItems: "center" },
   loadingText: { marginTop: verticalScale(10) },
-  errorText: {
-    textAlign: "center",
-    fontSize: typography.size.md,
-  },
-  header: {
-    alignItems: "center",
-    marginBottom: verticalScale(10),
-  },
-  title: {
-    fontSize: typography.size.xl,
-    fontWeight: typography.weight.semibold,
-  },
+  errorText: { textAlign: "center", fontSize: typography.size.md },
+
+  header: { alignItems: "center", marginBottom: verticalScale(10) },
+  title: { fontSize: typography.size.xl, fontWeight: typography.weight.semibold },
   subtitle: { fontSize: typography.size.md },
+
   card: {
     borderRadius: scale(16),
     padding: scale(18),
@@ -285,6 +249,8 @@ const styles = StyleSheet.create({
     position: "relative",
     overflow: "hidden",
   },
+
+  // ✅ on ne touche PAS : c’est ton rendu validé
   cardBackground: {
     position: "absolute",
     top: 0,
@@ -295,6 +261,7 @@ const styles = StyleSheet.create({
     zIndex: -1,
     transform: [{ scale: 1.05 }],
   },
+
   message: {
     fontSize: typography.size.lg,
     fontStyle: "italic",
@@ -302,52 +269,32 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginVertical: verticalScale(30),
   },
-  iconWrapper: {
-    alignItems: "center",
-    marginVertical: verticalScale(-60),
-  },
-  ritualBox: {
+
+  iconWrapper: { alignItems: "center", marginVertical: verticalScale(-60) },
+
+  // ✅ overrides BaseCard pour que ça ressemble EXACTEMENT à ton ancien ritualBox
+  ritualBoxOverrides: {
     borderRadius: scale(10),
     padding: scale(14),
     marginTop: verticalScale(8),
-    borderWidth: 1,
+    marginBottom: 0,
+
+    // on neutralise l’ombre de BaseCard
+    shadowOpacity: 0,
+    shadowRadius: 0,
+    shadowOffset: { width: 0, height: 0 },
+    shadowColor: "transparent",
+    elevation: 0,
   },
+
   ritualLabel: {
     fontWeight: "600",
     marginBottom: verticalScale(4),
     fontSize: typography.size.md,
   },
+
   ritualText: {
     fontSize: typography.size.md,
     lineHeight: typography.lineHeight.relaxed,
-  },
-  elementsRow: {
-    flexDirection: "row",
-    justifyContent: "center",
-    gap: 8,
-    marginTop: verticalScale(20),
-  },
-  elementItem: {
-    flexDirection: "row",
-    alignItems: "center",
-    gap: 6,
-  },
-  elementIcon: {
-    width: 32,
-    height: 32,
-    resizeMode: "contain",
-  },
-  elementText: {
-    fontSize: typography.size.md,
-    fontFamily: typography.fontFamily.primary,
-    fontWeight: "500",
-    color: "#3f2f28",
-  },
-  favoriteBtn: {
-    marginTop: verticalScale(20),
-    borderRadius: scale(8),
-    paddingVertical: verticalScale(12),
-    paddingHorizontal: scale(24),
-    alignSelf: "center",
   },
 });

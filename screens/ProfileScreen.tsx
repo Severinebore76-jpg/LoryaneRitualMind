@@ -1,9 +1,14 @@
 // screens/ProfileScreen.tsx
 import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
-import { Modal, ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
+import { Modal, ScrollView, StyleSheet, View } from "react-native";
+
 import { ThemedText } from "../components/themed-text";
 import { ThemedView } from "../components/themed-view";
+
+import PrimaryButton from "../components/ui/buttons/PrimaryButton";
+import SecondaryButton from "../components/ui/buttons/SecondaryButton";
+
 import { getLoryaneTheme } from "../constants/theme";
 
 const ProfileScreen: React.FC = () => {
@@ -28,7 +33,9 @@ const ProfileScreen: React.FC = () => {
           Profil
         </ThemedText>
 
-        {/* 🅰️ BLOC A — INFOS USER */}
+        {/* =======================
+            BLOC A — UTILISATEUR
+        ======================= */}
         <ThemedView style={styles.card}>
           <ThemedView style={styles.avatar}>
             <ThemedText style={styles.avatarInitial}>
@@ -46,25 +53,28 @@ const ProfileScreen: React.FC = () => {
             {user.email ? "Connectée" : "Non connectée"}
           </ThemedText>
 
-          <TouchableOpacity style={styles.secondaryBtn}>
-            <ThemedText style={styles.secondaryBtnText}>
-              Modifier mes informations
-            </ThemedText>
-          </TouchableOpacity>
+          {/* SECONDARY — réglage */}
+          <SecondaryButton
+            label="Modifier mes informations"
+            onPress={() => {}}
+            style={{ marginTop: 12 }}
+          />
 
-          <TouchableOpacity
-            style={[styles.primaryBtn, { marginTop: 12 }]}
+          {/* PRIMARY — CTA */}
+          <PrimaryButton
+            label="Créer un compte / Se connecter"
             onPress={() => nav.navigate("Auth" as never)}
-          >
-            <ThemedText style={[styles.primaryBtnText, { color: "#aa755d" }]}>
-              Créer un compte / Se connecter
-            </ThemedText>
-          </TouchableOpacity>
+            size="md"
+          />
         </ThemedView>
 
-        {/* 🅱️ BLOC B — ABONNEMENT */}
+        {/* =======================
+            BLOC B — ABONNEMENT
+        ======================= */}
         <ThemedView style={styles.card}>
-          <ThemedText style={styles.cardTitle}>Statut d’abonnement</ThemedText>
+          <ThemedText style={styles.cardTitle}>
+            Statut d’abonnement
+          </ThemedText>
 
           {user.subscription === "freemium" ? (
             <>
@@ -76,18 +86,18 @@ const ProfileScreen: React.FC = () => {
                 Pour aller plus loin, activez Loryane+.
               </ThemedText>
 
-              <TouchableOpacity
-                style={styles.primaryBtn}
+              {/* PRIMARY — CTA */}
+              <PrimaryButton
+                label="Activer Loryane+"
                 onPress={() => nav.navigate("Subscription" as never)}
-              >
-                <ThemedText style={[styles.primaryBtnText, { color: "#aa755d" }]}>
-                  ⭐ Activer Loryane+
-                </ThemedText>
-              </TouchableOpacity>
+                size="md"
+              />
             </>
           ) : (
             <>
-              <ThemedText style={styles.statusPlus}>✨ Loryane+ — accès complet</ThemedText>
+              <ThemedText style={styles.statusPlus}>
+                ✨ Loryane+ — accès complet
+              </ThemedText>
               <ThemedText style={styles.subscriptionText}>
                 Merci pour votre soutien 🕊️  
                 Votre abonnement est actif.
@@ -96,97 +106,81 @@ const ProfileScreen: React.FC = () => {
           )}
         </ThemedView>
 
-        {/* 🅲 BLOC C — RÉGLEMENTAIRE */}
+        {/* =======================
+            BLOC C — LÉGAL (SECONDARY)
+        ======================= */}
         <ThemedView style={styles.card}>
-          <ThemedText style={styles.cardTitle}>Informations légales</ThemedText>
+          <ThemedText style={styles.cardTitle}>
+            Informations légales
+          </ThemedText>
 
-          <TouchableOpacity
-            style={styles.linkBtn}
+          <SecondaryButton
+            label="Mentions légales & RGPD"
             onPress={() => nav.navigate("Legal" as never)}
-          >
-            <ThemedText style={styles.linkText}>
-              Mentions légales & RGPD
-            </ThemedText>
-          </TouchableOpacity>
+          />
 
-          <TouchableOpacity
-            style={styles.linkBtn}
+          <SecondaryButton
+            label="Politique de confidentialité"
             onPress={() => nav.navigate("Confidentiality" as never)}
-          >
-            <ThemedText style={styles.linkText}>
-              Politique de confidentialité
-            </ThemedText>
-          </TouchableOpacity>
+          />
 
-          <TouchableOpacity
-            style={styles.linkBtn}
+          <SecondaryButton
+            label="Données personnelles"
             onPress={() => nav.navigate("DataPolicy" as never)}
-          >
-            <ThemedText style={styles.linkText}>
-              Données personnelles
-            </ThemedText>
-          </TouchableOpacity>
+          />
 
-          <TouchableOpacity
-            style={styles.linkBtn}
+          <SecondaryButton
+            label="Conditions d’utilisation (CGU)"
             onPress={() => nav.navigate("CGU" as never)}
-          >
-            <ThemedText style={styles.linkText}>
-              Conditions d’utilisation (CGU)
-            </ThemedText>
-          </TouchableOpacity>
+          />
 
-          <TouchableOpacity
-            style={styles.linkBtn}
+          <SecondaryButton
+            label="Conditions de vente (CGV)"
             onPress={() => nav.navigate("CGV" as never)}
-          >
-            <ThemedText style={styles.linkText}>
-              Conditions de vente (CGV)
-            </ThemedText>
-          </TouchableOpacity>
+          />
 
-          <TouchableOpacity
-            style={styles.linkBtn}
+          <SecondaryButton
+            label="Facturation & remboursement"
             onPress={() => nav.navigate("Billing" as never)}
-          >
-            <ThemedText style={styles.linkText}>
-              Facturation & remboursement
-            </ThemedText>
-          </TouchableOpacity>
+          />
         </ThemedView>
 
-        {/* 🅳 BOUTON — À PROPOS DE LORYANE */}
-        <TouchableOpacity
-          style={styles.aboutBtn}
+        {/* =======================
+            CTA MARQUE — PRIMARY
+        ======================= */}
+        <PrimaryButton
+          label="À propos de Loryane"
           onPress={() => nav.navigate("Apropos" as never)}
-        >
-          <ThemedText style={styles.aboutIcon}>✦</ThemedText>
-          <ThemedText style={styles.aboutText}>À propos de Loryane</ThemedText>
-        </TouchableOpacity>
+          size="md"
+        />
 
-        {/* 🅴 BLOC D — Loryane ESSENTIELLE */}
-        <TouchableOpacity style={styles.aboutBtn} onPress={() => setModalVisible(true)}>
-          <ThemedText style={styles.aboutIcon}>✦</ThemedText>
-          <ThemedText style={styles.aboutText}>Loryane Essentielle</ThemedText>
-        </TouchableOpacity>
+        <PrimaryButton
+          label="Loryane Essentielle"
+          onPress={() => setModalVisible(true)}
+          size="md"
+        />
       </ScrollView>
 
-      {/* MODALE */}
+      {/* =======================
+            MODALE
+        ======================= */}
       <Modal transparent animationType="fade" visible={modalVisible}>
         <View style={styles.modalOverlay}>
           <View style={styles.modalBox}>
-            <ThemedText style={styles.modalTitle}>Disponible prochainement ✨</ThemedText>
+            <ThemedText style={styles.modalTitle}>
+              Disponible prochainement ✨
+            </ThemedText>
 
             <ThemedText style={styles.modalText}>
               La version Loryane Essentielle sera bientôt intégrée dans l’app.
             </ThemedText>
 
-            <TouchableOpacity
-              style={[styles.primaryBtn, { marginTop: 16 }]}
+            {/* PRIMARY — fermeture */}
+            <PrimaryButton
+              label="Fermer"
               onPress={() => setModalVisible(false)}
-            >
-              <ThemedText style={styles.primaryBtnText}>Fermer</ThemedText>
-            </TouchableOpacity>
+              size="sm"
+            />
           </View>
         </View>
       </Modal>
@@ -196,9 +190,9 @@ const ProfileScreen: React.FC = () => {
 
 export default ProfileScreen;
 
-// ------------------------------------------------------
-// STYLES (inchangés)
-// ------------------------------------------------------
+/* =======================
+   STYLES — STRUCTURE SEULEMENT
+======================= */
 const styles = StyleSheet.create({
   container: { flex: 1, paddingHorizontal: 24 },
 
@@ -211,6 +205,8 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     borderWidth: 1,
     borderColor: "#d6b98c55",
+    alignItems: "center",
+    gap: 12,
   },
 
   avatar: {
@@ -222,7 +218,6 @@ const styles = StyleSheet.create({
     borderColor: "#dec5a5",
     justifyContent: "center",
     alignItems: "center",
-    alignSelf: "center",
   },
 
   avatarInitial: { fontSize: 30, color: "#aa755d", fontWeight: "600" },
@@ -231,7 +226,7 @@ const styles = StyleSheet.create({
     fontSize: 17,
     fontWeight: "600",
     color: "#3f2f28",
-    marginTop: 14,
+    marginTop: 8,
     textAlign: "center",
   },
 
@@ -239,87 +234,43 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: "#6c5448",
     textAlign: "center",
-    marginTop: 4,
     opacity: 0.8,
   },
 
   connectionStatus: {
-    marginTop: 6,
     fontSize: 14,
     color: "#aa755d",
     fontWeight: "600",
     textAlign: "center",
-    opacity: 0.9,
-  },
-
-  primaryBtn: {
-    backgroundColor: "#fff5f0",
-    paddingVertical: 12,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#d6b98c",
-    alignItems: "center",
-    marginTop: 12,
-  },
-
-  primaryBtnText: { fontWeight: "600", color: "#3f2f28", fontSize: 15 },
-
-  secondaryBtn: {
-    marginTop: 10,
-    paddingVertical: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#d6b98c55",
-    backgroundColor: "transparent",
-  },
-
-  secondaryBtnText: {
-    fontSize: 14,
-    color: "#aa755d",
-    textAlign: "center",
-    fontWeight: "500",
   },
 
   cardTitle: {
     fontSize: 17,
     fontWeight: "700",
     color: "#3f2f28",
-    marginBottom: 10,
     textAlign: "center",
   },
 
-  statusFree: { fontSize: 15, fontWeight: "600", color: "#aa755d", textAlign: "center" },
+  statusFree: {
+    fontSize: 15,
+    fontWeight: "600",
+    color: "#aa755d",
+    textAlign: "center",
+  },
 
-  statusPlus: { fontSize: 15, fontWeight: "700", color: "#d6b98c", textAlign: "center" },
+  statusPlus: {
+    fontSize: 15,
+    fontWeight: "700",
+    color: "#d6b98c",
+    textAlign: "center",
+  },
 
   subscriptionText: {
-    marginTop: 10,
     textAlign: "center",
     fontSize: 14,
     color: "#3f2f28",
     lineHeight: 20,
   },
-
-  linkBtn: { paddingVertical: 10 },
-
-  linkText: { color: "#3f2f28", fontSize: 15, textAlign: "center" },
-
-  aboutBtn: {
-    marginTop: 30,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    paddingVertical: 14,
-    paddingHorizontal: 22,
-    backgroundColor: "#fff5f0",
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#d6b98c",
-  },
-
-  aboutIcon: { fontSize: 18, color: "#d6b98c", marginRight: 8 },
-
-  aboutText: { fontSize: 16, fontWeight: "600", color: "#3f2f28" },
 
   modalOverlay: {
     flex: 1,
@@ -336,9 +287,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "#d6b98c",
     alignItems: "center",
+    gap: 14,
   },
 
   modalTitle: { fontSize: 18, color: "#3f2f28", fontWeight: "700" },
 
-  modalText: { marginTop: 12, fontSize: 15, color: "#3f2f28", textAlign: "center" },
+  modalText: { fontSize: 15, color: "#3f2f28", textAlign: "center" },
 });

@@ -1,3 +1,4 @@
+// screens/HomeScreen.tsx
 // @ts-nocheck
 import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useRef, useState } from "react";
@@ -8,22 +9,21 @@ import {
   Image,
   StyleSheet,
   Text,
-  TouchableOpacity,
-  View
+  View,
 } from "react-native";
+
 import { scale, verticalScale } from "../constants/layout";
 import { getLoryaneTheme } from "../constants/theme";
 import { typography } from "../constants/typography";
 
-// SYMBOLES
 import SymbolDisplay from "../components/SymbolDisplay";
+import PrimaryButton from "../components/ui/buttons/PrimaryButton";
 import { SYMBOLS_MAP } from "../constants/symbols";
 
 export default function HomeScreen() {
   const theme = getLoryaneTheme("light");
   const nav = useNavigation();
 
-  // ANIMATIONS
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0.9)).current;
   const quoteAnim = useRef(new Animated.Value(0)).current;
@@ -85,8 +85,7 @@ export default function HomeScreen() {
         essential_oil: data.essential_oil || null,
         symbol: data.symbol || null,
       });
-
-    } catch (err) {
+    } catch {
       setDailyMessage({
         message: "Le calme est la clé de l’alignement.",
         stone: null,
@@ -100,8 +99,7 @@ export default function HomeScreen() {
 
   return (
     <View style={[styles.container, { backgroundColor: theme.background }]}>
-
-      {/* LOGO + TITRE */}
+      {/* LOGO */}
       <Animated.View
         style={{
           opacity: fadeAnim,
@@ -114,8 +112,6 @@ export default function HomeScreen() {
           style={styles.logo}
           resizeMode="contain"
         />
-
-        {/* ⭐ TITRE MODIFIÉ ICI → theme.primary */}
         <Text style={[styles.title, { color: theme.primary }]}>
           Loryane Ritual Mind
         </Text>
@@ -142,7 +138,6 @@ export default function HomeScreen() {
             <Text style={styles.separator}>──────── ✦ ────────</Text>
 
             <View style={styles.elementsRow}>
-
               {dailyMessage.stone && (
                 <View style={styles.elementItem}>
                   <Image
@@ -159,30 +154,28 @@ export default function HomeScreen() {
                     source={require("../assets/symbols/symbol_oil.png")}
                     style={styles.elementIcon}
                   />
-                  <Text style={styles.elementText}>{dailyMessage.essential_oil}</Text>
+                  <Text style={styles.elementText}>
+                    {dailyMessage.essential_oil}
+                  </Text>
                 </View>
               )}
 
               {dailyMessage.symbol && SYMBOLS_MAP[dailyMessage.symbol] && (
                 <SymbolDisplay symbol={dailyMessage.symbol} />
               )}
-
             </View>
           </Animated.View>
         )}
       </View>
 
-      {/* BOUTON */}
+      {/* ACTION */}
       <View style={styles.actions}>
-        <TouchableOpacity
+        <PrimaryButton
+          label="Découvrir le rituel du jour"
+          icon="✨"
           onPress={() => nav.navigate("Rituel")}
-          style={styles.creamButton}
-        >
-          <View style={styles.buttonContent}>
-            <Text style={styles.buttonIcon}>✨</Text>
-            <Text style={styles.creamButtonText}>Découvrir le rituel du jour</Text>
-          </View>
-        </TouchableOpacity>
+          size="md"
+        />
       </View>
 
       <Text style={styles.footer}>🕊️ Prendre un instant pour soi 🕊️</Text>
@@ -190,7 +183,6 @@ export default function HomeScreen() {
   );
 }
 
-// STYLES
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -227,6 +219,8 @@ const styles = StyleSheet.create({
     color: "#d6b98c",
     marginVertical: 6,
   },
+
+  // (DailyElementsRow viendra ensuite — là on touche pas)
   elementsRow: {
     flexDirection: "row",
     marginTop: 10,
@@ -249,42 +243,11 @@ const styles = StyleSheet.create({
     fontFamily: typography.fontFamily.primary,
     color: "#3f2f28",
   },
+
   actions: {
     marginTop: verticalScale(35),
     width: "80%",
     alignItems: "center",
-  },
-  creamButton: {
-    backgroundColor: "#f7efe8",
-    paddingVertical: 14,
-    paddingHorizontal: 28,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: "#d6b98c",
-    marginTop: verticalScale(20),
-    shadowColor: "#000",
-    shadowOpacity: 0.08,
-    shadowRadius: 6,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 3,
-    alignSelf: "center",
-  },
-  creamButtonText: {
-    fontSize: typography.size.md,
-    fontFamily: typography.fontFamily.primary,
-    color: "#aa755dff",
-    textAlign: "center",
-    fontWeight: "600",
-    letterSpacing: 0.3,
-  },
-  buttonContent: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: 8,
-  },
-  buttonIcon: {
-    fontSize: 20,
   },
   footer: {
     fontSize: typography.size.sm,
