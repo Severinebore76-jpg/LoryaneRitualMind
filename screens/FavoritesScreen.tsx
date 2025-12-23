@@ -190,7 +190,7 @@ const makeStyles = (theme: Theme) =>
       fontSize: 26,
       fontWeight: "700",
       textAlign: "center",
-      color: getThemeForMonth().primary,
+      color: theme.primary,
       marginBottom: 25,
       marginTop: 40,
     },

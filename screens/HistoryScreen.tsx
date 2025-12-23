@@ -36,7 +36,7 @@ export default function HistoryScreen() {
 
   return (
     <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
-      <Text style={[styles.title, { color: themeMonth.primary }]}>
+      <Text style={[styles.title, { color: theme.primary }]}>
         🕰 Historique
       </Text>
 

@@ -90,7 +90,7 @@ const MeditationScreen: React.FC = () => {
     >
       <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
         {/* TITRE */}
-        <ThemedText type="title" style={[styles.title, { color: monthlyTheme.primary }]}>
+        <ThemedText type="title" style={[styles.title, { color: theme.primary }]}>
           Méditation de {monthlyEnergy.name}
         </ThemedText>
 
