@@ -61,7 +61,7 @@ const MeditationScreen: React.FC = () => {
       }
       await soundRef.current.playAsync();
       setAudioStatus("playing");
-    } catch {}
+    } catch { }
   };
 
   const pauseMeditation = async () => {
@@ -70,7 +70,7 @@ const MeditationScreen: React.FC = () => {
         await soundRef.current.pauseAsync();
         setAudioStatus("paused");
       }
-    } catch {}
+    } catch { }
   };
 
   const stopMeditation = async () => {
@@ -79,7 +79,7 @@ const MeditationScreen: React.FC = () => {
         await soundRef.current.stopAsync();
         setAudioStatus("stopped");
       }
-    } catch {}
+    } catch { }
   };
 
   return (
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     marginBottom: 22,
     borderWidth: 2,
-    backgroundColor: "#fff5f0",
+    backgroundColor: "#f4e7e3",
   },
 
   image: {
@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
   // Card audio spécifique (volontairement conservée)
   card: {
     width: "100%",
-    backgroundColor: "#F6F2EC",
+    backgroundColor: "#f4e7e3",
     borderRadius: 16,
     borderWidth: 1.5,
     paddingVertical: 18,

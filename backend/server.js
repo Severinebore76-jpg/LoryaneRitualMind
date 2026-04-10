@@ -1,28 +1,26 @@
 // 🧩 backend/server.js
+
 import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 
-// Connexion DB
-import connectDB from "./config/db.js";
+// ❌ ON N'IMPORTE PAS Mongo pour l’instant
+// import connectDB from "./config/db.js";
 
 // Middlewares
 import { errorHandler } from "./middlewares/errorHandler.js";
 
-// Routes API existantes
+// Routes
 import messagesRoutes from "./routes/messages.js";
 import ritualsRoutes from "./routes/rituals.js";
 
-// Nouvelles routes (utilisateurs + auth)
-import authRoutes from "./routes/authRoutes.js";
-import userRoutes from "./routes/userRoutes.js";
+// (optionnel) tu peux laisser mais inutile pour ton bug actuel
+// import authRoutes from "./routes/authRoutes.js";
+// import userRoutes from "./routes/userRoutes.js";
 
 dotenv.config();
-
-// Connexion BDD
-connectDB();
 
 const app = express();
 const PORT = process.env.PORT || 5050;
@@ -33,24 +31,28 @@ app.use(express.json());
 app.use(morgan("dev"));
 app.use(helmet());
 
-// Routes existantes
+// Routes API
 app.use("/api/rituals", ritualsRoutes);
 app.use("/api/messages", messagesRoutes);
 
-// Nouvelles routes User + Auth
-app.use("/api/users", userRoutes);
-app.use("/api/auth", authRoutes);
+// (optionnel)
+// app.use("/api/users", userRoutes);
+// app.use("/api/auth", authRoutes);
 
-// Route de test
+// Route test
 app.get("/api/test", (req, res) => {
-  res.json({ message: "✅ Backend Loryane Ritual Mind opérationnel" });
+  res.json({ message: "✅ Backend opérationnel" });
 });
 
-// Middleware global d’erreurs
+// Middleware erreurs
 app.use(errorHandler);
 
-// Lancement serveur
-app.listen(PORT, () => {
+// 🚀 Lancement serveur PROPRE
+const server = app.listen(PORT, "0.0.0.0", () => {
   console.log(`🚀 Serveur backend lancé sur le port ${PORT}`);
 });
-export default app;
+
+// Gestion erreurs serveur
+server.on("error", (err) => {
+  console.error("❌ Erreur serveur:", err);
+});

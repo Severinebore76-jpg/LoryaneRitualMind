@@ -37,11 +37,13 @@ export default function RitualScreen() {
 
   const theme = getLoryaneTheme("light");
 
-  const formatDate2026 = () => {
+  // ✅ FIX : année dynamique
+  const formatDate = () => {
     const d = new Date();
     const day = d.toLocaleDateString("fr-FR", { day: "numeric" });
     const month = d.toLocaleDateString("fr-FR", { month: "long" });
-    return `${day} ${month} 2026`;
+    const year = d.getFullYear();
+    return `${day} ${month} ${year}`;
   };
 
   const loadFavoriteRitual = () => {
@@ -54,7 +56,8 @@ export default function RitualScreen() {
     try {
       setLoading(true);
       setError(null);
-      const res = await fetch("http://192.168.0.16:5050/api/rituals/today");
+
+      const res = await fetch("http://192.168.0.38:5050/api/rituals/today");
       if (!res.ok) throw new Error("Échec de la récupération du rituel");
 
       const data = await res.json();
@@ -103,10 +106,15 @@ export default function RitualScreen() {
       const existingFavorites = await AsyncStorage.getItem("favorites");
       const favorites = existingFavorites ? JSON.parse(existingFavorites) : [];
 
+      // ✅ FIX : ordre correct
+      const monthNumber = parseInt(monthFile.substring(0, 2));
+      const year = new Date().getFullYear();
+
       const alreadySaved = favorites.some(
         (fav: any) =>
           fav.day === ritual.day &&
-          fav.monthNumber === parseInt(monthFile.substring(0, 2))
+          fav.monthNumber === monthNumber &&
+          fav.year === year
       );
 
       if (alreadySaved) {
@@ -114,13 +122,12 @@ export default function RitualScreen() {
         return;
       }
 
-      const monthNumber = parseInt(monthFile.substring(0, 2));
-
       favorites.push({
         ...ritual,
         month: monthFile,
         monthNumber,
         day: ritual.day,
+        year,
         dateSaved: new Date().toISOString(),
       });
 
@@ -174,7 +181,7 @@ export default function RitualScreen() {
             Rituel du jour
           </Text>
           <Text style={[styles.subtitle, { color: "#3f2f28", marginTop: 2 }]}>
-            {formatDate2026()}
+            {formatDate()}
           </Text>
         </View>
 
@@ -194,12 +201,11 @@ export default function RitualScreen() {
             </View>
           </View>
 
-          {/* ✅ RITUEL : maintenant via BaseCard (sans changer le rendu) */}
           <BaseCard
             borderColor={theme.accent}
             style={[
               styles.ritualBoxOverrides,
-              { backgroundColor: "#efe6e0" },
+              { backgroundColor: "#f4e7e3" },
             ]}
           >
             <Text style={[styles.ritualLabel, { color: "#3f2f28" }]}>
@@ -250,7 +256,6 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
 
-  // ✅ on ne touche PAS : c’est ton rendu validé
   cardBackground: {
     position: "absolute",
     top: 0,
@@ -272,14 +277,11 @@ const styles = StyleSheet.create({
 
   iconWrapper: { alignItems: "center", marginVertical: verticalScale(-60) },
 
-  // ✅ overrides BaseCard pour que ça ressemble EXACTEMENT à ton ancien ritualBox
   ritualBoxOverrides: {
     borderRadius: scale(10),
     padding: scale(14),
     marginTop: verticalScale(8),
     marginBottom: 0,
-
-    // on neutralise l’ombre de BaseCard
     shadowOpacity: 0,
     shadowRadius: 0,
     shadowOffset: { width: 0, height: 0 },

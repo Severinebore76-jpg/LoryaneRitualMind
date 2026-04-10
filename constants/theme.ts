@@ -21,7 +21,7 @@ export type Theme = {
 // 🎨 THÈMES MENSUELS
 // ————————————————————————————————————
 const themesByMonth: Record<number, Theme> = {
-  1: { primary: "#a48989", accent: "#c9b1b1", background: "#dccfcf", card: "#ece8e8", surface: "#F1E9E6", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" }, 
+  1: { primary: "#a48989", accent: "#c9b1b1", background: "#dccfcf", card: "#ece8e8", surface: "#F1E9E6", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
   2: { primary: "#b08d8d", accent: "#d6bcbc", background: "#dccfcf", card: "#f0e9e9", surface: "#F6EDED", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
   3: { primary: "#c7a58f", accent: "#d8bda9", background: "#dccfcf", card: "#f1ebe7", surface: "#F6EFEA", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
   4: { primary: "#cfb7a5", accent: "#e3d0c2", background: "#dccfcf", card: "#f3eeeb", surface: "#FAF6F4", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
@@ -30,9 +30,9 @@ const themesByMonth: Record<number, Theme> = {
   7: { primary: "#c29b88", accent: "#ddbdaa", background: "#dccfcf", card: "#f4eeeb", surface: "#FBF6F4", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
   8: { primary: "#d4b08f", accent: "#e8cdb3", background: "#dccfcf", card: "#f6efea", surface: "#FDF7F2", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
   9: { primary: "#c7aa9a", accent: "#e1c9bd", background: "#dccfcf", card: "#f7f1ed", surface: "#FCF7F4", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
-  10:{ primary: "#c89a7c", accent: "#e0bca3", background: "#dccfcf", card: "#f5ede8", surface: "#FBF3EF", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
-  11:{ primary: "#b79986", accent: "#d0b6a9", background: "#dccfcf", card: "#f3ece9", surface: "#F9F3F1", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
-  12:{ primary: "#d3bfa9", accent: "#e8d9c9", background: "#dccfcf", card: "#f6f0ea", surface: "#FDF7F2", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
+  10: { primary: "#c89a7c", accent: "#e0bca3", background: "#dccfcf", card: "#f5ede8", surface: "#FBF3EF", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
+  11: { primary: "#b79986", accent: "#d0b6a9", background: "#dccfcf", card: "#f3ece9", surface: "#F9F3F1", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
+  12: { primary: "#d3bfa9", accent: "#e8d9c9", background: "#dccfcf", card: "#f6f0ea", surface: "#FDF7F2", text: "#241718", error: "#B94A48", textOnPrimary: "#FFFFFF", textOnAccent: "#3C2F2F" },
 };
 
 // ————————————————————————————————————

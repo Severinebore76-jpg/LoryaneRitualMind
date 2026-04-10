@@ -41,7 +41,7 @@ export default function PrimaryButton({
 
 const styles = StyleSheet.create({
   button: {
-    backgroundColor: "#f7efe8",
+    backgroundColor: "#f4e7e3",
     borderColor: "#d6b98c",
     borderWidth: 1,
     borderRadius: 14,

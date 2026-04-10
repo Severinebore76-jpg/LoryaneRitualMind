@@ -76,14 +76,14 @@ export default function HomeScreen() {
 
   const fetchMessage = async () => {
     try {
-      const res = await fetch("http://192.168.0.22:5050/api/messages/today");
+      const res = await fetch("http://192.168.0.38:5050/api/rituals/today");
       const data = await res.json();
 
       setDailyMessage({
-        message: data.message || "Le calme est la clé de l’alignement.",
-        stone: data.stone || null,
-        essential_oil: data.essential_oil || null,
-        symbol: data.symbol || null,
+        message: data.ritual.message || "Le calme est la clé de l’alignement.",
+        stone: data.ritual.stone || null,
+        essential_oil: data.ritual.essential_oil || null,
+        symbol: data.ritual.symbol || null,
       });
     } catch {
       setDailyMessage({
