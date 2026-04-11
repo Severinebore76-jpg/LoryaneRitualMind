@@ -25,6 +25,12 @@ import LegalScreen from "../screens/Legal/LegalScreen";
 // Écran Premium
 import PremiumScreen from "../screens/PremiumScreen";
 
+//Écran Créer un compte / Se connecter 
+import AuthScreen from "../screens/AuthScreen";
+
+//Écran Modifier mes informations
+import EditProfileScreen from "../screens/EditProfileScreen";
+
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
@@ -87,6 +93,16 @@ function ProfileStack() {
       <Stack.Screen
         name="Subscription"
         component={PremiumScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="Auth"
+        component={AuthScreen}
+        options={{ headerShown: false }}
+      />
+      <Stack.Screen
+        name="EditProfile"
+        component={EditProfileScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

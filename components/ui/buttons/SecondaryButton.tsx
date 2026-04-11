@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     fontFamily: typography.fontFamily.primary,
     fontWeight: "500",
     letterSpacing: 0.3,
-    color: "#3f2f28",
+    color: "#aa755d",
     textAlign: "center",
   },
 });

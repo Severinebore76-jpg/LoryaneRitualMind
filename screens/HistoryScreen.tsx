@@ -5,6 +5,8 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import React, { useEffect, useState } from "react";
 import { ScrollView, StyleSheet, Text } from "react-native";
 
+import ScreenContainer from "../components/layout/ScreenContainer"; // ✅ AJOUT
+
 import { ThemedView } from "../components/themed-view";
 import BaseCard from "../components/ui/cards/BaseCard";
 import DailyElementsRow from "../components/ui/elements/DailyElementsRow";
@@ -35,70 +37,75 @@ export default function HistoryScreen() {
   }, []);
 
   return (
-    <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
-      <Text style={[styles.title, { color: theme.primary }]}>
-        🕰 Historique
-      </Text>
-
-      <Text style={styles.subtitle}>Tes 7 derniers rituels</Text>
-
-      {history.length === 0 && (
-        <Text style={styles.empty}>
-          Aucun rituel sauvegardé pour le moment.
-        </Text>
-      )}
-
-      <ScrollView
-        style={{ width: "100%", marginTop: 30 }}
-        contentContainerStyle={{ paddingBottom: 120 }}
-        showsVerticalScrollIndicator={false}
+    <ScreenContainer>
+      <ThemedView
+        style={[
+          styles.container,
+          {
+            backgroundColor: theme.background,
+          },
+        ]}
       >
-        {history.map((ritual, index) => (
-          <BaseCard
-            key={index}
-            borderColor={themeMonth.primary}
-          >
-            <Text style={[styles.date, { color: themeMonth.primary }]}>
-              {ritual.day}{" "}
-              {ritual.month.replace(/^\d+_/, "").replace(/_/g, " ")} 2026
-            </Text>
+        <Text style={[styles.title, { color: theme.primary }]}>
+          🕰 Historique
+        </Text>
 
-            <Text style={styles.message}>“{ritual.message}”</Text>
+        <Text style={styles.subtitle}>Tes 7 derniers rituels</Text>
 
-            <DailyElementsRow
-              stone={ritual.stone}
-              essential_oil={ritual.essential_oil}
-              symbol={ritual.symbol}
-            />
+        {history.length === 0 && (
+          <Text style={styles.empty}>
+            Aucun rituel sauvegardé pour le moment.
+          </Text>
+        )}
 
-            <Text style={[styles.label, { color: themeMonth.primary }]}>
-              Rituel :
-            </Text>
+        <ScrollView
+          style={{ width: "100%", marginTop: 30 }}
+          contentContainerStyle={{
+            paddingBottom: 120,
+            paddingTop: 10, // ✅ léger offset propre (équilibre visuel)
+          }}
+          showsVerticalScrollIndicator={false}
+        >
+          {history.map((ritual, index) => (
+            <BaseCard key={index} borderColor={themeMonth.primary}>
+              <Text style={[styles.date, { color: themeMonth.primary }]}>
+                {ritual.day}{" "}
+                {ritual.month.replace(/^\d+_/, "").replace(/_/g, " ")} 2026
+              </Text>
 
-            <Text style={styles.ritualText}>{ritual.ritual}</Text>
-          </BaseCard>
-        ))}
-      </ScrollView>
-    </ThemedView>
+              <Text style={styles.message}>“{ritual.message}”</Text>
+
+              <DailyElementsRow
+                stone={ritual.stone}
+                essential_oil={ritual.essential_oil}
+                symbol={ritual.symbol}
+              />
+
+              <Text style={[styles.label, { color: themeMonth.primary }]}>
+                Rituel :
+              </Text>
+
+              <Text style={styles.ritualText}>{ritual.ritual}</Text>
+            </BaseCard>
+          ))}
+        </ScrollView>
+      </ThemedView>
+    </ScreenContainer>
   );
 }
 
-// ----------------------------------------------------------
-// STYLES (SCREEN ONLY)
-// ----------------------------------------------------------
+// STYLES INCHANGÉS
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 24,
     alignItems: "center",
-    paddingTop: 10,
   },
 
   title: {
     fontSize: 28,
     fontWeight: "700",
     textAlign: "center",
-    marginTop: 40,
     marginBottom: 6,
   },
 

@@ -2,7 +2,15 @@
 // @ts-nocheck
 import { Audio } from "expo-av";
 import React, { useEffect, useRef, useState } from "react";
-import { Image, ScrollView, StyleSheet, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  TouchableOpacity,
+  View,
+} from "react-native";
+
+import ScreenContainer from "../components/layout/ScreenContainer"; // ✅ AJOUT
 
 import { ThemedText } from "../components/themed-text";
 import { ThemedView } from "../components/themed-view";
@@ -39,7 +47,7 @@ const MeditationScreen: React.FC = () => {
   const [audioStatus, setAudioStatus] =
     useState<"stopped" | "playing" | "paused">("stopped");
 
-  // ----- TEXTE -----
+  // TEXTE
   useEffect(() => {
     try {
       if (monthlyTextFile && monthlyTextFile.text) {
@@ -52,7 +60,7 @@ const MeditationScreen: React.FC = () => {
     }
   }, [monthlyTextFile]);
 
-  // ----- AUDIO -----
+  // AUDIO
   const playMeditation = async () => {
     try {
       if (!soundRef.current) {
@@ -83,82 +91,127 @@ const MeditationScreen: React.FC = () => {
   };
 
   return (
-    <ScrollView
-      style={{ flex: 1, backgroundColor: theme.background }}
-      contentContainerStyle={{ paddingBottom: 70, backgroundColor: theme.background }}
-      showsVerticalScrollIndicator={false}
-    >
-      <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
-        {/* TITRE */}
-        <ThemedText type="title" style={[styles.title, { color: theme.primary }]}>
-          Méditation de {monthlyEnergy.name}
-        </ThemedText>
-
-        {/* IMAGE */}
-        <View style={[styles.imageWrapper, { borderColor: monthlyTheme.accent }]}>
-          <Image source={monthlyImage} style={styles.image} />
-        </View>
-
-        {/* CARD AUDIO (reste indépendante) */}
-        <View style={[styles.card, { borderColor: monthlyTheme.primary }]}>
-          <ThemedText style={[styles.cardTitle, { color: monthlyTheme.primary }]}>
-            🎧 Méditation audio
+    <ScreenContainer>
+      <ScrollView
+        style={{ flex: 1, backgroundColor: theme.background }}
+        contentContainerStyle={{
+          paddingBottom: 70,
+          paddingTop: 10, // ✅ remplace ton insets.top
+        }}
+        showsVerticalScrollIndicator={false}
+      >
+        <ThemedView
+          style={[styles.container, { backgroundColor: theme.background }]}
+        >
+          {/* TITRE */}
+          <ThemedText
+            type="title"
+            style={[
+              styles.title,
+              {
+                color: theme.primary,
+                marginTop: 10, // ✅ conservé (ton équilibre visuel)
+              },
+            ]}
+          >
+            Méditation de {monthlyEnergy.name}
           </ThemedText>
 
-          <View style={[styles.controlsRow, { borderColor: monthlyTheme.primary }]}>
-            <TouchableOpacity
-              onPress={audioStatus === "playing" ? pauseMeditation : playMeditation}
-              activeOpacity={0.8}
-              style={[styles.iconBtn, { borderColor: monthlyTheme.primary }]}
-            >
-              {audioStatus === "playing" ? <PauseIcon size={26} /> : <PlayIcon size={26} />}
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              onPress={stopMeditation}
-              activeOpacity={0.8}
-              style={[styles.iconBtn, { borderColor: monthlyTheme.primary }]}
-            >
-              <StopIcon size={26} />
-            </TouchableOpacity>
+          {/* IMAGE */}
+          <View
+            style={[
+              styles.imageWrapper,
+              { borderColor: monthlyTheme.accent },
+            ]}
+          >
+            <Image source={monthlyImage} style={styles.image} />
           </View>
-        </View>
 
-        {/* CARD ENERGIES — BaseCard */}
-        <BaseCard borderColor={monthlyTheme.primary}>
-          <ThemedText style={[styles.cardTitle, { color: monthlyTheme.primary }]}>
-            ✨ Énergies du mois
-          </ThemedText>
+          {/* AUDIO */}
+          <View style={[styles.card, { borderColor: monthlyTheme.primary }]}>
+            <ThemedText
+              style={[styles.cardTitle, { color: monthlyTheme.primary }]}
+            >
+              🎧 Méditation audio
+            </ThemedText>
 
-          <ThemedText style={[styles.bodyText, { color: theme.text }]}>
-            {monthlyEnergy.description}
-          </ThemedText>
-        </BaseCard>
+            <View
+              style={[
+                styles.controlsRow,
+                { borderColor: monthlyTheme.primary },
+              ]}
+            >
+              <TouchableOpacity
+                onPress={
+                  audioStatus === "playing"
+                    ? pauseMeditation
+                    : playMeditation
+                }
+                activeOpacity={0.8}
+                style={[
+                  styles.iconBtn,
+                  { borderColor: monthlyTheme.primary },
+                ]}
+              >
+                {audioStatus === "playing" ? (
+                  <PauseIcon size={26} />
+                ) : (
+                  <PlayIcon size={26} />
+                )}
+              </TouchableOpacity>
 
-        {/* CARD TEXTE — BaseCard */}
-        <BaseCard borderColor={monthlyTheme.primary}>
-          <ThemedText style={[styles.cardTitle, { color: monthlyTheme.primary }]}>
-            🕊️ Texte de la méditation
-          </ThemedText>
+              <TouchableOpacity
+                onPress={stopMeditation}
+                activeOpacity={0.8}
+                style={[
+                  styles.iconBtn,
+                  { borderColor: monthlyTheme.primary },
+                ]}
+              >
+                <StopIcon size={26} />
+              </TouchableOpacity>
+            </View>
+          </View>
 
-          <ThemedText style={[styles.bodyText, { color: theme.text }]}>
-            {meditationText}
-          </ThemedText>
-        </BaseCard>
-      </ThemedView>
-    </ScrollView>
+          {/* ENERGIES */}
+          <BaseCard borderColor={monthlyTheme.primary}>
+            <ThemedText
+              style={[styles.cardTitle, { color: monthlyTheme.primary }]}
+            >
+              ✨ Énergies du mois
+            </ThemedText>
+
+            <ThemedText style={[styles.bodyText, { color: theme.text }]}>
+              {monthlyEnergy.description}
+            </ThemedText>
+          </BaseCard>
+
+          {/* TEXTE */}
+          <BaseCard borderColor={monthlyTheme.primary}>
+            <ThemedText
+              style={[styles.cardTitle, { color: monthlyTheme.primary }]}
+            >
+              🕊️ Texte de la méditation
+            </ThemedText>
+
+            <ThemedText style={[styles.bodyText, { color: theme.text }]}>
+              {meditationText}
+            </ThemedText>
+          </BaseCard>
+        </ThemedView>
+      </ScrollView>
+    </ScreenContainer>
   );
 };
 
 export default MeditationScreen;
 
-// ---------------- STYLES ----------------
+// STYLES INCHANGÉS
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
     alignItems: "center",
     paddingHorizontal: 22,
-    paddingTop: 36,
   },
 
   title: {
@@ -184,7 +237,6 @@ const styles = StyleSheet.create({
     resizeMode: "cover",
   },
 
-  // Card audio spécifique (volontairement conservée)
   card: {
     width: "100%",
     backgroundColor: "#f4e7e3",

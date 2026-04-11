@@ -1,7 +1,9 @@
 // screens/PremiumScreen.tsx
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { Alert, ScrollView, StyleSheet } from "react-native";
+
+import ScreenContainer from "../components/layout/ScreenContainer"; // ✅ AJOUT
 
 import { ThemedText } from "../components/themed-text";
 import { ThemedView } from "../components/themed-view";
@@ -14,87 +16,108 @@ const PremiumScreen: React.FC = () => {
   const theme = getLoryaneTheme("light");
   const nav = useNavigation();
 
+  const handleSubscribe = (type: "monthly" | "yearly") => {
+    Alert.alert(
+      "Abonnement",
+      type === "monthly"
+        ? "Offre mensuelle sélectionnée"
+        : "Offre annuelle sélectionnée"
+    );
+  };
+
   return (
-    <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        contentContainerStyle={styles.scrollContent}
-      >
-        {/* TITRE */}
-        <ThemedText type="title" style={[styles.title, { color: theme.primary }]}>
-          Loryane+
-        </ThemedText>
-
-        <ThemedText style={styles.subtitle}>
-          Un espace intérieur, rien que pour toi.
-        </ThemedText>
-
-        {/* PROMESSE */}
-        <ThemedView style={styles.heroCard}>
-          <ThemedText style={styles.heroTitle}>
-            Quand le rituel devient un refuge
+    <ScreenContainer>
+      <ThemedView style={[styles.container, { backgroundColor: theme.background }]}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={[
+            styles.scrollContent,
+            { paddingTop: 10 } // ✅ remplace insets.top + 10
+          ]}
+        >
+          {/* TITRE */}
+          <ThemedText
+            type="title"
+            style={[
+              styles.title,
+              {
+                color: theme.primary,
+                marginTop: 10 // ✅ conservé (ton équilibre visuel)
+              }
+            ]}
+          >
+            Loryane+
           </ThemedText>
 
-          <ThemedText style={styles.heroText}>
-            Loryane+ transforme ton rituel en véritable rendez-vous avec toi-même :
-            audios guidés, archives complètes, favoris sauvegardés, ambiance sur mesure.
+          <ThemedText style={styles.subtitle}>
+            Un espace intérieur, rien que pour toi.
           </ThemedText>
 
-          <ThemedText style={styles.heroHint}>
-            Sans engagement. Tu peux arrêter à tout moment.
-          </ThemedText>
-        </ThemedView>
+          {/* PROMESSE */}
+          <ThemedView style={styles.heroCard}>
+            <ThemedText style={styles.heroTitle}>
+              Quand le rituel devient un refuge
+            </ThemedText>
 
-        {/* AVANTAGES */}
-        <ThemedView style={styles.card}>
-          <ThemedText style={styles.sectionTitle}>
-            Ce que Loryane+ débloque
-          </ThemedText>
+            <ThemedText style={styles.heroText}>
+              Loryane+ transforme ton rituel en véritable rendez-vous avec toi-même :
+              audios guidés, archives complètes, favoris sauvegardés, ambiance sur mesure.
+            </ThemedText>
 
-          <ThemedText style={styles.bullet}>✦ Rituels audio-guidés</ThemedText>
-          <ThemedText style={styles.bullet}>✦ Accès aux archives complètes</ThemedText>
-          <ThemedText style={styles.bullet}>✦ Favoris synchronisés</ThemedText>
-          <ThemedText style={styles.bullet}>✦ Rappels personnalisés</ThemedText>
-          <ThemedText style={styles.bullet}>✦ Ambiances premium</ThemedText>
-        </ThemedView>
+            <ThemedText style={styles.heroHint}>
+              Sans engagement. Tu peux arrêter à tout moment.
+            </ThemedText>
+          </ThemedView>
 
-        {/* OFFRES — CTA */}
-        <ThemedView style={styles.card}>
-          <ThemedText style={styles.sectionTitle}>
-            Choisis ton rythme
-          </ThemedText>
+          {/* AVANTAGES */}
+          <ThemedView style={styles.card}>
+            <ThemedText style={styles.sectionTitle}>
+              Ce que Loryane+ débloque
+            </ThemedText>
 
+            <ThemedText style={styles.bullet}>✦ Rituels audio-guidés</ThemedText>
+            <ThemedText style={styles.bullet}>✦ Accès aux archives complètes</ThemedText>
+            <ThemedText style={styles.bullet}>✦ Favoris synchronisés</ThemedText>
+            <ThemedText style={styles.bullet}>✦ Rappels personnalisés</ThemedText>
+            <ThemedText style={styles.bullet}>✦ Ambiances premium</ThemedText>
+          </ThemedView>
+
+          {/* OFFRES */}
+          <ThemedView style={styles.card}>
+            <ThemedText style={styles.sectionTitle}>
+              Choisis ton rythme
+            </ThemedText>
+
+            <SecondaryButton
+              label="Formule mensuelle — 9,90 € / mois"
+              onPress={() => handleSubscribe("monthly")}
+            />
+
+            <SecondaryButton
+              label="Formule annuelle — 94,90 € / an"
+              onPress={() => handleSubscribe("yearly")}
+            />
+
+            <ThemedText style={styles.legalNote}>
+              Le paiement sécurisé sera activé ultérieurement.
+            </ThemedText>
+          </ThemedView>
+
+          {/* SORTIE */}
           <SecondaryButton
-            label="Formule mensuelle — 9,90 € / mois"
-            onPress={() => {}}
+            label="Continuer en mode Free"
+            onPress={() => nav.goBack()}
+            style={{ marginTop: 30 }}
           />
-
-          <SecondaryButton
-            label="Formule annuelle — 94,90 € / an"
-            onPress={() => {}}
-          />
-
-          <ThemedText style={styles.legalNote}>
-            Le paiement sécurisé sera activé ultérieurement.
-          </ThemedText>
-        </ThemedView>
-
-        {/* SORTIE */}
-        <SecondaryButton
-          label="Continuer en mode Free"
-          onPress={() => nav.goBack()}
-          style={{ marginTop: 30 }}
-        />
-      </ScrollView>
-    </ThemedView>
+        </ScrollView>
+      </ThemedView>
+    </ScreenContainer>
   );
 };
 
 export default PremiumScreen;
 
-// ------------------------------------------------------
-// STYLES — STRUCTURE SEULEMENT
-// ------------------------------------------------------
+// STYLES INCHANGÉS
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -107,7 +130,6 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    marginTop: 40,
     marginBottom: 4,
     textAlign: "center",
   },

@@ -12,6 +12,8 @@ import {
   View,
 } from "react-native";
 
+import ScreenContainer from "../components/layout/ScreenContainer"; // ✅ AJOUT
+
 import LoryaneRotatingIcon from "../components/LoryaneRotatingIcon";
 import SecondaryButton from "../components/ui/buttons/SecondaryButton";
 import BaseCard from "../components/ui/cards/BaseCard";
@@ -103,74 +105,96 @@ export default function FavoritesScreen() {
 
   if (loading) {
     return (
-      <View style={styles.centered}>
-        <Text style={{ color: "#3f2f28" }}>Chargement des favoris...</Text>
-      </View>
+      <ScreenContainer>
+        <View style={styles.centered}>
+          <Text style={{ color: "#3f2f28" }}>
+            Chargement des favoris...
+          </Text>
+        </View>
+      </ScreenContainer>
     );
   }
 
   if (favorites.length === 0) {
     return (
-      <View style={[styles.centered, { paddingHorizontal: 20 }]}>
-        <Text style={styles.pageTitle}>⭐ Mes rituels favoris</Text>
-        <Text style={styles.emptyText}>Aucun favori pour le moment.</Text>
-      </View>
+      <ScreenContainer>
+        <View style={[styles.centered, { paddingHorizontal: 20 }]}>
+          <Text style={styles.pageTitle}>
+            ⭐ Mes rituels favoris
+          </Text>
+          <Text style={styles.emptyText}>
+            Aucun favori pour le moment.
+          </Text>
+        </View>
+      </ScreenContainer>
     );
   }
 
   return (
-    <ScrollView
-      style={styles.container}
-      contentContainerStyle={{ padding: 20 }}
-      showsVerticalScrollIndicator={false}
-    >
-      <Text style={styles.pageTitle}>⭐ Mes rituels favoris</Text>
+    <ScreenContainer>
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={{
+          padding: 20,
+          paddingTop: 10, // ✅ équilibre visuel conservé
+        }}
+        showsVerticalScrollIndicator={false}
+      >
+        <Text style={styles.pageTitle}>
+          ⭐ Mes rituels favoris
+        </Text>
 
-      {favorites.map((item, idx) => {
-        const themeMonth = getThemeForMonth(item.monthNumber);
+        {favorites.map((item, idx) => {
+          const themeMonth = getThemeForMonth(item.monthNumber);
 
-        const date = new Date(item.dateSaved).toLocaleDateString("fr-FR", {
-          day: "2-digit",
-          month: "long",
-          year: "numeric",
-        });
+          const date = new Date(item.dateSaved).toLocaleDateString(
+            "fr-FR",
+            {
+              day: "2-digit",
+              month: "long",
+              year: "numeric",
+            }
+          );
 
-        return (
-          <BaseCard key={idx} borderColor={themeMonth.primary}>
-            <Text style={styles.date}>{date}</Text>
+          return (
+            <BaseCard key={idx} borderColor={themeMonth.primary}>
+              <Text style={styles.date}>{date}</Text>
 
-            <Text style={styles.message}>“{item.message}”</Text>
+              <Text style={styles.message}>
+                “{item.message}”
+              </Text>
 
-            <DailyElementsRow
-              stone={item.stone}
-              essential_oil={item.essential_oil}
-              symbol={item.symbol}
-            />
+              <DailyElementsRow
+                stone={item.stone}
+                essential_oil={item.essential_oil}
+                symbol={item.symbol}
+              />
 
-            <SecondaryButton
-              label="RETIRER"
-              onPress={() => removeFavorite(idx)}
-              style={{ marginTop: 14 }}
-            />
-          </BaseCard>
-        );
-      })}
+              <SecondaryButton
+                label="RETIRER"
+                onPress={() => removeFavorite(idx)}
+                style={{ marginTop: 14 }}
+              />
+            </BaseCard>
+          );
+        })}
 
-      <View style={styles.iconWrapper}>
-        <LoryaneRotatingIcon />
-      </View>
+        <View style={styles.iconWrapper}>
+          <LoryaneRotatingIcon />
+        </View>
 
-      <SecondaryButton
-        label="🗑️ Supprimer tous les favoris"
-        onPress={clearFavorites}
-        style={{ marginTop: 20 }}
-      />
-    </ScrollView>
+        <SecondaryButton
+          label="🗑️ Supprimer tous les favoris"
+          onPress={clearFavorites}
+          style={{ marginTop: 20 }}
+        />
+      </ScrollView>
+    </ScreenContainer>
   );
 }
 
 // ===================================================================
-// 🎨 STYLES — SCREEN ONLY
+// 🎨 STYLES — INCHANGÉS
 // ===================================================================
 const makeStyles = (theme: Theme) =>
   StyleSheet.create({
@@ -192,7 +216,7 @@ const makeStyles = (theme: Theme) =>
       textAlign: "center",
       color: theme.primary,
       marginBottom: 25,
-      marginTop: 40,
+      marginTop: 20,
     },
 
     emptyText: {

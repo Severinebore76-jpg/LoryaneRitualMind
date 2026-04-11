@@ -36,8 +36,8 @@ export default function AboutScreen() {
         {/* INTRO */}
         <ThemedText style={styles.paragraph}>
           Loryane Ritual Mind est une application dédiée au bien-être intérieur.
-          Elle vous accompagne chaque jour avec des rituels simples, élégants et 
-          profondément apaisants. Une bulle intime pour respirer, ralentir, et se 
+          Elle vous accompagne chaque jour avec des rituels simples, élégants et
+          profondément apaisants. Une bulle intime pour respirer, ralentir, et se
           reconnecter à votre essentiel.
         </ThemedText>
 
@@ -50,10 +50,10 @@ export default function AboutScreen() {
         <View style={styles.block}>
           <ThemedText style={styles.subtitle}>Créatrice — Séverine BORÉ</ThemedText>
           <ThemedText style={styles.content}>
-            Artiste, autrice et passionnée de bien-être holistique, 
-            Séverine BORÉ a imaginé Loryane comme une expérience complète 
-            alliant douceur, intention et sens.  
-            {"\n\n"}À travers ses mots, ses rituels et son univers sensible, 
+            Artiste, autrice et passionnée de bien-être holistique,
+            Séverine BORÉ a imaginé Loryane comme une expérience complète
+            alliant douceur, intention et sens.
+            {"\n\n"}À travers ses mots, ses rituels et son univers sensible,
             elle vous invite à éveiller votre monde intérieur avec simplicité et élégance.
           </ThemedText>
         </View>
@@ -62,8 +62,8 @@ export default function AboutScreen() {
         <View style={styles.block}>
           <ThemedText style={styles.subtitle}>Notre mission</ThemedText>
           <ThemedText style={styles.content}>
-            Vous guider vers une routine apaisée et alignée.  
-            Quelques minutes par jour suffisent pour restructurer votre espace intérieur, 
+            Vous guider vers une routine apaisée et alignée.
+            Quelques minutes par jour suffisent pour restructurer votre espace intérieur,
             renforcer votre ancrage et cultiver votre harmonie personnelle.
           </ThemedText>
         </View>
@@ -72,9 +72,9 @@ export default function AboutScreen() {
         <View style={styles.block}>
           <ThemedText style={styles.subtitle}>Un univers premium</ThemedText>
           <ThemedText style={styles.content}>
-            Loryane s’inspire du luxe naturel : matières organiques, 
-            palette beige poudré, dorures élégantes et rythmes doux.  
-            Chaque élément visuel a été pensé pour créer une expérience 
+            Loryane s’inspire du luxe naturel : matières organiques,
+            palette beige poudré, dorures élégantes et rythmes doux.
+            Chaque élément visuel a été pensé pour créer une expérience
             sensorielle raffinée et apaisante.
           </ThemedText>
         </View>
@@ -84,7 +84,7 @@ export default function AboutScreen() {
           <ThemedText style={styles.subtitle}>Loryane Essentielle</ThemedText>
           <ThemedText style={styles.content}>
             La version physique de l’univers Loryane est Loryane Essentielle : pierres naturelles,
-            huiles essentielles, rituels imprimés, coffrets bien-être et créations artisanales.  
+            huiles essentielles, rituels imprimés, coffrets bien-être et créations artisanales.
             Une extension du digital vers une expérience tangible et holistique.
           </ThemedText>
         </View>
@@ -93,8 +93,8 @@ export default function AboutScreen() {
         <View style={styles.block}>
           <ThemedText style={styles.subtitle}>Philosophie</ThemedText>
           <ThemedText style={styles.content}>
-            Un bien-être moderne, déculpabilisé, non intrusif.  
-            Ici, pas de performance — seulement un espace sûr, 
+            Un bien-être moderne, déculpabilisé, non intrusif.
+            Ici, pas de performance — seulement un espace sûr,
             doux et accessible, pour vous écouter et avancer à votre rythme.
           </ThemedText>
         </View>
@@ -105,8 +105,8 @@ export default function AboutScreen() {
             Important
           </ThemedText>
           <ThemedText style={[styles.content, { fontSize: 14 }]}>
-            Loryane Ritual Mind propose des contenus bien-être et inspirationnels.  
-            Cette application ne fournit aucun diagnostic médical et ne remplace en 
+            Loryane Ritual Mind propose des contenus bien-être et inspirationnels.
+            Cette application ne fournit aucun diagnostic médical et ne remplace en
             aucun cas un avis professionnel (médical, psychologique ou thérapeutique).
           </ThemedText>
         </View>

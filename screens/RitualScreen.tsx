@@ -1,5 +1,6 @@
 // screens/RitualScreen.tsx
 // @ts-nocheck
+
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useRoute } from "@react-navigation/native";
 import React, { useEffect, useState } from "react";
@@ -12,7 +13,8 @@ import {
   Text,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+
+import ScreenContainer from "../components/layout/ScreenContainer";
 
 import LoryaneRotatingIcon from "../components/LoryaneRotatingIcon";
 import PrimaryButton from "../components/ui/buttons/PrimaryButton";
@@ -37,7 +39,6 @@ export default function RitualScreen() {
 
   const theme = getLoryaneTheme("light");
 
-  // ✅ FIX : année dynamique
   const formatDate = () => {
     const d = new Date();
     const day = d.toLocaleDateString("fr-FR", { day: "numeric" });
@@ -106,7 +107,6 @@ export default function RitualScreen() {
       const existingFavorites = await AsyncStorage.getItem("favorites");
       const favorites = existingFavorites ? JSON.parse(existingFavorites) : [];
 
-      // ✅ FIX : ordre correct
       const monthNumber = parseInt(monthFile.substring(0, 2));
       const year = new Date().getFullYear();
 
@@ -145,42 +145,49 @@ export default function RitualScreen() {
 
   if (loading) {
     return (
-      <View style={styles.centered}>
-        <ActivityIndicator size="large" color="#c6a56f" />
-        <Text style={styles.loadingText}>Chargement du rituel...</Text>
-      </View>
+      <ScreenContainer>
+        <View style={styles.centered}>
+          <ActivityIndicator size="large" color="#c6a56f" />
+          <Text style={styles.loadingText}>Chargement du rituel...</Text>
+        </View>
+      </ScreenContainer>
     );
   }
 
   if (error || !ritual) {
     return (
-      <View style={styles.centered}>
-        <Text style={[styles.errorText, { color: getErrorColor("light") }]}>
-          ⚠️ {error ?? "Aucun rituel disponible."}
-        </Text>
-      </View>
+      <ScreenContainer>
+        <View style={styles.centered}>
+          <Text style={[styles.errorText, { color: getErrorColor("light") }]}>
+            ⚠️ {error ?? "Aucun rituel disponible."}
+          </Text>
+        </View>
+      </ScreenContainer>
     );
   }
 
   const monthKey = normalizeMonthKey(monthFile);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: theme.background }}>
+    <ScreenContainer>
       <ScrollView
-        showsVerticalScrollIndicator={false}
+        style={{ flex: 1, backgroundColor: theme.background }}
         contentContainerStyle={{
           paddingHorizontal: 20,
-          paddingTop: 40,
+          paddingTop: 24, // ✅ FIX PROPRE (au lieu de 40)
           paddingBottom: 100,
           alignItems: "center",
         }}
+        showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
           <Text style={{ fontSize: 22, marginBottom: 4 }}>✨</Text>
+
           <Text style={[styles.title, { color: theme.primary }]}>
             Rituel du jour
           </Text>
-          <Text style={[styles.subtitle, { color: "#3f2f28", marginTop: 2 }]}>
+
+          <Text style={[styles.subtitle, { color: "#3f2f28" }]}>
             {formatDate()}
           </Text>
         </View>
@@ -203,14 +210,12 @@ export default function RitualScreen() {
 
           <BaseCard
             borderColor={theme.accent}
-            style={[
-              styles.ritualBoxOverrides,
-              { backgroundColor: "#f4e7e3" },
-            ]}
+            style={[styles.ritualBoxOverrides, { backgroundColor: "#f4e7e3" }]}
           >
             <Text style={[styles.ritualLabel, { color: "#3f2f28" }]}>
               Rituel :
             </Text>
+
             <Text style={[styles.ritualText, { color: "#3f2f28" }]}>
               {ritual.ritual}
             </Text>
@@ -232,17 +237,23 @@ export default function RitualScreen() {
           </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </ScreenContainer>
   );
 }
 
+// STYLES inchangés
 const styles = StyleSheet.create({
   centered: { flex: 1, justifyContent: "center", alignItems: "center" },
   loadingText: { marginTop: verticalScale(10) },
   errorText: { textAlign: "center", fontSize: typography.size.md },
 
   header: { alignItems: "center", marginBottom: verticalScale(10) },
-  title: { fontSize: typography.size.xl, fontWeight: typography.weight.semibold },
+
+  title: {
+    fontSize: typography.size.xl,
+    fontWeight: typography.weight.semibold,
+  },
+
   subtitle: { fontSize: typography.size.md },
 
   card: {
@@ -275,17 +286,16 @@ const styles = StyleSheet.create({
     marginVertical: verticalScale(30),
   },
 
-  iconWrapper: { alignItems: "center", marginVertical: verticalScale(-60) },
+  iconWrapper: {
+    alignItems: "center",
+    marginVertical: verticalScale(-60),
+  },
 
   ritualBoxOverrides: {
     borderRadius: scale(10),
     padding: scale(14),
     marginTop: verticalScale(8),
-    marginBottom: 0,
     shadowOpacity: 0,
-    shadowRadius: 0,
-    shadowOffset: { width: 0, height: 0 },
-    shadowColor: "transparent",
     elevation: 0,
   },
 

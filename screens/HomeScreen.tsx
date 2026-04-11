@@ -12,6 +12,8 @@ import {
   View,
 } from "react-native";
 
+import ScreenContainer from "../components/layout/ScreenContainer"; // ✅ AJOUT
+
 import { scale, verticalScale } from "../constants/layout";
 import { getLoryaneTheme } from "../constants/theme";
 import { typography } from "../constants/typography";
@@ -98,88 +100,90 @@ export default function HomeScreen() {
   };
 
   return (
-    <View style={[styles.container, { backgroundColor: theme.background }]}>
-      {/* LOGO */}
-      <Animated.View
-        style={{
-          opacity: fadeAnim,
-          transform: [{ scale: scaleAnim }],
-          alignItems: "center",
-        }}
-      >
-        <Image
-          source={require("../assets/images/logo_loryane.png")}
-          style={styles.logo}
-          resizeMode="contain"
-        />
-        <Text style={[styles.title, { color: theme.primary }]}>
-          Loryane Ritual Mind
-        </Text>
-      </Animated.View>
+    <ScreenContainer>
+      <View style={[styles.container, { backgroundColor: theme.background }]}>
+        {/* LOGO */}
+        <Animated.View
+          style={{
+            opacity: fadeAnim,
+            transform: [{ scale: scaleAnim }],
+            alignItems: "center",
+          }}
+        >
+          <Image
+            source={require("../assets/images/logo_loryane.png")}
+            style={styles.logo}
+            resizeMode="contain"
+          />
+          <Text style={[styles.title, { color: theme.primary }]}>
+            Loryane Ritual Mind
+          </Text>
+        </Animated.View>
 
-      {/* MESSAGE DU JOUR */}
-      <View style={styles.quoteBox}>
-        {loading ? (
-          <ActivityIndicator color={theme.primary} />
-        ) : (
-          <Animated.View
-            style={{
-              opacity: quoteAnim,
-              transform: [{ translateY: quoteAnimY }],
-              alignItems: "center",
-            }}
-          >
-            <Text style={styles.separator}>──────── ✦ ────────</Text>
+        {/* MESSAGE DU JOUR */}
+        <View style={styles.quoteBox}>
+          {loading ? (
+            <ActivityIndicator color={theme.primary} />
+          ) : (
+            <Animated.View
+              style={{
+                opacity: quoteAnim,
+                transform: [{ translateY: quoteAnimY }],
+                alignItems: "center",
+              }}
+            >
+              <Text style={styles.separator}>──────── ✦ ────────</Text>
 
-            <Text style={[styles.quote, { color: theme.text }]}>
-              “{dailyMessage.message}”
-            </Text>
+              <Text style={[styles.quote, { color: theme.text }]}>
+                “{dailyMessage.message}”
+              </Text>
 
-            <Text style={styles.separator}>──────── ✦ ────────</Text>
+              <Text style={styles.separator}>──────── ✦ ────────</Text>
 
-            <View style={styles.elementsRow}>
-              {dailyMessage.stone && (
-                <View style={styles.elementItem}>
-                  <Image
-                    source={require("../assets/symbols/symbol_crystal.png")}
-                    style={styles.elementIcon}
-                  />
-                  <Text style={styles.elementText}>{dailyMessage.stone}</Text>
-                </View>
-              )}
+              <View style={styles.elementsRow}>
+                {dailyMessage.stone && (
+                  <View style={styles.elementItem}>
+                    <Image
+                      source={require("../assets/symbols/symbol_crystal.png")}
+                      style={styles.elementIcon}
+                    />
+                    <Text style={styles.elementText}>{dailyMessage.stone}</Text>
+                  </View>
+                )}
 
-              {dailyMessage.essential_oil && (
-                <View style={styles.elementItem}>
-                  <Image
-                    source={require("../assets/symbols/symbol_oil.png")}
-                    style={styles.elementIcon}
-                  />
-                  <Text style={styles.elementText}>
-                    {dailyMessage.essential_oil}
-                  </Text>
-                </View>
-              )}
+                {dailyMessage.essential_oil && (
+                  <View style={styles.elementItem}>
+                    <Image
+                      source={require("../assets/symbols/symbol_oil.png")}
+                      style={styles.elementIcon}
+                    />
+                    <Text style={styles.elementText}>
+                      {dailyMessage.essential_oil}
+                    </Text>
+                  </View>
+                )}
 
-              {dailyMessage.symbol && SYMBOLS_MAP[dailyMessage.symbol] && (
-                <SymbolDisplay symbol={dailyMessage.symbol} />
-              )}
-            </View>
-          </Animated.View>
-        )}
+                {dailyMessage.symbol && SYMBOLS_MAP[dailyMessage.symbol] && (
+                  <SymbolDisplay symbol={dailyMessage.symbol} />
+                )}
+              </View>
+            </Animated.View>
+          )}
+        </View>
+
+        {/* ACTION */}
+        <View style={styles.actions}>
+          <PrimaryButton
+            label="Découvrir le rituel du jour"
+            icon="✨"
+            onPress={() => nav.navigate("Rituel")}
+            size="md"
+          />
+        </View>
+
+        <Text style={styles.footer}>🕊️ Prendre un instant pour soi 🕊️</Text>
       </View>
-
-      {/* ACTION */}
-      <View style={styles.actions}>
-        <PrimaryButton
-          label="Découvrir le rituel du jour"
-          icon="✨"
-          onPress={() => nav.navigate("Rituel")}
-          size="md"
-        />
-      </View>
-
-      <Text style={styles.footer}>🕊️ Prendre un instant pour soi 🕊️</Text>
-    </View>
+    </ScreenContainer>
   );
 }
 
@@ -220,7 +224,6 @@ const styles = StyleSheet.create({
     marginVertical: 6,
   },
 
-  // (DailyElementsRow viendra ensuite — là on touche pas)
   elementsRow: {
     flexDirection: "row",
     marginTop: 10,
