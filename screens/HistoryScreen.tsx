@@ -126,8 +126,9 @@ const styles = StyleSheet.create({
   date: {
     fontSize: typography.size.md,
     fontWeight: "600",
-    marginBottom: 6,
+    marginBottom: 10,
     textTransform: "capitalize",
+    textAlign: "center",
   },
 
   message: {
@@ -136,6 +137,7 @@ const styles = StyleSheet.create({
     marginBottom: 14,
     color: "#3f2f28",
     lineHeight: 22,
+    textAlign: "center",
   },
 
   label: {

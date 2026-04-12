@@ -66,20 +66,20 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    gap: scale(14),
-    marginTop: verticalScale(16),
+    marginTop: verticalScale(6),
   },
 
   item: {
     flexDirection: "row",
     alignItems: "center",
-    gap: scale(6),
+    marginHorizontal: 4, // 🔥 ESPACE CONTRÔLÉ entre éléments
+    maxWidth: "28%", // 🔥 LIMITE CHAQUE BLOC
+    justifyContent: "center",
   },
 
   icon: {
-    width: scale(22),
-    height: scale(22),
-    resizeMode: "contain",
+    width: scale(20),
+    height: scale(20),
   },
 
   text: {
@@ -88,4 +88,5 @@ const styles = StyleSheet.create({
     fontWeight: "400",
     color: "#3f2f28",
   },
+
 });

@@ -125,7 +125,9 @@ export default function AppNavigator() {
         tabBarStyle: {
           backgroundColor: theme.background,
           borderTopWidth: 0,
-          height: 90,
+          height: 70,
+          paddingBottom: 10,
+          paddingTop: 6,
           shadowColor: "#000",
           shadowOpacity: 0.05,
           shadowRadius: 6,

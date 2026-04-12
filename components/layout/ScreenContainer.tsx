@@ -15,7 +15,7 @@ export default function ScreenContainer({ children }: Props) {
   return (
     <SafeAreaView
       style={[styles.container, { backgroundColor: theme.background }]}
-      edges={["top", "left", "right"]}
+      edges={["top"]}
     >
       {children}
     </SafeAreaView>

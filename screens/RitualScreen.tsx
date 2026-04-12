@@ -14,7 +14,7 @@ import {
   View,
 } from "react-native";
 
-import ScreenContainer from "../components/layout/ScreenContainer";
+import ScreenContainer from "../components/layout/ScreenContainer"; // ✅ NEW
 
 import LoryaneRotatingIcon from "../components/LoryaneRotatingIcon";
 import PrimaryButton from "../components/ui/buttons/PrimaryButton";
@@ -171,14 +171,12 @@ export default function RitualScreen() {
   return (
     <ScreenContainer>
       <ScrollView
-        style={{ flex: 1, backgroundColor: theme.background }}
+        showsVerticalScrollIndicator={false}
         contentContainerStyle={{
-          paddingHorizontal: 20,
-          paddingTop: 24, // ✅ FIX PROPRE (au lieu de 40)
-          paddingBottom: 100,
+          paddingHorizontal: 10,
+          paddingBottom: 60,
           alignItems: "center",
         }}
-        showsVerticalScrollIndicator={false}
       >
         <View style={styles.header}>
           <Text style={{ fontSize: 22, marginBottom: 4 }}>✨</Text>
@@ -187,7 +185,7 @@ export default function RitualScreen() {
             Rituel du jour
           </Text>
 
-          <Text style={[styles.subtitle, { color: "#3f2f28" }]}>
+          <Text style={[styles.subtitle, { color: theme.primary }]}>
             {formatDate()}
           </Text>
         </View>
@@ -226,45 +224,50 @@ export default function RitualScreen() {
             essential_oil={ritual.essential_oil}
             symbol={ritual.symbol}
           />
-
-          <View style={{ marginTop: verticalScale(18) }}>
-            <PrimaryButton
-              label="Ajouter aux favoris"
-              icon="⭐"
-              size="md"
-              onPress={addToFavorites}
-            />
-          </View>
+        </View>
+        <View style={{ marginTop: verticalScale(30) }}>
+          <PrimaryButton
+            label="Ajouter aux favoris"
+            icon="⭐"
+            size="md"
+            onPress={addToFavorites}
+          />
         </View>
       </ScrollView>
     </ScreenContainer>
   );
 }
 
-// STYLES inchangés
+// ---------------- STYLES ----------------
 const styles = StyleSheet.create({
   centered: { flex: 1, justifyContent: "center", alignItems: "center" },
   loadingText: { marginTop: verticalScale(10) },
   errorText: { textAlign: "center", fontSize: typography.size.md },
 
-  header: { alignItems: "center", marginBottom: verticalScale(10) },
+  header: {
+    alignItems: "center",
+    marginBottom: verticalScale(10),
+  },
 
   title: {
     fontSize: typography.size.xl,
     fontWeight: typography.weight.semibold,
   },
 
-  subtitle: { fontSize: typography.size.md },
+  subtitle: {
+    fontSize: typography.size.md,
+  },
 
   card: {
-    borderRadius: scale(16),
+    borderRadius: scale(20),
     padding: scale(18),
     borderWidth: 1,
-    marginTop: verticalScale(20),
+    marginTop: verticalScale(40),
     marginBottom: verticalScale(40),
     backgroundColor: "rgba(255, 245, 240, 0.85)",
     position: "relative",
     overflow: "hidden",
+    width: "100%",
   },
 
   cardBackground: {
@@ -279,7 +282,7 @@ const styles = StyleSheet.create({
   },
 
   message: {
-    fontSize: typography.size.lg,
+    fontSize: typography.size.md,
     fontStyle: "italic",
     lineHeight: typography.lineHeight.spacious,
     textAlign: "center",

@@ -63,4 +63,5 @@ const styles = StyleSheet.create({
   outlined: {
     backgroundColor: "transparent",
   },
+
 });
