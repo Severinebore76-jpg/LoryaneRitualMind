@@ -50,15 +50,27 @@ const MeditationScreen: React.FC = () => {
   // TEXTE
   useEffect(() => {
     try {
-      if (monthlyTextFile && monthlyTextFile.text) {
-        setMeditationText(monthlyTextFile.text);
+      const text = monthlyTextFile?.text;
+
+      if (text) {
+        setMeditationText(text);
       } else {
         setMeditationText("Texte indisponible pour le moment.");
       }
-    } catch {
+    } catch (error) {
+      console.log("Erreur chargement texte :", error);
       setMeditationText("Texte indisponible pour le moment.");
     }
   }, [monthlyTextFile]);
+
+  // CLEANUP AUDIO (important)
+  useEffect(() => {
+    return () => {
+      if (soundRef.current) {
+        soundRef.current.unloadAsync();
+      }
+    };
+  }, []);
 
   // AUDIO
   const playMeditation = async () => {
@@ -69,7 +81,10 @@ const MeditationScreen: React.FC = () => {
       }
       await soundRef.current.playAsync();
       setAudioStatus("playing");
-    } catch { }
+    } catch (error) {
+      console.log("Erreur lecture audio :", error);
+      setAudioStatus("stopped");
+    }
   };
 
   const pauseMeditation = async () => {
@@ -78,7 +93,10 @@ const MeditationScreen: React.FC = () => {
         await soundRef.current.pauseAsync();
         setAudioStatus("paused");
       }
-    } catch { }
+    } catch (error) {
+      console.log("Erreur pause audio :", error);
+      setAudioStatus("stopped");
+    }
   };
 
   const stopMeditation = async () => {
@@ -87,7 +105,10 @@ const MeditationScreen: React.FC = () => {
         await soundRef.current.stopAsync();
         setAudioStatus("stopped");
       }
-    } catch { }
+    } catch (error) {
+      console.log("Erreur stop audio :", error);
+      setAudioStatus("stopped");
+    }
   };
 
   return (
