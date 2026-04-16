@@ -1,29 +1,118 @@
 // screens/PremiumScreen.tsx
 import { useNavigation } from "@react-navigation/native";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Alert, ScrollView, StyleSheet } from "react-native";
+import Purchases from "react-native-purchases";
 
-import ScreenContainer from "../components/layout/ScreenContainer"; // ✅ AJOUT
-
+import ScreenContainer from "../components/layout/ScreenContainer";
 import { ThemedText } from "../components/themed-text";
 import { ThemedView } from "../components/themed-view";
-
 import SecondaryButton from "../components/ui/buttons/SecondaryButton";
-
 import { getLoryaneTheme } from "../constants/theme";
+
+const ENTITLEMENT_ID = "Loryane Ritual Mind Pro";
 
 const PremiumScreen: React.FC = () => {
   const theme = getLoryaneTheme("light");
-  const nav = useNavigation();
+  const nav = useNavigation<any>();
 
-  const handleSubscribe = (type: "monthly" | "yearly") => {
-    Alert.alert(
-      "Abonnement",
-      type === "monthly"
-        ? "Offre mensuelle sélectionnée"
-        : "Offre annuelle sélectionnée"
-    );
+  const [packages, setPackages] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  // 🔌 FETCH OFFERS REVENUECAT
+  useEffect(() => {
+    const loadOffers = async () => {
+      try {
+        const offerings = await Purchases.getOfferings();
+
+        console.log("🔥 OFFERINGS FULL:", JSON.stringify(offerings, null, 2));
+
+        if (!offerings.current) {
+          console.log("❌ current = null");
+        } else {
+          console.log("✅ packages:", offerings.current.availablePackages.length);
+          setPackages(offerings.current.availablePackages);
+        }
+
+      } catch (e) {
+        console.log("💥 ERREUR RevenueCat:", e);
+      }
+    };
+
+    loadOffers();
+  }, []);
+
+  // 💳 ACHAT
+  const handleSubscribe = async (type: "monthly" | "yearly") => {
+    try {
+      const pack =
+        type === "monthly"
+          ? packages.find((p) => p.product.identifier === "loryane.premium.monthly")
+          : packages.find((p) => p.product.identifier === "loryane.premium.yearly");
+
+      if (!pack) {
+        Alert.alert("Erreur", "Offre indisponible.");
+        return;
+      }
+
+      const { customerInfo } = await Purchases.purchasePackage(pack);
+
+      const isActive =
+        customerInfo.entitlements.active[ENTITLEMENT_ID] !== undefined;
+
+      if (isActive) {
+        nav.reset({
+          index: 0,
+          routes: [{ name: "Accueil" }],
+        });
+
+        Alert.alert("Succès", "Abonnement activé !");
+      }
+
+    } catch (e: any) {
+      if (!e.userCancelled) {
+        console.log("Erreur achat:", e);
+        Alert.alert("Erreur", "Paiement échoué.");
+      }
+    }
   };
+
+  // 🔄 RESTORE
+  const handleRestore = async () => {
+    try {
+      const customerInfo = await Purchases.restorePurchases();
+
+      const isActive =
+        customerInfo.entitlements.active[ENTITLEMENT_ID] !== undefined;
+
+      if (isActive) {
+        nav.reset({
+          index: 0,
+          routes: [{ name: "Accueil" }],
+        });
+
+        Alert.alert("Succès", "Achats restaurés !");
+      } else {
+        Alert.alert("Info", "Aucun abonnement actif.");
+      }
+
+    } catch (e) {
+      console.log("Erreur restore:", e);
+      Alert.alert("Erreur", "Impossible de restaurer.");
+    }
+  };
+
+  // 💰 PRIX (fiable RevenueCat)
+  const monthly = packages.find(
+    (p) => p.product.identifier === "loryane.premium.monthly"
+  );
+
+  const yearly = packages.find(
+    (p) => p.product.identifier === "loryane.premium.yearly"
+  );
+
+  const monthlyPrice = monthly?.product?.priceString || "...";
+  const yearlyPrice = yearly?.product?.priceString || "...";
 
   return (
     <ScreenContainer>
@@ -32,17 +121,16 @@ const PremiumScreen: React.FC = () => {
           showsVerticalScrollIndicator={false}
           contentContainerStyle={[
             styles.scrollContent,
-            { paddingTop: 10 } // ✅ remplace insets.top + 10
+            { paddingTop: 10 }
           ]}
         >
-          {/* TITRE */}
           <ThemedText
             type="title"
             style={[
               styles.title,
               {
                 color: theme.primary,
-                marginTop: 10 // ✅ conservé (ton équilibre visuel)
+                marginTop: 10
               }
             ]}
           >
@@ -53,7 +141,6 @@ const PremiumScreen: React.FC = () => {
             Un espace intérieur, rien que pour toi.
           </ThemedText>
 
-          {/* PROMESSE */}
           <ThemedView style={styles.heroCard}>
             <ThemedText style={styles.heroTitle}>
               Quand le rituel devient un refuge
@@ -69,7 +156,6 @@ const PremiumScreen: React.FC = () => {
             </ThemedText>
           </ThemedView>
 
-          {/* AVANTAGES */}
           <ThemedView style={styles.card}>
             <ThemedText style={styles.sectionTitle}>
               Ce que Loryane+ débloque
@@ -82,28 +168,31 @@ const PremiumScreen: React.FC = () => {
             <ThemedText style={styles.bullet}>✦ Ambiances premium</ThemedText>
           </ThemedView>
 
-          {/* OFFRES */}
           <ThemedView style={styles.card}>
             <ThemedText style={styles.sectionTitle}>
               Choisis ton rythme
             </ThemedText>
 
             <SecondaryButton
-              label="Formule mensuelle — 9,90 € / mois"
+              label={`Formule mensuelle — ${monthlyPrice} / mois`}
               onPress={() => handleSubscribe("monthly")}
             />
 
             <SecondaryButton
-              label="Formule annuelle — 94,90 € / an"
+              label={`Formule annuelle — ${yearlyPrice} / an`}
               onPress={() => handleSubscribe("yearly")}
             />
 
             <ThemedText style={styles.legalNote}>
-              Le paiement sécurisé sera activé ultérieurement.
+              Paiement sécurisé via Apple. Annulable à tout moment.
             </ThemedText>
+
+            <SecondaryButton
+              label="Restaurer mes achats"
+              onPress={handleRestore}
+            />
           </ThemedView>
 
-          {/* SORTIE */}
           <SecondaryButton
             label="Continuer en mode Free"
             onPress={() => nav.goBack()}
@@ -117,7 +206,7 @@ const PremiumScreen: React.FC = () => {
 
 export default PremiumScreen;
 
-// STYLES INCHANGÉS
+// ---------------- STYLES ----------------
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -34,6 +34,10 @@ import EditProfileScreen from "../screens/EditProfileScreen";
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 
+type AppNavigatorProps = {
+  isPremium: boolean;
+};
+
 // -------------------------------
 // 📌 STACK PROFIL
 // -------------------------------
@@ -108,11 +112,10 @@ function ProfileStack() {
     </Stack.Navigator>
   );
 }
-
 // -------------------------------
 // 📌 TAB PRINCIPALE
 // -------------------------------
-export default function AppNavigator() {
+export default function AppNavigator({ isPremium }: AppNavigatorProps) {
   const theme = getLoryaneTheme("light");
 
   return (
@@ -151,17 +154,16 @@ export default function AppNavigator() {
 
       <Tab.Screen
         name="Rituel"
-        component={RitualScreen}
+        component={isPremium ? RitualScreen : PremiumScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Orbit size={24} color={color} strokeWidth={1.2} />
           ),
-        }}
-      />
+        }} />
 
       <Tab.Screen
         name="Méditation"
-        component={MeditationScreen}
+        component={isPremium ? MeditationScreen : PremiumScreen}
         options={{
           tabBarIcon: ({ color }) => <Moon size={26} color={color} />,
         }}
@@ -169,7 +171,7 @@ export default function AppNavigator() {
 
       <Tab.Screen
         name="Favoris"
-        component={FavoritesScreen}
+        component={isPremium ? FavoritesScreen : PremiumScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Star size={26} color={color} strokeWidth={1.3} />
@@ -179,7 +181,7 @@ export default function AppNavigator() {
 
       <Tab.Screen
         name="Historique"
-        component={HistoryScreen}
+        component={isPremium ? HistoryScreen : PremiumScreen}
         options={{
           tabBarIcon: ({ color }) => <Scroll size={26} color={color} />,
         }}
